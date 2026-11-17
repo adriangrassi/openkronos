@@ -64,7 +64,9 @@
       ],
       "icon": "build/icon.png",
       "category": "public.app-category.music",
-      "artifactName": "OpenKronos-${version}-mac-${arch}.${ext}"
+      "artifactName": "OpenKronos-${version}-mac-${arch}.${ext}",
+      "identity": "-",
+      "hardenedRuntime": false
     },
     "dmg": {
       "artifactName": "OpenKronos-${version}-mac-${arch}.dmg"
