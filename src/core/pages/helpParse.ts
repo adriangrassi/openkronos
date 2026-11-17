@@ -1,4 +1,4 @@
-// Turns the text of KORG's Parameter Guide (private, never committed) into short help entries. Pure: no node: imports.
+// Turns the text of KORG's Parameter Guide (research/param-guide.txt, KORG's text) into short help entries. Pure: no node: imports.
 // The PDF text is two columns per page, side by side on each line; a parameter is "Label   [range]" followed by its description.
 
 export type HelpMode = "program" | "exi" | "combi" | "global";

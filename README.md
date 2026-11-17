@@ -37,7 +37,7 @@ These files are KORG Inc.'s copyright and are not covered by the MIT licence. If
 
 ## Licence and support
 
-The code is MIT licensed (`LICENSE`); bundled fonts and libraries are listed in `THIRD-PARTY-NOTICES.md`. KORG’s documentation and data are not included and not covered. If OpenKronos helps you, a star on GitHub is welcome: Settings has a button for it.
+The code is MIT licensed (`LICENSE`); bundled fonts and libraries are listed in `THIRD-PARTY-NOTICES.md`. KORG’s documentation is included only for building (see above) and is not covered by this licence. If OpenKronos helps you, a star on GitHub is welcome: Settings has a button for it.
 
 ## Not affiliated
 
