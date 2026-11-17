@@ -10,7 +10,8 @@
     "build": "electron-vite build",
     "start": "electron-vite preview",
     "test": "node --test \"src/**/*.test.ts\"",
-    "dist": "npm run build && electron-builder --win --x64"
+    "dist": "npm run build && electron-builder --win --x64",
+    "dist:mac": "npm run build && electron-builder --mac --arm64"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",
@@ -55,6 +56,18 @@
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
       "artifactName": "OpenKronos-${version}-Setup.exe"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "build/icon.png",
+      "category": "public.app-category.music",
+      "artifactName": "OpenKronos-${version}-mac-${arch}.${ext}"
+    },
+    "dmg": {
+      "artifactName": "OpenKronos-${version}-mac-${arch}.dmg"
     }
   }
 }
