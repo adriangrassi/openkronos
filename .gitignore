@@ -1,3 +1,4 @@
+# research/ stays ignored; the KORG files the build needs are added to git by force (see README).
 research/korg-sysex/
 node_modules/
 out/

@@ -1,5 +1,5 @@
 // Builds src/generated/param-docs.json for the AI's lookup_param_help tool and the Shift-click explain grounding, from KORG's Parameter Guide text
-// (research/param-guide.txt: private, never committed). Longer entries than help.json (the whole On/Off description), no tab ids. Without the text the file is {}.
+// (research/param-guide.txt, KORG's text, included for building). Longer entries than help.json (the whole On/Off description), no tab ids. Without the text the file is {}.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { parseGuide } from "../src/core/pages/helpParse.ts";

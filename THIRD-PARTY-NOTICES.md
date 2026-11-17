@@ -19,6 +19,10 @@ Bundled under `src/app/renderer/fonts/`, all under the SIL Open Font License 1.1
 
 TypeScript, Vite, electron-vite, @vitejs/plugin-react and the @types packages are used to build the app, and playwright-core drives the window tests. They are not part of the built app. Their licences are in `package-lock.json` and in their own packages.
 
+## KORG documents
+
+`research/korg-sysex/` (MIDI implementation text tables) and `research/param-guide.txt` (Parameter Guide text) are KORG Inc.'s documents. They are included only so the project can be built and are not covered by the MIT licence; all rights stay with KORG Inc.
+
 ## Trademarks
 
 KORG and Kronos are trademarks of KORG Inc. Claude is a trademark of Anthropic. ChatGPT and Codex are trademarks of OpenAI. This project is not affiliated with, endorsed by or sponsored by any of them.

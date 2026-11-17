@@ -1,4 +1,4 @@
-// Parses KORG's Effect.txt (research/korg-sysex, licensed, not in git) into src/generated/effects.json: each effect type with its named parameters.
+// Parses KORG's Effect.txt (research/korg-sysex, KORG's files, included for building) into src/generated/effects.json: each effect type with its named parameters.
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 

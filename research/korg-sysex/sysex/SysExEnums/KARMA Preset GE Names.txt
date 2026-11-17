@@ -1,0 +1,2072 @@
+Category: Arpeggio
+0: Arp Model 01 Up/Dn
+1: Arp Model 02 Dn/Up
+2: Arp Model 03 Up
+3: Arp Model 04 Dn
+4: Arp Model 05 Rand
+5: Arp Model 06 Up/Dn
+6: Arp Model 07 Dn/Up
+7: Arp Model 08 Up
+8: Arp Model 09 Dn
+9: Arp Model 10 Up/Dn
+10: Arp Model 11 Dn/Up
+11: Arp Model 12 Up
+12: Arp Model 13 Dn
+13: Arp Model 14 Up/Dn
+14: Arp Model 15 Dn/Up
+15: Arp Model 16 Up
+16: Arp Model 17 Dn
+17: Arp Model 18 Rand
+18: Arp Model 19 DurEnv
+19: Arp Model 20 Rpt
+20: Arp Model 21 Chrm Up
+21: Arp Model 22 Chrm Dn
+22: Basic Arp ALT1
+23: Basic Arp ALT2
+24: Basic Arp DOWN
+25: Basic Arp RANDOM
+26: Basic Arp UP
+27: Bend-Pad-Mover Arp
+28: Bolero Celeste
+29: Classical 1
+30: Classical 2
+31: Classical Arpeggiando
+32: Computer 1
+33: Computer 2
+34: Echo Arp 1
+35: Euro Bureau
+36: Exp Triad
+37: Five Tone Climb
+38: Harmonic Double Bubble
+39: Kalimbish 1
+40: Minor 9th Rise
+41: Monophrase 1
+42: Ostinato 6th
+43: Ostinato 7th
+44: Pad Helper/Arp
+45: Piano Arp 1
+46: Pipe Riff 1
+47: PipeClassyRiff
+48: Random Slow
+49: SimpleAlt.Arp
+50: Ski Arp 1
+51: Ski Arp 2
+52: Step Sequencer
+53: Str Arco Arp 4/4
+54: Sweeping EP 2
+55: WholeTone
+56: WindChimes Gliss
+57: arpeggiations
+58: Arp Model 05 Up/Dn
+59: Arp Model 05A Dn/Up
+60: Arp Model 05B Up
+61: Arp Model 05C Dn
+62: Arp Model 06 Up/Dn
+63: Arp Model 06A Dn/Up
+64: Arp Model 06B Up
+65: Arp Model 06C Dn
+66: Arp Model 07 Rand
+67: Arp Model 09 Poly
+68: Arp Model 10 Poly
+69: Bassoon 1
+70: Bell Dancer
+71: Bells w/Gliss
+72: BendArp
+73: Bows Shimmer 1
+74: Candyland 1
+75: Celeste Arpeggio
+76: Chromatic Walk
+77: Clusters/EndLoop
+78: Combination Filters
+79: Crimson Copeland Glass String
+80: DayDream Piano
+81: Digi-Bell 1
+82: Digital Bells 1
+83: Drifting Cloud Pad Mover
+84: Echo Arp 2
+85: Enchanted Forest
+86: Ensemble Bell
+87: Euro Lights
+88: Fast Bowing 1
+89: Fast Bowing 2
+90: Filter Arp
+91: Gamelans 1
+92: Gamelans 2
+93: Gamelans 3
+94: Giant FM Keys
+95: Goober Uber Alles 1
+96: Hubble Pad
+97: India/Flute Split
+98: KaleidoBell
+99: KalimbaGrv
+100: Kalimbish 2
+101: Koto Gliss
+102: LongGliss-Abs
+103: LongGliss-Rel
+104: Mallet Repeats 2
+105: Mallet Wave
+106: MalletGame 01
+107: MalletGame 02
+108: MalletGame 03
+109: Minor 3rds Up & Down
+110: NewAge Ostinato
+111: Noble Brite Pad
+112: Notch/Bell Pad
+113: OrXHit Dance 1
+114: Ork Hit Xtravaganzoid
+115: Pad Helper 01
+116: Pad Mover 1
+117: PadAnimator 1
+118: Piano 4 Liberace
+119: Piano Arpeggios
+120: Piano Cadenza 1
+121: Piano Cadenza 2
+122: Piano Chord
+123: Piano Pad 2
+124: Pink Guitar 1
+125: Pipe Organ Bachesque
+126: Planet KARMA 1
+127: Planet KARMA 2
+128: Planet KARMA 3
+129: Power Balladeer
+130: Power Piano Thing
+131: Psychedelic Pad Mover
+132: Random Mallets
+133: Random Pitch
+134: Rest and Riff
+135: Riff and Rest
+136: Simple Guitar arp
+137: SimpleSinePad 1
+138: Slow Synth Mover 1
+139: Slow Synth Mover 2
+140: Slow Synth Mover 3
+141: Square 30303
+142: Stepping
+143: Super Sweeper 1
+144: Sweeping EP 1
+145: Synth Sweeper
+146: Tempo Env 1
+147: Tempo Env 2
+148: Tempo Env 3
+149: Tempo Env 4
+150: The Power and the Glory
+151: Tremolo Tension Strings
+152: Triplet Arp
+153: Violin Riff 1
+154: Wait for it? 1
+155: Wait for it? 2
+156: WindSong
+157: Wurly Morse Code
+158: classical arpeggiation
+
+Category: Melodic
+159: 4tone Trance
+160: Aromatherapy Gone Awry
+161: BassTuba Riff
+162: Beyond the Crypt Bell Toll
+163: Big Bottom Lead
+164: Brass Phrase
+165: BrightPulseLead
+166: Clarinet Riff
+167: Classical 3
+168: Classical 4
+169: Classical Strings
+170: Dance Buzz Kik
+171: Dbl Reed Riff
+172: Dittos
+173: Electro Lead
+174: English Horn 1 (VJS)
+175: Flute 1
+176: Flute Riff (Bar 1)
+177: Gliss Down 1
+178: Going Up
+179: Gong Roller
+180: HH Mono
+181: Happiness Seq.
+182: Hemispheres
+183: Horn Triplet
+184: Lil Melodies
+185: Lonely Harmonica
+186: Mallet Repeats 1
+187: Mallet Roller 1
+188: Mallet Roller 2
+189: Meditate 1
+190: Monophrase 2
+191: Monophrase 3
+192: NoBend Gtr.Riff
+193: Oasis Basis
+194: Octave Strings 1
+195: Orch Hitter
+196: Orch. Timpani
+197: Organ Riff 7/8
+198: Pizz.SlowNotes
+199: Quarks 1
+200: Rhythmic Synth
+201: Route Up&Down
+202: Russian Strings
+203: Russian Winter
+204: Santur 1
+205: Simple Arco
+206: Spatial
+207: Speed Seq.
+208: StepSaw Down
+209: String Melody
+210: Subtle Mallet
+211: Super Sweep
+212: Swirling Notch Pad 1
+213: Talking Mod 1
+214: Techno Riff 1
+215: Techno Riff 2
+216: Theremin
+217: Tom Fill Variations
+218: Trance Riff 1
+219: Trance Riff 2
+220: Trance Riff 3
+221: Trance Riff 4
+222: Trance Simple
+223: TripHop Vibe
+224: Tubular E Maj
+225: Volume Fade Gtr
+226: Watchamacallit
+227: Alto Sax Riff
+228: Angular Improv
+229: Armadillo Organ
+230: Arp w/End Loop
+231: Atonal 1
+232: Atonal 2
+233: Atonal 3
+234: Atonal 4
+235: Atonal 5
+236: Atonal 6
+237: Atonal 7
+238: Baroquen
+239: Bass Abyss
+240: Bassoon 2
+241: Brass March
+242: Cinema Piccolo
+243: Clarinet Phrase
+244: Comb & Pipe
+245: Computer 3
+246: CrescDecresc
+247: DJ Touch
+248: Dance Comp 1
+249: Dark Kik/Zaps Raving
+250: Dbl Reed Scales
+251: Echo Melody
+252: English Horn 2
+253: Ethnic Sitar
+254: FX Trigger
+255: Fast Bowing 3
+256: Flip Blip
+257: Flute 2
+258: Flute 3
+259: Flute Desc Echo
+260: Flute Improv
+261: Flute/Piccolo
+262: Funky Orx Hits
+263: Gliss Down 2
+264: Gliss Down then Up
+265: HammerOn
+266: Haus Kik Transitions
+267: Improv Lead 1
+268: Improv Lead 2
+269: Improv Lead 3
+270: Jungle Lines
+271: Koto Phrase
+272: Lil Counterpoint
+273: Main St. Electric
+274: Major Minor Switch Hit
+275: Muted Trumpet
+276: Phat Saw Lead
+277: Pipe Riff 2
+278: Pipe Riff 3
+279: Polka Riff
+280: Press. Strings 1
+281: Quarks 2
+282: R&B Planet Thing
+283: RandPno8bar(7/1)
+284: Recorder
+285: Santur 2
+286: Santur 3
+287: Shakuhachi
+288: SitarSitar 1
+289: Sixteenth Note Strings
+290: SmoothSineLead
+291: Squirrels at Play
+292: String Single Line
+293: Strings Long Line
+294: SuperSoloTriplet
+295: Swirling Notch Pad 2
+296: Syn Santur
+297: Syn Techno Riff
+298: Synthetic Piccolo
+299: Talking Mod 2
+300: Techno Riff 3
+301: Techno Riff 4
+302: Techno Riff 5
+303: TenorSax
+304: TenorSax Scales
+305: The Fly
+306: Timbral Shaper
+307: Trickle
+308: Triplet Cycle
+309: Tull
+310: Urgent!
+311: Vibe Dn/Roll
+312: Voice LargeMove
+313: Wait for it휽 3
+314: Whistling
+315: Woods Line
+316: jomd
+
+Category: Harmonic (Poly)
+317: 1/7/5 organ
+318: 12/4 Wash 5th/4th
+319: 5tone Vel Trip 1
+320: 6/8 organ
+321: 7tone Ostinat
+322: A.Piano Comp
+323: Acid Jazz
+324: Analog Pad Mover
+325: Arco Strings
+326: Arctic Voices 1
+327: Astral Pad 1
+328: Balzando Orch. 1
+329: Barber Pole
+330: BariSax 1
+331: BariSax 2
+332: Booty Call
+333: Brass Riff 01
+334: Brass Riff 02
+335: Brass Riff 03
+336: Brass Stabber
+337: Candyland 2
+338: Chameleon
+339: Choir Classical
+340: Chord Rhythm 1
+341: Classical 5
+342: Clavi Comp
+343: Comp & Go
+344: Comp Thing
+345: Contemplate This
+346: Contemplate This Too!
+347: Contemplate This again휽
+348: Cyber Choir 1
+349: Dance 1
+350: Dance Comp 2
+351: Disco Strings
+352: Dizziness Seq
+353: E.Piano 01
+354: E.Piano 02
+355: E.Piano 03
+356: E.Piano 04
+357: E.Piano 05
+358: E.Piano 06
+359: E.Piano 07
+360: E.Piano 08
+361: E.Piano Chord 1
+362: E.Piano Police
+363: E.Piano Riff
+364: Express Piano
+365: F.Horns Rhythm
+366: Fast Bowing 4
+367: Fast Bowing 5
+368: Fast Bowing 6
+369: Finger Cymbal
+370: Fretless Analog
+371: Goa Trance
+372: Grand Wirey Pad
+373: Groove Acid Riff
+374: Happy Strings
+375: Harmonica 1
+376: HipHop Strings
+377: Jazz Piano Comp
+378: Kalimbish 3
+379: KarMarch
+380: Keith's Organ Comp
+381: MalletGame 04
+382: Modern Harmonies
+383: Modern String Quartet
+384: New BowRoque
+385: New Old Beat
+386: New Sax Ensemble
+387: Offbeat Dancerific 1
+388: Old EP Riff
+389: Orch.Movement
+390: Orch.String Arp 1
+391: Orchestra Soft
+392: Orchestra Tuning Up Weird!
+393: Organ 1
+394: Pad Helper 02
+395: Pad Helper 03
+396: Pad Helper 04
+397: Pad Motion
+398: Pizzicato Ens.
+399: PizzoDance
+400: Rhythmic Strings
+401: Rock Organ
+402: SF Pad
+403: Santur 4
+404: Santur 5
+405: Saxes Riff 1
+406: Saxes Riff 2
+407: Simple Comp 1
+408: Simple Pizz.
+409: SitarSitar 2
+410: Slice of Life
+411: SlowChoir Part 1
+412: SlowChoir Part 2
+413: StabRhythm
+414: StringsRit 1
+415: SynDrum Fill
+416: Synpiano 1
+417: Synpiano 2
+418: Tango 3
+419: TangoChords 1
+420: Tape Flute
+421: Tape Strings
+422: Techno Anthem
+423: TeknoLife Split v2.0
+424: That HeavenVibe
+425: The Smart Couple
+426: The Sublime Mariner
+427: UhAh ChoirRiff 1
+428: UhAh ChoirRiff 2
+429: UhAh ChoirRiff 3
+430: UhAh ChoirRiff 4
+431: UhAh ChoirRiff 5
+432: Vox Oasis
+433: 1234 Organ Shuffle
+434: 3/4 Piano Phrase
+435: 4tone Ride
+436: 80's Stereo Riff
+437: A.Piano Rhythm
+438: Ad Hoc Fanfare
+439: Aqua Phonics
+440: Astral Pad 2
+441: Atonal 8
+442: Balzando Orch. 2
+443: Bass Clarinet
+444: Bass-Chords
+445: Bending Texture
+446: Bendy
+447: Bendy Gtr Riffs
+448: Bendy Kalimba 1
+449: Bendy Pad Mover
+450: Big Arp Repeater
+451: Big LogDrums
+452: Blues Harmonica
+453: Bossa Riff
+454: Bowing
+455: Brass Riff 04
+456: Brass Riff 05
+457: Brass Riff 06
+458: Brass-Gliss Up
+459: Candyland 3
+460: Choir of Light
+461: Chord + Melody
+462: Classic Fanfare
+463: Clav Riff
+464: Clavinetronics ENV's
+465: Crazy Bee
+466: Dance Comp 3
+467: Dance/Gospel Organ
+468: Dancing Classical
+469: Dancing Pluck
+470: Dark Night
+471: Dial Up Modem Emergency
+472: Digi-Bell 2
+473: Digital Bells 2
+474: Dirty B 1
+475: Djembe/Log Drum
+476: Double Reed Canonica
+477: Drone Pipes
+478: Dual Filterz
+479: E.P. Comp 7/8
+480: E.Piano 09
+481: E.Piano 10
+482: E.Piano Chord 2
+483: EasternRiff 1
+484: EasternRiff 2
+485: Echoing Gooberation
+486: Ethnic Mallets
+487: F.Horn Riff 1
+488: FM E. Piano mf
+489: Fantabellz 1
+490: Fantabellz 2
+491: Fire Strings DT
+492: Flashin' Arp
+493: Flashlight!
+494: Frozen Glaciers
+495: Funk Factory
+496: Funky Moves
+497: Future Syn Pad
+498: Gamelans 4
+499: Gate and Pitch
+500: Giant Rotary
+501: Glass Bell Bright
+502: Goober Uber Alles 2
+503: Gospel Riff
+504: Harmonic Pad
+505: Harmonica 2
+506: Indian Riff
+507: Indian Stars
+508: Jazz Club (nnnNice...)
+509: Kalimbish 4
+510: Kalimbish 5
+511: Kalimbish 6
+512: LFO Ride
+513: Latin Piano
+514: Latinesque/Suitcase
+515: Little Rascals
+516: MalletGame 05
+517: MalletGame 06
+518: MalletGame 07
+519: MalletGame 08
+520: Marmalade Skies
+521: Mellow Pad
+522: Modern Sax Ensemble
+523: Modern Shamisen
+524: MondoRimba
+525: Monkey Skulls 1
+526: Monkey Skulls 2
+527: Monkey Skulls 3
+528: Multi Arp
+529: My Greek Wedding
+530: News Brie
+531: Night Tines EP
+532: Now Com Organ
+533: Offbeat Dancerific 2
+534: OrXHit Dance 2
+535: Orbital Motion
+536: Orch (12/8) 1
+537: Orch.String Arp 2
+538: Orch.String Arp 3
+539: Orch.Strings 1
+540: Orch.Strings 2
+541: Orch.Strings 3
+542: Organ 'Fingers' (maj/min)
+543: Organ 2
+544: Organ Riff
+545: OrganRiff 1
+546: Pad Dreamer
+547: Pad Helper 05
+548: Pad Helper 06
+549: Pad Helper 07
+550: Pad Helper 08
+551: Pad Helper 09
+552: Pad Helper 10
+553: Pad Helper 11
+554: Pad Helper 12
+555: Pad Helper 13
+556: Pad Helper 14
+557: PadAnimator 2
+558: PadAnimator 3
+559: PadAnimator 4
+560: PadAnimator 5
+561: PadAnimator 6
+562: PadAnimator 7
+563: PadAnimator 8
+564: Perpetual Random Motion
+565: Pipe Riff 4
+566: PnoClustrImprov
+567: Pods In The Pad
+568: Poly Mover
+569: Power Romp
+570: Press. Strings 2
+571: QED in 7 + Waveseq
+572: Random Blues
+573: Random Clav
+574: Random Organ
+575: Random Techno
+576: Random Up
+577: Rhythmic Piano 3/4
+578: Robot Comp 1
+579: Santur & Hit
+580: Santur Enigma 1
+581: Santur Enigma 2
+582: Sax Ensemble Riff
+583: Scoring
+584: Sharp'n'Bendy
+585: Shepard Tone
+586: Shortwave
+587: SimpleSinePad 2
+588: SitarSitar 3
+589: SitarSitar 4
+590: Slow Choir
+591: Smoothie Pad
+592: Soft Shuffle
+593: Soft Walk
+594: Somb-semble
+595: Spectrum Alloy
+596: Square Snaps
+597: Staccato Tech
+598: Stradivarious Sync
+599: StrapStrings DT
+600: StringsRit 2
+601: StringsRit 3
+602: StringsTremolo
+603: Swarming
+604: Synpiano 3
+605: Synpiano 4
+606: Synpiano 5
+607: Synth Brass 1
+608: Synth Brass 2
+609: Techno Stat
+610: TekBass
+611: The New Kashmir
+612: Timpanic Bass
+613: Trance Arp 
+614: Trance Riff 5
+615: Trance Riff 6
+616: TranceComp 1
+617: Tremolo Tension Chromatic
+618: Tripl.Balzando
+619: Triplets'n 8th
+620: Trombone
+621: Twisted Filtration
+622: UhAh ChoirRiff 6
+623: Upbeat Bass Morph
+624: Venusian
+625: Violin Riff 2
+626: Violin or Wind Virtuoso
+627: W.windNewDance
+628: White Noise Rhythm
+629: Will To Strav.
+630: Will You Dance With Me?
+631: X-Mod Raver
+632: closemovingharmony
+
+Category: Chord Rhythmic
+633: 16 Chord Beat 1
+634: 16 Chord Beat 2
+635: 16th's On 2&4
+636: 2tone Vel Trip1
+637: 2tone Vel Trip2
+638: 4tone Vel Trip
+639: 5Tone Trance 1
+640: 5tone Trance 2
+641: 5tone Trance 3
+642: 5tone Vel Trip 2
+643: 6tone Ostinat
+644: 8th Chunk
+645: 90's House
+646: 90's Piano
+647: A.Piano Calm Arp
+648: Accent Bass Riff
+649: Accent Chords
+650: Acro Riff
+651: Analog Velvet 1
+652: Analog Velvet 2
+653: Analog Velvet 3
+654: Anna Clavichordia
+655: Arctic Voices 2
+656: Arp Angels
+657: Arp-o Strings
+658: Attack Piano
+659: Auto Pilot mod
+660: Blues Arco 8ths
+661: Brass Ens 1
+662: Brass Riff 07
+663: Brass Riff 08
+664: Brass Riff 09
+665: Brass Riff 10
+666: BrassRit 1
+667: BrassRit 2
+668: BrassRit 3
+669: BrassRit 4
+670: Brok'n Chords
+671: Camera Strings 1
+672: Camera Strings 2
+673: Chord Rhythm 2
+674: Cinematic 6/8
+675: Compusonic
+676: Cumulus Gate (reverb)
+677: Cyber Choir 2
+678: Dance Organ
+679: Dark and Warm
+680: Dirty B 2
+681: DreamTrans
+682: Dynamic Orch.
+683: Dynamics
+684: E.Piano 11
+685: E.Piano 12
+686: Echo Chords 1
+687: Echo Chords 2
+688: Echo Chords 3
+689: Echo Chords 4
+690: Epic Trance Riff
+691: EpicTrance
+692: F.Horn Riff 2
+693: F.Horn Riff 3
+694: F.Horn Riff 4
+695: Full & Accented 1
+696: Full & Accented 2
+697: Full Drawbars
+698: Full On
+699: Geisellich
+700: Giant Pad w/Pulse
+701: Groove Globe
+702: Groove Trance
+703: Groove Venus
+704: Groove Zoo
+705: HipHop Piano 1
+706: House Organ
+707: House Piano
+708: Hybrid Strg Cho 1
+709: Hybrid Strg Cho 2
+710: Jazz Organ 1
+711: Jazz Organ 2
+712: Keio Elec Lab.
+713: Killer
+714: Log Drum & Bells
+715: Long Comp
+716: M1 Organ
+717: MalletGame 09
+718: Not A Care in the World
+719: NuHopChrd
+720: NuTrance
+721: Oo wop
+722: OohAah Staggered
+723: Organ 3
+724: Organ Reggae
+725: OrganRiff 2
+726: Pad Helper 15
+727: Pad Holder
+728: Pad Mover 2
+729: Pad Mover 3
+730: Paloma Style
+731: Periodic Chords
+732: Pest
+733: Piano Arp 2
+734: Piano Comp 1
+735: Piano Comp 2
+736: Piano Pad 1
+737: Polka
+738: Poly arp 1
+739: Poly arp 2
+740: Poly arp 3
+741: Poly arp 4
+742: Poly arp 5
+743: R&B E.Piano 1
+744: Rand Piano Comp
+745: Random Clusters
+746: Rhythm Scanner
+747: Robot Comp 2
+748: Rumbo
+749: SFZ Brass 2
+750: SFZ Brass 3
+751: Simple Comp 2
+752: Simple Gate
+753: Simple Polka
+754: Simple String
+755: Soft Chords 1
+756: Soft Chords 2
+757: Steady!
+758: Stride Piano LH
+759: String Offbeat
+760: StringsRit 4
+761: StringsRit 5
+762: Super Sweeper 2
+763: Suspended Riff
+764: Synpiano 6
+765: Synth Pianoid
+766: Tagadah 1
+767: Tagadah 2
+768: Tango 1
+769: Tango 2
+770: TangoChords 2
+771: TangoChords 3
+772: TangoChords 4
+773: TangoChords 5
+774: TangoChords 6
+775: Tek Chords
+776: Tekkno
+777: Tramp Comper
+778: Trance Chord
+779: Trance Comp
+780: Trance Riff 7
+781: Trance Riff 8
+782: Uplifting
+783: Violin Riff 3
+784: Violin Riff 4
+785: Violin Riff 5
+786: Vocalese
+787: Waltzer
+788: Waltzes
+789: Wurli/Organ Funk
+790: 16th StraightComp
+791: 3/4 String Adventure
+792: 6/4 Ballade Thing
+793: Accordion Acmp
+794: Accordion Line
+795: Aero Gate Simulation
+796: Air Drops/Air Pad
+797: Analog Velvet 4
+798: Auto Pilot
+799: Big Fat Riffer 1
+800: Big Fat Riffer 2
+801: BottleBlow
+802: Bows Shimmer 2
+803: Brass Ens 2
+804: Brass Riff 11
+805: Brass Riff 12
+806: Brass Riff 13
+807: BrassRit 5
+808: BrassRit 6
+809: BrassRit 7
+810: Burnin' Brass
+811: Camera Strings 3
+812: Camera Strings 4
+813: Camera Strings 5
+814: Classical 6
+815: Clav
+816: Destructo
+817: Digi Ice Pad
+818: DigiLayer Keys
+819: Dolphin Ride
+820: Dream Voices
+821: Epic
+822: F.Horn Riff 5
+823: Fast Bowing 7
+824: Film Brass
+825: Fire Wave
+826: Gospel PercOrg
+827: Happy Dog
+828: Harpsy Style
+829: Holy Pipes 1
+830: Holy Pipes 2
+831: Horns & Ens
+832: Hybrid Bell
+833: Karma Sutra
+834: Key Comp
+835: LA EP2
+836: MalletGame 10
+837: Military Rhythm
+838: Moving Bellz
+839: Octave Strings 2
+840: Offbeat E.Piano
+841: OldToneWheel 1
+842: OldToneWheel 2
+843: Orch (12/8) 2
+844: Orch Backing
+845: Pad Helper 16
+846: Pad Helper 17
+847: Pizz Pluck
+848: Plus Sub Kick Beat
+849: R&B E.Piano 2
+850: Rand Accomp.
+851: Rave Stab
+852: Remix Organ
+853: Rockin' Organ
+854: SFZ Brass 1
+855: Simple Brass
+856: SitarSitar 5
+857: SitarSitar 6
+858: Soundscapes
+859: SplatSlap Pad
+860: Station Of Waves
+861: Sticky Rez Clav
+862: Stormtroopers!
+863: Stravy Attack
+864: Strings Qrtt.1
+865: Strings Qrtt.2
+866: Strings Riff
+867: StringsRit 6
+868: Swirling Dreams
+869: Symphonic Bows 1
+870: Symphonic Bows 2
+871: Symphonic Waves
+872: Synth-Bass Thang
+873: Tagadah Orch. 1
+874: Tagadah Orch. 2
+875: TangoChords 7
+876: TechBossa
+877: Thunderlog Loop
+878: TranceComp 2
+879: TranceForm Organ Gate
+880: Trombone Hard
+881: Tropical Pizzicato
+882: VS Bell Boy
+883: VS Piano
+884: Velo Whirly 1
+885: Velo Whirly 2
+886: Velocity Switch EP
+887: White Pad EP
+888: Wurli Funk
+889: arp only notes played
+
+Category: Strumming
+890: 12 Bar Guitar
+891: 16 Chord Strum
+892: Acoustic Strummer
+893: Bossa Guitar 1
+894: Comp Reggae Nu
+895: Country Strum 1
+896: Country Strum 2
+897: Country Strum 3
+898: Country Strum 4
+899: DoubleBend Guitar Strummer
+900: ElecGtr Strum
+901: Ethnic Strummer
+902: Finger PickStrum
+903: Frets Riff Strum 1
+904: Frets Riff Strum 2
+905: Funk Gtr
+906: Funky Strums
+907: GTR Strum
+908: Gtr 5ths
+909: Gtr. Strum (random)
+910: Guitar Strum 01
+911: Guitar Strum 02
+912: Guitar Strum 03
+913: Guitar Strum 04
+914: Guitar Strum 05
+915: Guitar Strum 06
+916: Guitar Strum 07
+917: Guitar Strum 08
+918: Guitar Strum 09
+919: Guitar Strum 10
+920: Guitar Strum 11
+921: Guitar Strum 12
+922: Guitar Strum 13
+923: Guitar Strum 14
+924: Guitar Strum 15
+925: Olde Celtic Gtr Strum
+926: Random Rhythm Guitars
+927: Reggae Guitar
+928: Reggae Strum
+929: Reggae Strum+repeats
+930: SingleCoil+Piezo
+931: Soul Strum
+932: Spanish Strum
+933: Strum 1
+934: Strum 2
+935: Strum 3
+936: Strum 4
+937: Strum Reggae 1
+938: Strum Reggae 2
+939: Strum Reggae Nu
+940: Strummer 1
+941: Strummer 2
+942: WhackWah 1
+943: 16 Strum Oct
+944: 7/8 Strum
+945: 8/16 Strum
+946: 8th Note Jazz Gtr Strum
+947: Bossa Guitar 2
+948: Chorus E.Guit
+949: Do the Funky Slide
+950: Dotted 16 Strum
+951: E.G. Harmonics
+952: Gtr Chugga/Riff
+953: Guitar Strum 16
+954: Guitar Strum 17
+955: Jazz Gtr Comp 1
+956: Jazz Gtr Comp 2
+957: Nuclear Strum
+958: Pick & Strum
+959: Piezo Guitar
+960: Random Pluck
+961: Slap & Strum
+962: Strat Thang
+963: Strum 5
+964: Strum 6
+965: Strum 7
+966: Tight Strum
+967: Unplugged RnB Strum
+968: VoxWah Chicks
+969: WhackWah 2
+
+Category: Pick
+GE Name
+970: 2Step GtrPick
+971: Alternating Octaves
+972: Ballad Pick 1
+973: Ballad Pick 2
+974: Basic 12 String Pick
+975: CleanMute Guit
+976: Country Picker 1
+977: Country Picker 2
+978: E.Gtr Cutting
+979: Finger Pick 1
+980: FingerPicker
+981: Fingerpicking Gtr 3/4
+982: Funkin' Guitar
+983: Guitar Noise
+984: Mandolin Basix
+985: Pedal Steel
+986: Pink Guitar 2
+987: Rock Chug Gtr 1
+988: Rock Riff Gtr.
+989: Spanish Pick
+990: Standard F.Pick 3/4 1
+991: Standard F.Pick 3/4 2
+992: Synth Droplets
+993: Unplugged RnB Gtr Noise
+994: Wah Funk Lick
+995: Acoustic Dreaming 7/4
+996: Banjo YEE HAAA!
+997: Bond/Floyd 7/4
+998: Chuggin Machine
+999: CleanMute Guitar
+1000: Country Picker 3
+1001: Dial Up GTR variation
+1002: Dist Guitar
+1003: Eddie Lives
+1004: Express Gtr 1
+1005: Express Gtr 2
+1006: Express Gtr 3
+1007: Express Gtr 4
+1008: Finger Pick 2
+1009: Floydesque
+1010: Fretless Guitar Thing
+1011: Frets Riff Pick 1
+1012: Frets Riff Pick 2
+1013: Fun with Dist Gtrs HOLD!
+1014: Funk Guitar Riff
+1015: Funk Guitar Riff WS
+1016: G. Strum (random)
+1017: GTR Dist. Cutting
+1018: Guitar Chopper
+1019: Mandolin/Strings for Miki
+1020: Matte Kudasai
+1021: Moody Gtr Score
+1022: Picking
+1023: Princessa Acoustic Gtr
+1024: Prog Rock Lines
+1025: Proud Strum
+1026: Rand Gtr no 7th
+1027: Random Pickingish
+1028: Rock Chug Gtr 2
+1029: Simple Strum
+1030: Slide Thing (Mosey On Down...)
+1031: StrumPick
+1032: UpWham Guitar
+1033: VoxWah Chicks1
+1034: WetDist. Guitar
+
+Category: Bass Pattern
+1035: A.Bass 1-5 Dbl
+1036: A.Bass 1-5(3/4)
+1037: A.Bass 1-5(4/4)
+1038: Bass 4 Strings
+1039: Bass Drone
+1040: Bendy Bass 1
+1041: Blues Bass 3/4
+1042: Country Bass
+1043: Cycling 16ths 1
+1044: Droner
+1045: HipHop Bass 2
+1046: Reso Bass 1
+1047: Reso Bass 2
+1048: Root휽 Fifth휽
+1049: Simple Bass 1
+1050: Simple Bass 2
+1051: Simple Euro Bass
+1052: Stagger Bass 1
+1053: Straight Bass 1
+1054: Walking Bass 1
+1055: Walking Bass 2
+1056: Walking Bass 3
+1057: Walking Bass 4
+1058: 16th Walk Bs 1
+1059: Back Beat Bass
+1060: Bass Open Line
+1061: Bass Rand Rpt
+1062: Bass Reggae
+1063: Bends and straight notes
+1064: Bendy Bass 2
+1065: Bendy Bass 3
+1066: Big Boogie Bass
+1067: Bigbeat Bass
+1068: Blind as a Bat
+1069: Chiller
+1070: Chillin Wid Bass
+1071: Digi Bass
+1072: Du Dada Bass 1
+1073: Du Dada Bass 2
+1074: E.Bass Finger 2
+1075: E.Bass Line
+1076: E.BassLine 01
+1077: E.BassLine 02
+1078: E.BassLine 03
+1079: E.BassLine 04
+1080: E.BassLine 05
+1081: E.BassLine 06
+1082: E.BassLine 07
+1083: E.BassLine 08
+1084: Electro Bass 1
+1085: F.BassLine 1
+1086: F.BassLine 2
+1087: F.BassLine 3
+1088: F.BassLine 4
+1089: F.BassLine 5
+1090: F.BassLine 6
+1091: Funkified E. Bass
+1092: Fusion Bass 7/8
+1093: Groove Acid
+1094: Groove Globe 2
+1095: Harmonics Bass
+1096: HipHop Bass 3
+1097: HipHop Bass 4
+1098: In Triplicate Bass/Pno
+1099: Jazz Bass
+1100: Jungle Bass 1
+1101: Jungle Bass 2
+1102: KEWL Bass
+1103: Latin Bass 1
+1104: Latin Bass 2
+1105: NuHopChrd 1
+1106: Offbeat Syncopated
+1107: Orch. Bass
+1108: Organ Bassline
+1109: Pick Bass Funky
+1110: Pop Bass 4/4
+1111: Robotic Bass
+1112: Rock Bass 16ths 1
+1113: Rock Bass 16ths 2
+1114: Simple Pop Bass
+1115: Slap Bass 1
+1116: Smooth Bass
+1117: Stagger Bass 2
+1118: Stein Bass 1
+1119: Stein Bass 2
+1120: SynBass Line 01
+1121: SynBass Line 02
+1122: SynBass Line 03
+1123: SynBass Line 04
+1124: SynBass Line 05
+1125: SynBass Line 06
+1126: SynBass Line 07
+1127: Techno Riff 01
+1128: Techno Riff 02
+1129: Tekno OrganBass
+1130: Trance Bass 1
+1131: Walking Bass 5
+1132: 16th Rush
+1133: 16th Walk Bs 2
+1134: 16th note Pop
+1135: 30303 MegaBass
+1136: 7/8 Bass Line
+1137: 70's Disco
+1138: Acid
+1139: Acid 5 Step
+1140: Aggro Bass
+1141: Basic Slap Bass
+1142: Bass Lines 1
+1143: Bass Lines 2
+1144: Bass Lines 3
+1145: Bass Pump
+1146: Byow Drone
+1147: Chaser 1
+1148: Chaser 2
+1149: Cycling 16ths 2
+1150: Dance & Comp 1
+1151: Dance & Comp 2
+1152: Dance 1
+1153: Dance 2
+1154: Dance 3
+1155: DanceBassMenu
+1156: Dark Bass
+1157: Decayed Bass
+1158: Digi Syn Bass 1
+1159: Digi Syn Bass 2
+1160: Dirty Man Bass
+1161: Disco Slapper
+1162: Drum'n'Bass Bs 1
+1163: Drum'n'Bass Bs 2
+1164: Duration Bass
+1165: E. Groove Bass
+1166: E.Bass Finger 1
+1167: E.Bass Pick
+1168: E.BassLine 09
+1169: E.BassLine 10
+1170: E.BassLine 11
+1171: Electro Bass 2
+1172: Euro 1
+1173: Euro 2
+1174: Fast Syncopate
+1175: FastVeloNote
+1176: Flash
+1177: Floyd/Moroder
+1178: Funk
+1179: Funk Bass
+1180: Funky Slap Bass
+1181: Funky Tekno
+1182: Future Funk Bass
+1183: Gated Dance
+1184: Get In Groove
+1185: Groove Analog 01
+1186: Groove Analog 02
+1187: Groove Analog 03
+1188: HipHop Bass 1
+1189: Hop/Funk
+1190: House Bass 1
+1191: House Bass 2
+1192: Jungle Liar
+1193: Komplicate
+1194: Kreeper
+1195: Latin Bass 3
+1196: Latin Bass 4
+1197: Latin Bass Pattern 3/4
+1198: Metal Bass
+1199: Nasty Bass
+1200: NuHopChrd 2
+1201: Open Funk 1
+1202: Open Funk 2
+1203: Phunky Wah 1
+1204: Phunky Wah 2
+1205: Random Throb
+1206: Repeat
+1207: Retro Pattern
+1208: Rock Shuffle Bass 
+1209: Seq Bass
+1210: Shaman
+1211: Silver Bass
+1212: Slap Bass 2
+1213: Slap Bass 3
+1214: Slap Bass 4
+1215: Slap Bass 5
+1216: Slap Bass Variation
+1217: Snaky Synth-Bass
+1218: Soul
+1219: Sparse Bass
+1220: Stein Bass Syn
+1221: Straight Bass 2
+1222: Stravy Bass
+1223: SynBass Line 08
+1224: SynBass Line 09
+1225: SynBass Line 10
+1226: SynBass Line 11
+1227: SynBass Line 12
+1228: SynBass Line 13
+1229: SynBass Line 14
+1230: SynBass Res 1
+1231: SynBass Res 2
+1232: TEKNO stutter
+1233: TeaBea
+1234: Techno Riff 03
+1235: Techno Riff 04
+1236: Techno Riff 05
+1237: Techno Riff 06
+1238: Techno Riff 07
+1239: Techno Riff 08
+1240: Techno Riff 09
+1241: Techno Riff 10
+1242: Techno Riff 11
+1243: Techno Riff 12
+1244: Techno Riff 13
+1245: Techno Riff 14
+1246: Techno Riff 15
+1247: Techno Riff Repeat
+1248: TechnoBossa
+1249: TeknoBass
+1250: Throb Pattern
+1251: Trance Bass 2
+1252: TranceBossa
+1253: Trancey Bass
+1254: Tribal
+1255: Woodwind Bass
+
+Category: Gated
+1256: Analog Pad Gate 1
+1257: Analog Pad Gate 2
+1258: Dr. Chopper 1
+1259: Dr. Chopper 2
+1260: Endlessly Rising
+1261: Full Vox Pad 1
+1262: Full Vox Pad 2
+1263: Gated Thing 1
+1264: Gator
+1265: Intransity
+1266: Meditate 2
+1267: New Reggae
+1268: Pad Gate
+1269: Vector Techno Mix
+1270: Abbesque
+1271: Chop Pad w/Bend
+1272: Chop Pad/Arp
+1273: Cinema Pad
+1274: Classic Click
+1275: Cosmology
+1276: Dr. Chopper 3
+1277: Entropy
+1278: Gated Bend
+1279: Gated Thing 2
+1280: Good Old B
+1281: Meditate 3
+1282: OutOfTheClouds
+1283: SuperSawBrass
+1284: Vanishing Planet
+
+Category: Drum
+1285: 16 Beat 1 [All Kits]
+1286: 16 Beat 2 [All Kits]
+1287: 16 Beater 1 [All Kits]
+1288: 16th Beat [All Kits]
+1289: 3/4 Waltz 1 [All Kits]
+1290: 3/4 Waltz 2 [All Kits]
+1291: 3/4 Waltz 3 [All Kits]
+1292: 4 Square Country [All Kits]
+1293: 4 on the floor [All Kits]
+1294: 5/4 Simple [All Kits]
+1295: 6/4 Calming Groove [All Kits]
+1296: 6/8 Country Ballad [All Kits]
+1297: 6/8 Slow Rock 1 [All Kits]
+1298: 6/8 Slow Rock 2 [All Kits]
+1299: 8 Beat 1- All Kits]
+1300: 8 Beat 2 [All Kits]
+1301: BD/HH 16ths [All Kits]
+1302: BD/HH/SD 16ths [All Kits]
+1303: Basic Rock [All Kits]
+1304: Bell Ride Rock [All Kits]
+1305: Big Rocker [All Kits]
+1306: Bon homme [All Kits]
+1307: Boy Bandz [All Kits]
+1308: Country Kick [All Kits]
+1309: Country Pop [All Kits]
+1310: Cross Eyed [All Kits]
+1311: Easy Rider [All Kits]
+1312: GoGo Drum [All Kits]
+1313: Happy Country [All Kits]
+1314: Hard Knock 1 [Dance Kits]
+1315: Heavy Halftime [All Kits]
+1316: Heavy Rock [All Kits]
+1317: In The Pocket [All Kits]
+1318: Killer [All Kits]
+1319: Metal [All Kits]
+1320: Monster Rock 1 [All Kits]
+1321: Monster Rock 2 [All Kits]
+1322: Monster Rock 3 [All Kits]
+1323: New Raw Groove [Dance Kits]
+1324: Offbeat Snare Grv [Dance Kits]
+1325: Pop Groove 1 [All Kits]
+1326: Processed 1 [All Kits]
+1327: Processed 2 [All Kits]
+1328: ROCKER [All Kits]
+1329: Reggae Pop [All Kits]
+1330: Reggae Rock [All Kits]
+1331: Reggae Sparce [All Kits]
+1332: Reggae Swag [All Kits]
+1333: Ride Pop 1 [All Kits]
+1334: Ride Pop 2 [All Kits]
+1335: Ride Rock [All Kits]
+1336: Riderock [Acoustic Kits]
+1337: Rock Groove [All Kits]
+1338: Rock Ride [All Kits]
+1339: Rock Shoes [Rock Kits]
+1340: Rock [All Kits]
+1341: Rocking Rides [All Kits]
+1342: Rollin [All Kits]
+1343: Santa Cruz [All Kits]
+1344: Sidestick Groove [All Kits]
+1345: SlowDrum 2 [All Kits]
+1346: SlowRock [All Kits]
+1347: Steady Rock [All Kits]
+1348: Stinky 1 [All Kits]
+1349: Stinky 2 [All Kits]
+1350: Straight Beat 1 [All Kits]
+1351: Stream Drum [All Kits]
+1352: Surf Rock [All Kits]
+1353: Texas [All Kits]
+1354: Trouble Rage [All Kits]
+1355: Trouble Town [All Kits]
+1356: Wacky 16 Beat [All Kits]
+1357: Your Destiny [All Kits]
+1358: Z-Rider [Acoustic Kits]
+1359: 16 Beat Shuffle 1 [All Kits]
+1360: 16 Beat Shuffle 2 [All Kits]
+1361: 3/4 SwWaltz 1 [All Kits]
+1362: 3/4 SwWaltz 2 [All Kits]
+1363: 3/4 SwWaltz 3 [All Kits]
+1364: 4 Beat 1 [Jazz Kit]
+1365: 4 Beat 2 [Jazz Kit]
+1366: 4<->16Beat [Jazz Kit]
+1367: Brush Groove 1 [Jazz Kit]
+1368: Brush Groove 2 [Jazz Kit]
+1369: Brush Swirl [Jazz Brush Kit]
+1370: Cruel Rock [All Kits]
+1371: Deep Love [All Kits]
+1372: Jazz Cymbal&RimSht [All Kits]
+1373: Jazz Cymbal&Tom [All Kits]
+1374: Jazz Drum [Jazz Kit]
+1375: Jazz Swing [All Kits]
+1376: Jazz [All Kits]
+1377: Jazzrides [All Kits]
+1378: Jazzy Sidestick [All Kits]
+1379: ModJazzImprov [All Kits]
+1380: Reggae Lazy 1 [All Kits]
+1381: Reggae Lazy 2 [All Kits]
+1382: Rock Shuffle Groove [All Kits]
+1383: Shuffle 1 [All Kits]
+1384: Shuffle 2 [All Kits]
+1385: Slow Blues Beat 3/4 [All Kits]
+1386: Swing Country Rock [All Kits]
+1387: Swing Groove [All Kits]
+1388: Swing [All Kits]
+1389: 6/8 Mashed Up [Dance Kits]
+1390: Da Hip Gruve [All Kits]
+1391: Dancehall Hop [Dance Kits]
+1392: Darkside [Tricki Kit]
+1393: Downtempo 1 [All Kits]
+1394: Drop a beat [DanceKits]
+1395: Fingerclicka
+1396: Flip Hop [Dance Kits]
+1397: H&L Rap [All Kits]
+1398: Hectic Garage 1 [Hectic Kit]
+1399: Hip-matic [Dance Kits]
+1400: HipHop 01 [Dance Kits]
+1401: HipHop 02 [Dance Kits]
+1402: HipHop 03 [All Kits]
+1403: HipHop 04 [Dance Kits]
+1404: HipHop 05 [All Kits]
+1405: HipHop 06 [All Kits]
+1406: HipHop 07 [All Kits]
+1407: HipHop 08 [All Kits]
+1408: HipHop 09 [All Kits]
+1409: HipHop 10 [All Kits]
+1410: HipHop 11 [All Kits]
+1411: HipHop 12 [All Kits]
+1412: HipHop 13 [All Kits]
+1413: HipHop 14 [All Kits]
+1414: HipHop 15 [All Kits]
+1415: HipHop 16 [All Kits]
+1416: HipHop 17 [All Kits]
+1417: HipHop 18 [Dance Kits]
+1418: HipHop 19 [Dance Kits]
+1419: HipHop 20 [All Kits]
+1420: HipHop 21 [All Kits]
+1421: HipHop 22 [Dance Kits]
+1422: HipHop 23 [All Kits]
+1423: HipHop 24 [All Kits]
+1424: HipHop 25 [All Kits]
+1425: HipHop 26 [All Kits]
+1426: HipHop 27 [Dance Kits]
+1427: HipHop 28 [All Kits]
+1428: HipHop 29 [All Kits]
+1429: HipHop 30 [Dance Kits]
+1430: HipHop 31 [Dance Kits]
+1431: HipHop 32 [All Kits]
+1432: HipHop 33 [All Kits]
+1433: HipHop 34 [Dance Kits]
+1434: HipHop 35 [All Kits]
+1435: HipHop 36 [Dance Kits]
+1436: HipHop 37 [Dance Kits]
+1437: HipHop 38 [Dance Kits]
+1438: HipHop 39 [All Kits]
+1439: HipHop 40 [Dance Kits]
+1440: HipHop 41 [Dance Kits]
+1441: HipHop 42 [All Kits]
+1442: HipHop Family [All Kits]
+1443: HipHop Groove 1 [Dance Kits]
+1444: HipHop Groove 2 [Dance Kits]
+1445: HipHop Groove 3 [Dance Kits]
+1446: HipHop Kombo [All Kits]
+1447: HipHop Momma [All Kits]
+1448: HipHop Persuit [All Kits]
+1449: HipHop Pound [All Kits]
+1450: HipHop Slimy [All Kits]
+1451: HipHop Spying [All Kits]
+1452: HipShuffle [All Kits]
+1453: Hiphop funkpop [Dance Kits]
+1454: HiphopEightBarPop [Dance Kits]
+1455: HipperHop [All Kits]
+1456: Hop:Arendbee [All Kits]
+1457: Hyper-HoP [All Kits]
+1458: Jazzy Hop [All Kits]
+1459: Knock On [Tricki Kit]
+1460: Mr Tricki [Tricki Kit]
+1461: Mr TrickiLove [Tricki Kit]
+1462: Nature RnB [Dance Kits]
+1463: New RnB [Some Kits]
+1464: Nod ya head [Tricki Kit]
+1465: Noise Hop 1 [Dance Kits]
+1466: NuHop Grv 1 [All Kits]
+1467: NuHop Grv 2 [All Kits]
+1468: NuHop Grv 3 [Dance Kits]
+1469: PopHop [Dance Kits]
+1470: R'n'B 01 [Dance Kits]
+1471: R'n'B 02 [All Kits]
+1472: R'n'B 03 [All Kits]
+1473: R'n'B 04 [All Kits]
+1474: R'n'B 05 [All Kits]
+1475: R'n'B 06 [All Kits]
+1476: R'n'B 07 [All Kits]
+1477: SkippyHop [Dance Kits]
+1478: SlowDrum 1 [All Kits]
+1479: Smooth HipHop [All Kits]
+1480: Smooth Hop [All Kits]
+1481: Synco hiphop [Dance Kits]
+1482: Tiktok [Dance Kits]
+1483: Tricki Beat [All Kits]
+1484: Tricki Licky [Some Kits]
+1485: Tricki Soulfunk [Some Kits]
+1486: Trip Hop [All Kits]
+1487: Trippy Tricki [Tricki Kit]
+1488: Urban 1 [Mashed Kit]
+1489: Urbane [Dance Kits]
+1490: 16 Beat 3 [Dance Kits]
+1491: 16 Beater 2 [Dance Kits]
+1492: 2 Step 01 [Dance Kits]
+1493: 2 Step 02 [Dance Kits]
+1494: 2 Step 03 (VJS) [House Kit]
+1495: 2 Step 04 [Some Kits]
+1496: 2 Step 05 [All Kits]
+1497: 2 Step 06 [Dance Kits]
+1498: 2 Step 07 [All Kits]
+1499: 2 Step 08 [Dance Kits]
+1500: 2 Step 09 [Dance Kits]
+1501: 2 Step 10 [All Kits]
+1502: 2 Step 11 [All Kits]
+1503: 2 Step 12 [All Kits]
+1504: 2 Step Garage 1 [All Kits]
+1505: 2 Step Garage 2 [All Kits]
+1506: 70's Funk House [Dance Kits]
+1507: 80'sMachineGroove [Dance Kits]
+1508: Acid [All Kits]
+1509: AcidJazzFunk [All Kits]
+1510: Addicted to DnB [Dance Kits]
+1511: Ana Beat 1 [Some Kits]
+1512: Ana Beat 2 [All Kits]
+1513: Ana Beat 3 [All Kits]
+1514: Ana Beat 4 [All Kits]
+1515: Ana Beat 5 [All Kits]
+1516: Analog Machine [Dance Kits]
+1517: BIG you up! [Dance Kits]
+1518: BOOGER BEAT [Dance Kits]
+1519: Bangin DnB [Dance Kits]
+1520: Basic Euro Beat [Dance Kits]
+1521: Basic House [Dance Kits]
+1522: BeatBoy [All Kits]
+1523: Bend Beat 1 [All Kits]
+1524: Bend Beat 2 [Dance Kits]
+1525: Bend Beat 3 [Dance Kits]
+1526: Bend/Chop Groove 1 [All Kits]
+1527: Bend/Chop Groove 2 [All Kits]
+1528: BigBeat 01 [All Kits]
+1529: BigBeat 02 [Dance Kits]
+1530: BigBeat 03 [All Kits]
+1531: BigBeat 04 [All Kits]
+1532: BigBeat 05 [Some Kits]
+1533: BigBeat 06 [Dance Kits]
+1534: BigBeat 07 [All Kits]
+1535: BigBeat 08 [Dance Kits]
+1536: BigBeat 09 [All Kits]
+1537: BigBeat 10 [All Kits]
+1538: BigBeat 11 [All Kits]
+1539: BigBeat 12 [Dance Kits]
+1540: BigBeat 13 [Dance Kits]
+1541: Build Up 4 Floor [Dance Kits]
+1542: BusyFilterTrance [Dance Kits]
+1543: Cars [Dance Kits]
+1544: Choppy 1 [All Kits]
+1545: Choppy 2 [All Kits]
+1546: Choppy 3 [All Kits]
+1547: Choppy 4 [All Kits]
+1548: Chopster [All Kits]
+1549: Chord-Floor [All Kits]
+1550: Chord-Floor [All Kits]
+1551: Classic DnB [Dance Kits]
+1552: Cyber Breaks [All Kits]
+1553: D'n'B Gate 1 [Dance Kits]
+1554: D'n'B Gate 2 [Dance Kits]
+1555: D'n'B Gate 3 [Dance Kits]
+1556: D'n'B Gate 4 [All Kits]
+1557: Dance Rock [Acoustic Kits]
+1558: DanceHall 1 [All Kits]
+1559: DanceHall 2 [All Kits]
+1560: DanceHall 3 [All Kits]
+1561: DanceHall 4 [All Kits]
+1562: Deep Trance [Dance Kits]
+1563: DeepHouse [All Kits]
+1564: Delhicatessen [Dance Kits]
+1565: Dirty Cuts 1 [Dance Kits]
+1566: Dirty Cuts 2 [All Kits]
+1567: DiscoHeat [Dance Kits]
+1568: Discohouse [Dance Kits]
+1569: Downtempo 2 [All Kits]
+1570: Downtempo 3 [Dance Kits]
+1571: Downtempo 4 [Dance Kits]
+1572: Downtempo 5 [Dance Kits]
+1573: Downtempo 6 [All Kits]
+1574: Downtempo 7 [All Kits]
+1575: Downtempo 8 [All Kits]
+1576: Downtempo 9 [All Kits]
+1577: Drum Machine [Dance Kits]
+1578: Drum n Dancehall [Dance Kits]
+1579: Drum'n'Bass 01 [Dance Kits]
+1580: Drum'n'Bass 02 [Dance Kits]
+1581: Drum'n'Bass 03 [All Kits]
+1582: Drum'n'Bass 03 [Dance Kits]
+1583: Drum'n'Bass 04 [All Kits]
+1584: Drum'n'Bass 05 [All Kits]
+1585: Drum'n'Bass 06 [All Kits]
+1586: Drum'n'Bass 07 [HipHop Kit]
+1587: Drum'n'Bass 09 [Dance Kits]
+1588: Drum'n'Bass 10 [All Kits]
+1589: Drum'n'Bass 11 [All Kits]
+1590: Drum'n'Bass 12 [All Kits]
+1591: Drum'n'Bass 13 [All Kits]
+1592: Drum'n'Bass 14 [All Kits]
+1593: Drum'n'Bass 15 [All Kits]
+1594: Drum'n'Bass 16 [Dance Kits]
+1595: Drum'n'Bass 17 [Dance Kits]
+1596: Drum'n'Bass 18 [Dance Kits]
+1597: Drum'n'Bass 19 [Dance Kits]
+1598: Drum'n'Bass 20 [Dance Kits]
+1599: Drum'n'Bass 21 [All Kits]
+1600: Drum'n'Bass 22 [Dance Kits]
+1601: Drum'n'Bass 23 [Dance Kits]
+1602: Drum'n'Bass 24 [Dance Kits]
+1603: Drum'n'Bass 25 [Dance Kits]
+1604: Drum'n'Bass 26 [Dance Kits]
+1605: Drum'n'Bass 27 [Dance Kits]
+1606: Drum'n'Bass 28 [Dance Kits]
+1607: Drum'n'Bass 29 [Dance Kits]
+1608: Drum'n'Bass 30 [All Kits]
+1609: Drum'n'Bass 31 [Dance Kits]
+1610: Drum'n'Bass 32 [All Kits]
+1611: Drummanbass [All Kits]
+1612: Elect PUNK [Dance Kits]
+1613: Electro 1 [All Kits]
+1614: Electro 2 [All Kits]
+1615: Electro 3 [All Kits]
+1616: Electro Beat [Dance Kits]
+1617: Electro Speed [Dance Kits]
+1618: ElectroFreestyle [Dance Kits]
+1619: Electrogroove [Dance Kits]
+1620: FunkUp Garage [Dance Kits]
+1621: Funky Trance [Dance Kits]
+1622: FunkyFlares [Dance Kits]
+1623: FunkyHouse [Dance Kits]
+1624: Future Funk [Dance Kits]
+1625: GarageHouse 1 [All Kits]
+1626: GarageHouse 2 [All Kits]
+1627: Gated D'n'B [Some Kits]
+1628: Gettin Down [All Kits]
+1629: Goa Drums [Dance Kits]
+1630: Groove w/RptTimeEnv [All Kits]
+1631: Groovy Garage [Dance Kits]
+1632: Hard House [Dance Kits]
+1633: Hard Knock 2 [All Kits]
+1634: Hard Tek [All Kits]
+1635: Hard Trance 1 [Dance Kits]
+1636: Hard Trance 2 [Dance Kits]
+1637: Hard Trance 3 [Dance Kits]
+1638: Hard&Fast [Dance Kits]
+1639: Hectic Garage 2 [Mashed Kit]
+1640: Hi NRG [Dance Kits]
+1641: House 01 [Dance Kits]
+1642: House 02 [Some Kits]
+1643: House 03 [All Kits]
+1644: House 04 [Dance Kits]
+1645: House 05 [Some Kits]
+1646: House 06 [Some Kits]
+1647: House 07 [Some Kits]
+1648: House 08 [Some Kits]
+1649: House 09 [Some Kits]
+1650: House 10 [Some Kits]
+1651: House 11 [Some Kits]
+1652: House 12 [All Kits]
+1653: House 13 [Some Kits]
+1654: House 14 [Dance Kits]
+1655: House 15 [Dance Kits]
+1656: House 16 [Dance Kits]
+1657: House 17 [All Kits]
+1658: House 4x4 [All Kits]
+1659: House Breaks [All Kits]
+1660: House Cym [Dance Kits]
+1661: House Me [All Kits]
+1662: House Me [Dance Kits]
+1663: House4onFloor [Dance Kits]
+1664: Hyper acid [Dance Kits]
+1665: IDM 1 [All Kits]
+1666: IDM 2 [All Kits]
+1667: IDM 3 [All Kits]
+1668: IDM 4 [All Kits]
+1669: IDM 5 [All Kits]
+1670: In Da Howse 1 [Dance Kits]
+1671: In Da Howse 2 [Dance Kits]
+1672: In Da Howse 3 [Dance Kits]
+1673: JUNGLEBOOGIE [All Kits]
+1674: Jump Up DnB [All Kits]
+1675: Junglaya [All Kits]
+1676: Jungle 1 [Dance Kits]
+1677: Jungle 2 [Dance Kits]
+1678: Kontemplate [All Kits]
+1679: Laid Groove [Dance Kits]
+1680: Live Mix Loop 1 [Dance Kits]
+1681: Live Mix Loop 2 [Dance Kits]
+1682: Live Mix Loop 3 [Dance Kits]
+1683: Live Mix Loop 4 [Dance Kits]
+1684: Lounge Beat Box [Some Kits]
+1685: Machine Groove [All Kits]
+1686: Mash Trancy [Dance Kits]
+1687: Mashed Garage [Dance Kits]
+1688: Mashed Uk Garage [Dance Kits]
+1689: Minimal 1 [All Kits]
+1690: Minimal 2 [All Kits]
+1691: Minimal 3 [Some Kits]
+1692: New Disco 1 [All Kits]
+1693: New Disco 2 [All Kits]
+1694: New DnB [All Kits]
+1695: New Tek Hus [Dance Kits]
+1696: Noise DnB 1 [Dance Kits]
+1697: Noise DnB 2 [Dance Kits]
+1698: Noise Hop 3 [Dance Kits]
+1699: Noise Hop 4 [Dance Kits]
+1700: Nu Skool 1 [All Kits]
+1701: Nu Skool 2 [Dance Kits]
+1702: NuPop [All Kits]
+1703: NuSkoolBreaks [All Kits]
+1704: NuStep Garage [All Kits]
+1705: Nuclear [Acoustic Kits]
+1706: Ol Skool Yo [Dance Kits]
+1707: Old Skool Elec 1 [Dance Kits]
+1708: Old Skool Elec 2 [All Kits]
+1709: Old Skool Elec 3 [All Kits]
+1710: PopDance [All Kits]
+1711: PopPop [All Kits]
+1712: PopRap [Dance Kits]
+1713: Princessa [Dance Kits]
+1714: ProgHouse 1 [All Kits]
+1715: ProgHouse 2 [All Kits]
+1716: ProgHouse 3 [All Kits]
+1717: Psycho Kit [Dance Kits]
+1718: Psycho Phunk [Dance Kits]
+1719: Psycho Tekno [Dance Kits]
+1720: R'n'B 08 [All Kits]
+1721: R'n'B 09 [All Kits]
+1722: R'n'B 10 [All Kits]
+1723: R'n'B 11 [All Kits]
+1724: Raggaz [All Kits]
+1725: Random Beat [All Kits]
+1726: Raw Kit [All Kits]
+1727: Reggae [All Kits]
+1728: Remix City 1 [Dance Kits]
+1729: Remix City 2 [Dance Kits]
+1730: Remix City 3 [Dance Kits]
+1731: Rev.Break 1 [Dance Kits]
+1732: Rev.Break 2 [All Kits]
+1733: Rhythm Box Bossa [All Kits]
+1734: Rufus 1 [Dance Kits]
+1735: SFX Birdman [All Kits]
+1736: SFX Shaman [All Kits]
+1737: SFX Talksie [All Kits]
+1738: SFX Thief [Some Kits]
+1739: Sinistar [Dance Kits]
+1740: Spare Me [Dance Kits]
+1741: Sparse R&B [All Kits]
+1742: SqGarage [All Kits]
+1743: Std.Garage [Dance Kits]
+1744: Stinky 3 [All Kits]
+1745: Stinky 4 [Dance Kits]
+1746: Stinky 5 [Dance Kits]
+1747: Straight Beat 2 [Dance Kits]
+1748: Striker [All Kits]
+1749: Synchro [All Kits]
+1750: Syncro [All Kits]
+1751: Techno 01 [Dance Kits]
+1752: Techno 02 [All Kits]
+1753: Techno 03 [Some Kits]
+1754: Techno 04 [All Kits]
+1755: Techno 05 [Dance Kits]
+1756: Techno 06 [Dance Kits]
+1757: Techno 07 [Some Kits]
+1758: Techno 08 [Some Kits]
+1759: Techno 09 [Dance Kits]
+1760: Techno 10 [Some Kits]
+1761: Techno 11 [Some Kits]
+1762: Techno 12 [Some Kits]
+1763: Techno 13 [Some Kits]
+1764: Techno 14 [Dance Kits]
+1765: Techno 15 [Dance Kits]
+1766: Techno 16 [Dance Kits]
+1767: Techno 17 [Dance Kits]
+1768: Techno Rand [Dance Kits]
+1769: That'sILL Yo! [All Kits]
+1770: Throaty Groove [Dance Kits]
+1771: Trance 1 [Dance Kits]
+1772: Trance 2 [Dance Kits]
+1773: Trance 3 [All Kits]
+1774: Trance 4 [All Kits]
+1775: Trance 5 [Dance Kits]
+1776: Trance Club [Dance Kits]
+1777: Trance4Floor [Dance Kits]
+1778: TranceHouse [Dance Kits]
+1779: Trbl Skool [All Kits]
+1780: Trbl Think [Dance Kits]
+1781: Trip House [All Kits]
+1782: Trouble [All Kits]
+1783: Two Step Garage [All Kits]
+1784: U-T E K N O [Dance Kits]
+1785: UK House 1 [All Kits]
+1786: Urban 2 [Mashed Kit]
+1787: VintageTrance
+1788: Wacky [Dance Kits]
+1789: Whiplash Trance [Dance Kits]
+1790: Wooden Beat 3 [Dance Kits]
+1791: `Tude [All Kits]
+1792: 6/8 Country [All Kits]
+1793: 7/8 Groove [All Kits]
+1794: 90's Funk [All Kits]
+1795: Abstract Groove [All Kits]
+1796: Bossa Nova [All Kits]
+1797: Copa With This [All Kits]
+1798: Degree Of Funk [All Kits]
+1799: Echo Clap [All Kits]
+1800: Echo Groove [All Kits]
+1801: Fourtified Funk [All Kits]
+1802: Funk 1 (32) [All Kits]
+1803: Funk 2 [All Kits]
+1804: Funk Jazz 1 [All Kits]
+1805: Funk Jazz 2 Brush [All Kits]
+1806: Funk Jazz 3 [Dance Kits]
+1807: Funk Jazz 4 [All Kits]
+1808: Funk Jazz 5 [All Kits]
+1809: Funk Rhythm 1 [All Kits]
+1810: Funk Rhythm 2 [All Kits]
+1811: Funk Rhythm 3 [All Kits]
+1812: Funk Rock 1 [All Kits]
+1813: Funk Rock 2 [All Kits]
+1814: Funk-Hop [All Kits]
+1815: Funky MF [All Kits]
+1816: Funky Studio RnB [All Kits]
+1817: Funky Town [All Kits]
+1818: Fusion Groove 7/8 [All Kits]
+1819: Fusion Groove [All Kits]
+1820: Fusionfunk [All Kits]
+1821: Hop/Funk [All Kits]
+1822: In Triplicate Drums [All Kits]
+1823: King Groove [All Kits]
+1824: Latin Contemp. [Acoustic Kits]
+1825: Latin Groove 3/4 [All Kits]
+1826: Latin [All Kits]
+1827: Old School Funk [All Kits]
+1828: Pop Funk [All Kits]
+1829: Pop Groove 2 [All Kits]
+1830: Rand Funk 1 [All Kits]
+1831: Rand Funk 2 [All Kits]
+1832: Rufus 2 [All Kits]
+1833: Shuffle Funk [Acoustic Kits]
+1834: Sly Pop [All Kits]
+1835: Smooth Groove [All Kits]
+1836: Snooper [All Kits]
+1837: Soul Funk [All Kits]
+1838: Soul Popper [All Kits]
+1839: Studio RnB [Acoustic Kits]
+1840: Stutter Hop [All Kits]
+1841: Wooden Beat 2 [All Kits]
+1842: Bongo Lp 1 [Vinyl Loop Kit]
+1843: Bongo Lp 2 [Vinyl Loop Kit]
+1844: Bossa Mambo [Vinyl Loop Kit]
+1845: Drum Loop 1 [Vinyl Loop Kit]
+1846: Drum Loop 2 [Vinyl Loop Kit]
+1847: Drum Loop 3 [Vinyl Loop Kit]
+1848: Drum Loop 4 [Vinyl Loop Kit]
+1849: FunkyEgyptian [Vinyl Loop Kit]
+1850: No Worries [Vinyl Loop Kit]
+1851: Old Vinyl [Vinyl Loop Kit]
+1852: OldSkool Vinyl [Vinyl Loop Kit]
+1853: Session Funk [Vinyl Loop Kit]
+1854: Shaker Pat. 1 [Vinyl Loop Kit]
+1855: Shaker Pat. 2 [Vinyl Loop Kit]
+1856: Shaker Pat. 3 [Vinyl Loop Kit]
+1857: Slice Groove 1 [Vinyl Loop Kit]
+1858: Slice Groove 2 [Vinyl Loop Kit]
+1859: Slice Groove 3 [Vinyl Loop Kit]
+1860: Swing Tablas [Vinyl Loop Kit]
+1861: Tabla Time [Vinyl Loop Kit]
+1862: Vinyl Disco [Vinyl Loop Kit]
+1863: Vinyl happy [Vinyl Loop Kit]
+1864: Add on Congas [All Kits]
+1865: Add on SlowCongas [All Kits]
+1866: Add on Top Perc [All Kits]
+1867: AfricaThunder1 [Orig Perc Kit]
+1868: AfricaThunder2 [Orig Perc Kit]
+1869: African Dance [All Kits]
+1870: African Stomp [All Kits]
+1871: Asian Perc [Orch&Ethnic Kit]
+1872: Big Ens. 1 [Brazil Perc Kit]
+1873: Big Ens. 2 [Brazil Perc Kit]
+1874: Big Ens. 3 [Brazil Perc Kit]
+1875: Bongo&Shaker [Cuban Perc Kit]
+1876: Camel Strut [Orch&Ethnic Kit]
+1877: Conga 1 [Cuban Perc Kit]
+1878: Conga 2 [Cuban Perc Kit]
+1879: Conga 3 [Cuban Perc Kit]
+1880: Conga Variation [Perc Kits]
+1881: Conga&Djembe [Orig Perc Kit]
+1882: Conga&Shaker [Orig Perc Kit]
+1883: Djembalia 1 [Orig Perc Kit]
+1884: Djembalia 2 [Dance Kits]
+1885: El Dugan [Orig Perc Kit]
+1886: Ethnic Perc 1 [Perc Kit]
+1887: Ethnic Perc 2 [Perc Kits]
+1888: EthnicDance [Orig Perc Kit]
+1889: Finger Snap [Orig Perc Kit]
+1890: Funky Perc [Orig Perc Kit]
+1891: Funky Snake [Orch&Ethnic Kit]
+1892: Hat & Percussion [Some Kits]
+1893: HipHop 43 [Brazil Perc Kit]
+1894: HipHop 44 [Brazil Perc Kit]
+1895: HipHop 45 [Brazil Perc Kit]
+1896: HipHop 46 [Orch&Ethnic Kit]
+1897: HipHop Junkie [Orch&Ethnic Kit]
+1898: Hipster [Orig Perc Kit]
+1899: House 18 [Cuban Perc Kit]
+1900: House 19 [Cuban Perc Kit]
+1901: House 20 [Cuban Perc Kit]
+1902: Ireland [Orig Perc Kit]
+1903: Jaws Harp [Misc Kit]
+1904: Jazz Cymbal&Conga [All Kits]
+1905: Jazz Perc [All Kits]
+1906: Jazzy Daddy [Perc
+1907: Jungle Fever [Cuban Perc Kit]
+1908: Latin Perc 1 [Perc Kits]
+1909: Latin Perc 2 [Perc Kits]
+1910: Latin Perc 3 [Perc Kits]
+1911: Latin Rap [Orig Perc Kit]
+1912: Light Perc [Orig Perc Kit]
+1913: LightPop&Clap [Orig Perc Kit]
+1914: Mambo Mamma [Cuban Perc Kit]
+1915: Misc Perc [Perc Kits]
+1916: Multi Perc 1 [Perc Kits]
+1917: Multi Perc 2 [Perc Kits]
+1918: Orch Perc [Orch&Ethnic Kit]
+1919: Perc 1 [Orig Perc Kit]
+1920: Perc 2 [Orig Perc Kit]
+1921: Perc Groove [Orig Perc Kit]
+1922: Percussion [Orig Perc Kit]
+1923: Perky [Cuban Perc Kit]
+1924: Salsa Perc [Orig Perc Kit]
+1925: Shaker 1 [Brazil Perc Kit]
+1926: Shaker 2 [Brazil Perc Kit]
+1927: Shaker 3 [Cuban Perc Kit]
+1928: Shaker 4 [Cuban Perc Kit]
+1929: Shuffle Perc 1 [Orig Perc Kit]
+1930: Shuffle Perc 2 [Orig Perc Kit]
+1931: Simple Perc [Orig Perc Kit]
+1932: Simple Shaker 3/4 [Perc Kit]
+1933: Smooth Samba 1 [Orig Perc Kit]
+1934: Smooth Samba 2 [Orig Perc Kit]
+1935: Soul Ens. 1 [Brazil Perc Kit]
+1936: Soul Ens. 2 [Brazil Perc Kit]
+1937: Soul Ens. 3 [Brazil Perc Kit]
+1938: Soul Ens. 4 [Brazil Perc Kit]
+1939: Steady Groover [All Kits]
+1940: Tablas 1 [Orch&Ethnic Kit]
+1941: Tablas 2 [Orch&Ethnic Kit]
+1942: Tablas 3 [Orch&Ethnic Kit]
+1943: Tablas 4 [Orch&Ethnic Kit]
+1944: Tablas 5 [Orch&Ethnic Kit]
+1945: Tablas 6 [Orch&Ethnic Kit]
+1946: Tablas 7 [Orch&Ethnic Kit]
+1947: Tablas 8 [Orch&Ethnic Kit]
+1948: Tablature [Orig Perc Kit]
+1949: Tambo-Shaker 1 [Orig Perc Kit]
+1950: Tambo-Shaker 2 [Perc Kits]
+1951: TribalCouncil [Orch&Ethnic Kit]
+1952: Udo [Misc Kit]
+1953: Wave Seq Conga [Acoustic Kits] 
+1954: 16th DrumSolo [All Kits]
+1955: Add on Rap V driver
+1956: Add on Vocoder driver
+1957: African 12/8 [Acoustic Kits]
+1958: Afro Toms [Acoustic Kits]
+1959: Berimbau [Brazil Perc Kit]
+1960: Big Booms [Orch&Ethnic Kit]
+1961: Cymbal Crash [All Kits]
+1962: Dramatic 1 [Orch&Ethnic Kit]
+1963: Dramatic 2 [Orch&Ethnic Kit]
+1964: Dramatic 3 [Orch&Ethnic Kit]
+1965: Dramatic 4 [Orch&Ethnic Kit]
+1966: Dramatic 5 [Orch&Ethnic Kit]
+1967: Drum Fills [All Kits]
+1968: Drum Roller [All Kits]
+1969: Mega Drum Hit
+1970: MilitaryMarch [Orch&Ethnic Kit]
+1971: Olde Celtic [Cuban Perc Kit]
+1972: Orch Army [Orch&Ethnic Kit]
+1973: Orch. Bs &Sn [Orch&Ethnic Kit] 
+1974: Orch.Perc 1 [Orch&Ethnic Kit] 
+1975: Orch.Perc 2 [Orch&Ethnic Kit]
+1976: Orch.Perc 3 [Orch&Ethnic Kit]
+1977: Orch.Perc 4 [Orch&Ethnic Kit]
+1978: Orch.Perc 5 [Orch&Ethnic Kit]
+1979: Orch.Perc 6 [Orch&Ethnic Kit]
+1980: Orch.Perc 7 [Orch&Ethnic Kit]
+1981: Solo-32nds [Acoustic Kits]
+1982: Solo-press roll [Acoustic Kits]
+1983: Solo-toms 16ths [Acoustic Kits]
+1984: Solo-triplets [Acoustic Kits]
+1985: Sousa March [Orch&Ethnic Kit]
+1986: Timpani Part
+1987: Vocoderdriver [Mashed Kit]
+
+Category: Wavesequence
+1988: Aggressive WaveSeq
+1989: Arp Melody WS
+1990: Bass Upbeats WS
+1991: Duration Bass WS
+1992: Ethereal Twinklings WS
+1993: Improvise It WS
+1994: Melodic/Chords WS
+1995: Root 'n' Flute WS
+1996: Slow Pad Builder w/pulse WS
+1997: Sparse Notes WS
+1998: Trance WS
+1999: Vintage Synth Arp WS
+2000: WS Random
+2001: Wave Seq Gliss
+2002: WaveSeq 1 (Bnd/Rpt)
+2003: FX Trigger WS
+2004: In Triplicate WS
+2005: Melodic Mover WS
+2006: Multi Instrument WS
+2007: QED in 7 + WS
+2008: Synth Hit Wavesequence
+2009: Tremolo Thing WS
+2010: Vocoder Perc WS
+2011: WaveSeq 2 (Ind.Phases)
+2012: WaveSeq Comp
+
+Category: CC
+2013: CC83 alternator
+2014: Cutoff + Reso cycle
+2015: Dual Env Gen 1
+2016: Dual LFOs-Saw/Saw
+2017: Dual LFOs-Saw/Sqr
+2018: Dual LFOs-Saw/Tri
+2019: Dual LFOs-Sqr/Saw
+2020: Dual LFOs-Sqr/Sqr
+2021: Dual LFOs-Sqr/Tri
+2022: Dual LFOs-Tri/Saw
+2023: Dual LFOs-Tri/Sqr
+2024: Dual LFOs-Tri/Tri
+2025: JS+y 2bar cycle
+2026: Ribbon Clamp Env 1
+2027: Ribbon Move Env 1
+2028: VJS motion
+2029: CC11 gate fx 1
+2030: CC11 gate fx 2
+2031: JS-Y Ramp down
+2032: Pitchbend Upbeat Jitter
+2033: Swirly gate fx
+
+Category: Real-Time
+2034: Clav Snap RT
+2035: Compu-shift
+2036: Cyborg Hit
+2037: Direct Index 1
+2038: Direct Index 2
+2039: Distant Lights
+2040: Dyno Tyne EP RT
+2041: Filter Sweep
+2042: Melodic Repeat!
+2043: RT Harmony/Bend
+2044: RT Melodic Repeat
+2045: RT Real-Time Bend
+2046: RT Repeats/Bend
+2047: Tempo Env Repeats

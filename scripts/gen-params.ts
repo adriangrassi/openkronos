@@ -1,4 +1,4 @@
-// Parses KORG's text tables (research/korg-sysex, licensed, not in git) into src/generated/params.json.
+// Parses KORG's text tables (research/korg-sysex, KORG's files, included for building) into src/generated/params.json.
 import { mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import type { ParamTables, Row } from "../src/core/params/params.ts";

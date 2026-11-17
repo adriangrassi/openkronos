@@ -20,12 +20,11 @@ OpenKronos can explain controls, answer questions about the open sound and make 
 
 Answers can be read aloud, out of the box with your computer's own voices (nothing to set up), or with a speech server of your own or ElevenLabs. See [docs/SPEECH-SETUP.md](docs/SPEECH-SETUP.md).
 
-## Material that is not in this repository
+## KORG documents in this repository
 
-`research/` and `src/generated/` are listed in `.gitignore`. They hold KORG's own MIDI implementation text and Parameter Guide, which are not ours to publish, and the parameter tables generated from them.
+`research/` holds KORG's own documentation, copied here only so the project builds from a fresh clone: the MIDI implementation text tables (`research/korg-sysex/`) and the Parameter Guide text (`research/param-guide.txt`). The build turns them into `src/generated/` (parameter tables and help text), which is built, not committed.
 
-- The Parameter Guide (`research/param-guide.txt`) is optional. Without it the app works, and the AI's parameter lookup just returns nothing.
-- The generators that run before `npm run build` read KORG's MIDI implementation files from `research/korg-sysex/`. A fresh clone does not have them, so you must supply your own copy of those files to build. They are not distributed here.
+These files are KORG Inc.'s copyright and are not covered by the MIT licence. If KORG or its representatives want them removed, open an issue and they will be taken out. The Kronos factory sound files and the page screenshots are not included.
 
 ## Licence and support
 

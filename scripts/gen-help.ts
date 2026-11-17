@@ -1,4 +1,4 @@
-// Builds src/generated/help.json from KORG's Parameter Guide text (research/param-guide.txt: private, gitignored, never committed). Without the text the file is {} and the app shows no help icons.
+// Builds src/generated/help.json from KORG's Parameter Guide text (research/param-guide.txt, KORG's text, included for building). Without the text the file is {} and the app shows no help icons.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { parseGuide } from "../src/core/pages/helpParse.ts";
