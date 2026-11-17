@@ -2,6 +2,15 @@
 
 An original editor and librarian for the KORG Kronos keyboard, built with Electron, React and TypeScript. It opens and saves `.PCG` files, lets you browse, rename, copy and swap Programs, Combinations, Set Lists, Drum Kits and Wave Sequences, pulls sounds from the keyboard and sends them back over USB MIDI (with a built-in simulated Kronos for working without the hardware), and edits Program, Combination, Global and effect parameters with graphic panels where they help. Nothing is written to a keyboard without an explicit action, and a backup file is written first.
 
+
+![OpenKronos editing a Program bank](docs/screenshots/editor.png)
+
+<details><summary>Start page</summary>
+
+![OpenKronos start page](docs/screenshots/start.png)
+
+</details>
+
 ## Download (Windows and Mac)
 
 Get the latest build from the [Releases page](https://github.com/adriangrassi/openkronos/releases/latest):
