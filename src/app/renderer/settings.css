@@ -1,0 +1,35 @@
+.settings-back { position: fixed; inset: 0; background: var(--scrim); display: flex; align-items: center; justify-content: center; z-index: 50; }
+.settings-dialog { width: min(520px, 92vw); max-height: 92vh; overflow-y: auto; background: var(--panel); border: 1px solid var(--modal-border); border-radius: var(--r-modal); padding: 20px; color: var(--text); }
+.settings-dialog h2 { margin: 0 0 16px; font-size: var(--fs-2xl); }
+.settings-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.settings-btns { display: flex; align-items: center; gap: 6px; }
+.settings-btns button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+.settings-themes { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; min-width: 0; }
+.settings-theme { display: flex; align-items: flex-start; gap: 8px; cursor: pointer; }
+.settings-theme span { display: flex; flex-direction: column; min-width: 0; }
+.settings-theme input { margin-top: 2px; }
+.settings-swatch { display: inline-block; width: 10px; height: 10px; margin-right: 6px; border-radius: var(--r-xs); }
+.settings-foot { display: flex; justify-content: space-between; margin-top: 16px; }
+.settings-dialog button:focus-visible, .settings-dialog select:focus-visible, .settings-dialog input:focus-visible { outline: var(--focus-w) solid var(--focus); outline-offset: var(--focus-off); }
+:root[data-density="compact"] .row { height: var(--h-xs); }
+.settings-hint { font-size: var(--fs-s); opacity: 0.75; }
+
+/* AI connection: one card per provider. Colours and sizes come from the theme tokens only. */
+.conn { display: flex; flex-direction: column; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.conn h3 { margin: 0; font-size: var(--fs-xl); }
+.conn-card { display: flex; flex-direction: column; gap: 8px; padding: 10px 12px; border: 1px solid var(--line-2); border-radius: var(--r-m); background: var(--well); }
+.conn-card p { margin: 0; }
+.conn-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.conn-use { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.conn-what { font-size: var(--fs-s); color: var(--text-2); }
+.conn-chip { padding: 1px 8px; border: 1px solid var(--line-2); border-radius: var(--r-s); font-size: var(--fs-s); white-space: nowrap; color: var(--muted); }
+.conn-chip[data-chip="ready"] { background: var(--state-ok); border-color: var(--state-ok); color: var(--state-ok-ink); }
+.conn-chip[data-chip="not-signed-in"], .conn-chip[data-chip="unknown"] { border-color: var(--state-warn); color: var(--state-warn); }
+.conn-chip[data-chip="not-installed"] { border-color: var(--state-bad); color: var(--state-bad); }
+.conn-result { font-size: var(--fs-s); }
+.conn-result[data-ok="false"] { color: var(--state-bad); }
+.conn-steps { margin: 0; padding-left: 1.4em; font-size: var(--fs-s); display: flex; flex-direction: column; gap: 6px; }
+.conn-cmd { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.conn-cmd code, .conn-doc code { font-family: var(--font-mono); font-size: var(--fs-s); padding: 1px 4px; background: var(--raise); border-radius: var(--r-xs); overflow-wrap: anywhere; }
+.conn-guide { max-height: 40vh; overflow-y: auto; padding: 8px 12px; border: 1px solid var(--line-2); border-radius: var(--r-m); background: var(--well); }
+.conn .settings-row { border-bottom: 0; padding: 2px 0; }

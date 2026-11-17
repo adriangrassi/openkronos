@@ -1,0 +1,28 @@
+/* Bank tools panel. Uses the app variables; no gradients, shadows or glows. */
+.banktools {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--text);
+  margin: 8px 12px;
+  padding: 10px 12px;
+  max-height: 48vh;
+  overflow: auto;
+  font-size: var(--fs-m);
+}
+.banktools h2 { font-size: var(--fs-xl); margin: 0; }
+.banktools h3 { font-size: var(--fs-m); margin: 0 0 6px; }
+.banktools h4 { font-size: var(--fs-s); margin: 6px 0 2px; }
+.banktools button:focus-visible,
+.banktools input:focus-visible,
+.banktools select:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+.bt-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.bt-block { border-top: 1px solid var(--line); padding: 8px 0; }
+.bt-row, .bt-grid { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-bottom: 6px; }
+.bt-grid label { display: flex; gap: 4px; align-items: center; }
+.bt-grid input[type="number"] { width: 4.5em; }
+.bt-preview { border-collapse: collapse; width: 100%; margin: 6px 0; }
+.bt-preview th, .bt-preview td { border-bottom: 1px solid var(--line); padding: 2px 6px; text-align: left; font-variant-numeric: tabular-nums; }
+.bt-group { margin: 4px 0 8px; }
+.bt-group button, .banktools > .bt-block button { margin: 2px 4px 2px 0; }
+.bt-error { color: var(--accent); margin: 4px 0; }
+.bt-muted { color: var(--text); opacity: 0.7; margin: 2px 0 6px; }

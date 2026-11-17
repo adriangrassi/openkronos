@@ -1,0 +1,11 @@
+/* Sound exchange panel. Uses the app variables; no gradients, shadows or glows. */
+.exchange { background: var(--panel); border: 1px solid var(--line); color: var(--text); margin: 8px 12px; padding: 10px 12px; max-height: 40vh; overflow: auto; font-size: var(--fs-m); }
+.exchange h2 { font-size: var(--fs-xl); margin: 0; }
+.exchange button:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+.ex-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.ex-actions button { margin-right: 6px; }
+.ex-rows { border-collapse: collapse; width: 100%; margin: 8px 0; }
+.ex-rows td { border-bottom: 1px solid var(--line); padding: 2px 6px; }
+.ex-warn { color: var(--accent); }
+.ex-error { color: var(--accent); margin: 4px 0; }
+.ex-status { opacity: 0.8; margin: 4px 0; }

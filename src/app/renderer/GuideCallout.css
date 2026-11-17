@@ -1,0 +1,21 @@
+/* Ask & show walkthrough tip. Above the app, below the floating AI window (.ai-panel is 10). */
+.guide { position: fixed; z-index: 9; display: flex; flex-direction: column; gap: 6px; padding: 12px 14px; background: var(--raise-2); color: var(--text); border: 1px solid var(--accent); border-radius: var(--r-m); box-shadow: 0 6px 20px var(--bg); font-size: var(--fs-m); line-height: var(--lh-s); }
+.guide::before { content: ""; position: absolute; width: 10px; height: 10px; background: var(--raise-2); border: 1px solid var(--accent); transform: rotate(45deg); }
+.guide[data-docked="true"]::before, .guide[data-side="dock"]::before { display: none; }
+.guide[data-side="right"]::before { left: -6px; top: calc(var(--arrow) - 5px); border-right: 0; border-top: 0; }
+.guide[data-side="left"]::before { right: -6px; top: calc(var(--arrow) - 5px); border-left: 0; border-bottom: 0; }
+.guide[data-side="bottom"]::before { top: -6px; left: calc(var(--arrow) - 5px); border-right: 0; border-bottom: 0; }
+.guide[data-side="top"]::before { bottom: -6px; left: calc(var(--arrow) - 5px); border-left: 0; border-top: 0; }
+.guide-step { color: var(--muted); font-size: var(--fs-xs); line-height: var(--lh-2xs); letter-spacing: 0.04em; text-transform: uppercase; }
+.guide-name { font-size: var(--fs-xl); line-height: var(--lh-m); font-weight: 600; }
+.guide-note { color: var(--accent-hi); }
+.guide-vals { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; margin: 2px 0 0; padding: 6px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.guide-vals dt { color: var(--muted); }
+.guide-vals dd { margin: 0; font-weight: 600; }
+.guide p { margin: 0; }
+.guide-lost { color: var(--text-2); }
+.guide-ok { color: var(--accent-hi); }
+.guide-err { color: var(--danger); }
+.guide-buttons { display: flex; align-items: center; gap: 6px; }
+.guide-gap { flex: 1; }
+.guide button { height: 26px; padding: 0 10px; }

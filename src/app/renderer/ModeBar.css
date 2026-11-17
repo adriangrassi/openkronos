@@ -1,0 +1,16 @@
+.mode-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  margin: 8px 0;
+}
+
+.mode-bar button {
+  padding: 4px 2px;
+  font-size: var(--fs-s);
+}
+
+.mode-bar button[data-active="true"] {
+  color: var(--accent);
+  border-color: var(--accent);
+}

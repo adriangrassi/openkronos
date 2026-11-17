@@ -1,0 +1,249 @@
+/* Style A, hardware: the component skins that sit on top of the tokens in themes.css. Every rule is scoped to [data-theme="a"], so Normal and Studio never read this file.
+   Colours, fonts and shadows are tokens only. Rotary encoders and faders are drawn by theme-a/Faces.tsx over the controls own logic; this file paints them. */
+
+/* ---- Rotary encoders: the Kronos view dial and the Simple mode macro knob ---- */
+/* Size tokens (SVG user units, drawn by theme-a/Faces.tsx): ring r26, ticks from r29.4, body r19.5, cap r15.4, indicator r4.5-13.2, in a 72 unit box shown at 58 px.
+   Hairlines use non-scaling-stroke so they stay 1 CSS px at every UI scale and device scale. */
+:root[data-theme="a"] .kc-dial { position: relative; }
+:root[data-theme="a"] .kc-dial-svg { overflow: visible; }
+:root[data-theme="a"] .kc-track, :root[data-theme="a"] .knob-track { fill: none; stroke: var(--key-lo); stroke-width: 3; stroke-linecap: round; }
+:root[data-theme="a"] .kc-arc, :root[data-theme="a"] .knob-value { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linecap: round; }
+:root[data-theme="a"] .ta-detent { stroke: var(--ink-2); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+:root[data-theme="a"] .kc-cap, :root[data-theme="a"] .knob-cap { fill: var(--cap-hi); stroke: var(--key-lo); stroke-width: 1; vector-effect: non-scaling-stroke; }
+:root[data-theme="a"] .kc-dial-svg:hover .kc-cap, :root[data-theme="a"] .knob:hover:not([data-disabled="true"]) .knob-cap { stroke: var(--ink-3); }
+:root[data-theme="a"] .kc-dial-svg:focus-visible { outline: none; }
+:root[data-theme="a"] .ta-focus { fill: none; stroke: none; }
+:root[data-theme="a"] .kc-dial-svg:focus-visible .ta-focus, :root[data-theme="a"] .knob:has(input:focus-visible) .ta-focus { stroke: var(--focus); stroke-width: 2; vector-effect: non-scaling-stroke; }
+:root[data-theme="a"] .kc-dial-svg:focus-visible .kc-cap, :root[data-theme="a"] .knob:has(input:focus-visible) .knob-cap { stroke: var(--key-lo); stroke-width: 1; }
+:root[data-theme="a"] .kc-tick, :root[data-theme="a"] .knob-tick { stroke: var(--ink); stroke-width: 2.4; stroke-linecap: round; }
+:root[data-theme="a"] .ta-tick { fill: none; stroke: var(--ink-3); stroke-width: 1; vector-effect: non-scaling-stroke; }
+:root[data-theme="a"] .ta-tick.ta-long { stroke: var(--ink-2); stroke-width: 1.5; }
+:root[data-theme="a"] .ta-shadow { fill: var(--key-lo); opacity: 0.7; }
+:root[data-theme="a"] .ta-body { fill: var(--knob-lo); stroke: var(--key-lo); stroke-width: 1; vector-effect: non-scaling-stroke; }
+:root[data-theme="a"] .ta-knurl { fill: none; stroke: var(--knob-hi); stroke-width: 1; vector-effect: non-scaling-stroke; opacity: 0.8; }
+:root[data-theme="a"] .ta-lit-edge, :root[data-theme="a"] .ta-shade-edge { fill: none; stroke-width: 1; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+:root[data-theme="a"] .ta-lit-edge { stroke: var(--ink); opacity: 0.28; }
+:root[data-theme="a"] .ta-shade-edge { stroke: var(--key-lo); opacity: 0.7; }
+:root[data-theme="a"] .ta-cap-lit { opacity: 0.4; }
+:root[data-theme="a"] .kc-name { color: var(--ink-2); }
+:root[data-theme="a"] .kc-value { font-family: var(--font-num); color: var(--accent); }
+/* The value shown over a control while it is held, so a thumb or cursor never hides it. */
+:root[data-theme="a"] .ta-tip { position: absolute; left: 50%; top: 0; z-index: 30; transform: translate(-50%, -100%); pointer-events: none; white-space: nowrap; padding: 1px 6px; background: var(--oled); color: var(--display); font-family: var(--font-num); font-size: var(--fs-s); line-height: 1.3; border: 1px solid var(--key-lo); border-radius: var(--r-xs); box-shadow: var(--field-shadow); }
+:root[data-theme="a"] .ta-tip-fader { left: 26px; }
+:root[data-theme="a"] .knob[data-disabled="true"], :root[data-theme="a"] input[type="range"]:disabled { filter: saturate(0); }
+/* The macro knob's own range input is invisible even when disabled; the generic disabled dimming would show its rail. */
+:root[data-theme="a"] .knob input[type="range"]:disabled { opacity: 0; }
+
+/* ---- Faders: a range input made invisible over the drawn scale, slot and cap ---- */
+/* Size tokens: 44 px wide, cap 24 x 28 px (FADER_CAP) on a 4 px slot, a scale of 11 marks (3 long) along the travel; the input is the cap's width and the whole travel. */
+:root[data-theme="a"] .ta-fader { position: relative; flex: none; width: 44px; touch-action: none; }
+:root[data-theme="a"] .ta-fader-svg { position: absolute; inset: 0; overflow: visible; pointer-events: none; }
+:root[data-theme="a"] .ta-fader input[type="range"].kc-fader-input { position: absolute; left: 14px; top: 0; width: 24px; margin: 0; opacity: 0; cursor: ns-resize; }
+:root[data-theme="a"] .ta-fader input[type="range"].kc-fader-input::-webkit-slider-runnable-track { width: 24px; height: auto; border: 0; background: transparent; box-shadow: none; }
+:root[data-theme="a"] .ta-fader input[type="range"].kc-fader-input::-webkit-slider-thumb,
+:root[data-theme="a"] .ta-fader input[type="range"].kc-fader-input:hover:not(:disabled)::-webkit-slider-thumb { width: 24px; height: var(--ta-cap); margin: 0; border: 0; background: transparent; box-shadow: none; }
+:root[data-theme="a"] .ta-slot { fill: var(--key-lo); stroke: var(--rule); stroke-width: 1; vector-effect: non-scaling-stroke; }
+:root[data-theme="a"] .ta-lit { fill: var(--accent); }
+:root[data-theme="a"] .ta-cap-shadow { fill: var(--key-lo); opacity: 0.7; }
+:root[data-theme="a"] .ta-cap { fill: var(--cap-hi); stroke: var(--key-lo); stroke-width: 1; vector-effect: non-scaling-stroke; }
+:root[data-theme="a"] .ta-cap-hi { fill: none; stroke: var(--ink); stroke-width: 1; opacity: 0.22; vector-effect: non-scaling-stroke; }
+:root[data-theme="a"] .ta-groove { fill: none; stroke: var(--key-lo); stroke-width: 1; vector-effect: non-scaling-stroke; }
+:root[data-theme="a"] .ta-groove-hi { fill: none; stroke: var(--knob-hi); stroke-width: 1; opacity: 0.6; vector-effect: non-scaling-stroke; }
+:root[data-theme="a"] .ta-ind { fill: none; stroke: var(--ink); stroke-width: 2; }
+:root[data-theme="a"] .ta-fader:hover .ta-cap { fill: var(--knob-hi); }
+:root[data-theme="a"] .ta-fader:has(input:focus-visible) .ta-cap { stroke: var(--focus); stroke-width: 2; }
+:root[data-theme="a"] .kc-fader-box { background: var(--oled); color: var(--accent); font-family: var(--font-num); border-color: var(--key-lo); box-shadow: var(--field-shadow); }
+
+/* ---- Numeric boxes: an OLED value cell, with a small encoder beside it on the effect pages ---- */
+:root[data-theme="a"] .kc-boxframe { background: var(--oled); border-color: var(--key-lo); box-shadow: var(--field-shadow); }
+:root[data-theme="a"] .kc-boxval { color: var(--display); font-family: var(--font-num); }
+:root[data-theme="a"] .kc-steps button { background: var(--key); }
+:root[data-theme="a"] .kc-steps button:first-child::after { border-bottom-color: var(--ink); }
+:root[data-theme="a"] .kc-steps button:last-child::after { border-top-color: var(--ink); }
+:root[data-theme="a"] .fxp .kc-box { width: auto; min-width: 96px; flex-direction: row; align-items: center; gap: 6px; }
+:root[data-theme="a"] .fxp .kc-box:not(:has(.ta-enc))::before { content: ""; flex: none; width: 28px; }
+:root[data-theme="a"] .fxp .kc-box .kc-boxframe { flex: 1; }
+/* Mini encoder: a 28 px hit area, drawn 1:1 (ring r10.5, body r7.5), beside the numeric box. */
+:root[data-theme="a"] .ta-enc-hit { flex: none; display: block; width: 28px; height: 28px; margin: -2px 0; cursor: ns-resize; touch-action: none; user-select: none; }
+:root[data-theme="a"] .ta-enc { display: block; flex: none; }
+:root[data-theme="a"] .ta-enc-track { fill: none; stroke: var(--key-lo); stroke-width: 2; stroke-linecap: round; }
+:root[data-theme="a"] .ta-enc-arc { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linecap: round; }
+:root[data-theme="a"] .ta-enc-body { fill: var(--knob-lo); stroke: var(--knob-hi); stroke-width: 1; vector-effect: non-scaling-stroke; }
+:root[data-theme="a"] .ta-enc .ta-ind { stroke-width: 1.6; stroke-linecap: round; }
+:root[data-theme="a"] .ta-enc-hit:hover .ta-enc-body { stroke: var(--ink-3); }
+
+/* ---- Sliders in rows and docks: a recessed rail, an amber fill where the row sets --p, a 12 x 20 px cap with two grooves and a centre mark (--thumb-w/--thumb-h in themes.css) ---- */
+:root[data-theme="a"] input[type="range"]::-webkit-slider-runnable-track { background: linear-gradient(var(--accent), var(--accent)) 0 0 / var(--p, 0%) 100% no-repeat, var(--key-lo); box-shadow: var(--field-shadow), 0 1px 0 var(--key-hi); }
+:root[data-theme="a"] input[type="range"]::-webkit-slider-thumb {
+  background:
+    linear-gradient(var(--ink), var(--ink)) 50% 50% / 2px 10px no-repeat,
+    linear-gradient(var(--key-lo), var(--key-lo)) 2px 50% / 1px 10px no-repeat,
+    linear-gradient(var(--key-lo), var(--key-lo)) calc(100% - 2px) 50% / 1px 10px no-repeat,
+    linear-gradient(var(--cap-hi), var(--cap-lo));
+  border: 1px solid var(--key-lo);
+  box-shadow: inset 0 1px 0 var(--knob-hi), 0 2px 2px var(--key-lo);
+}
+:root[data-theme="a"] input[type="range"]:hover:not(:disabled)::-webkit-slider-thumb { border-color: var(--ink-3); }
+:root[data-theme="a"] input[type="range"]:focus-visible { outline: none; }
+:root[data-theme="a"] input[type="range"]:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 2px var(--focus); }
+:root[data-theme="a"] input[type="range"].kc-bar::-webkit-slider-runnable-track { background: linear-gradient(var(--accent), var(--accent)) 0 0 / var(--p) 100% no-repeat, var(--key-lo); }
+
+/* ---- Graphs: single-weight amber lines on the OLED well ---- */
+:root[data-theme="a"] .eg-svg, :root[data-theme="a"] .lfo-svg, :root[data-theme="a"] .g3-svg, :root[data-theme="a"] .eq-svg, :root[data-theme="a"] .fxr-svg, :root[data-theme="a"] .kl-graph, :root[data-theme="a"] .fxp-graph { background: var(--oled); border-color: var(--key-lo); box-shadow: inset 0 0 14px var(--key-lo); }
+:root[data-theme="a"] .kv .eg-svg, :root[data-theme="a"] .kv .g3-svg, :root[data-theme="a"] .kv .lfo-svg { border-color: var(--key-lo); }
+:root[data-theme="a"] .eg-line, :root[data-theme="a"] .lfo-line, :root[data-theme="a"] .g3-line, :root[data-theme="a"] .eq-line, :root[data-theme="a"] .fxg-tap, :root[data-theme="a"] .fxg-spike { fill: none; stroke: var(--accent); stroke-width: 1.5; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; opacity: 1; }
+:root[data-theme="a"] .eg-zero, :root[data-theme="a"] .lfo-zero, :root[data-theme="a"] .g3-zero, :root[data-theme="a"] .g3-frame, :root[data-theme="a"] .fxg .fxg-zero { stroke: var(--hair); stroke-width: 1; vector-effect: non-scaling-stroke; }
+:root[data-theme="a"] .eq-fill { fill: color-mix(in oklab, var(--accent) 10%, transparent); }
+:root[data-theme="a"] .eg-point, :root[data-theme="a"] .g3-handle { fill: var(--oled); stroke: var(--accent); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+:root[data-theme="a"] .eg-point:hover { fill: var(--accent); }
+:root[data-theme="a"] .fxg .fxg-dot { fill: var(--accent); stroke: var(--oled); stroke-width: 1; }
+:root[data-theme="a"] .fxg .fxg-bar { fill: color-mix(in oklab, var(--accent) 16%, transparent); stroke: var(--accent); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+:root[data-theme="a"] .fxg .fxg-diag { stroke: var(--oled-dim); stroke-width: 1; vector-effect: non-scaling-stroke; }
+:root[data-theme="a"] .fxg .fxg-thr { stroke: var(--accent); stroke-width: 1; vector-effect: non-scaling-stroke; }
+:root[data-theme="a"] .fxr-edge-main, :root[data-theme="a"] .fxr-edge-chain { stroke-width: 1.5; }
+:root[data-theme="a"] .fxr-node { fill: var(--oled); stroke: var(--rule); }
+:root[data-theme="a"] .fxr-node[data-state="on"] { stroke: var(--accent); stroke-width: 1.5; }
+:root[data-theme="a"] .fxg-caption, :root[data-theme="a"] .eg-note, :root[data-theme="a"] .lfo-caption, :root[data-theme="a"] .g3-caption, :root[data-theme="a"] .wt-note { color: var(--oled-dim); font-family: var(--font-mono); }
+
+/* ---- Module frames and value strips ---- */
+:root[data-theme="a"] .kp { background: transparent; border-color: var(--rule); border-radius: var(--r-m); }
+:root[data-theme="a"] .kp-title { background: transparent; color: var(--ink); border-bottom: 0; font-size: var(--fs-m); font-weight: 600; letter-spacing: 0; }
+:root[data-theme="a"] .kc-btn { background: linear-gradient(color-mix(in oklab, var(--key) 80%, var(--key-hi)), var(--key)); border-color: var(--key-lo); border-radius: var(--r-ctl); box-shadow: var(--key-shadow); }
+:root[data-theme="a"] .kc-btn[aria-checked="true"] { border-color: var(--key-lo); }
+:root[data-theme="a"] .kc-led { background: var(--led-off); box-shadow: inset 0 1px 2px var(--key-lo), 0 1px 0 var(--key-hi); }
+:root[data-theme="a"] .kc-btn[aria-checked="true"] .kc-led { background: var(--accent); box-shadow: 0 0 7px var(--accent); }
+:root[data-theme="a"] .kc-segs { border-color: var(--key-lo); }
+:root[data-theme="a"] .kc-segs button { background: var(--key); box-shadow: var(--key-shadow); }
+:root[data-theme="a"] .kc-segs button[data-active="true"] { background: var(--oled); color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+
+/* ---- Display-strip headings: a small OLED legend, as the open sound is shown ---- */
+:root[data-theme="a"] .settings-dialog h2, :root[data-theme="a"] .shell-dialog h2, :root[data-theme="a"] .shell-history h2, :root[data-theme="a"] .overview .ov-head h2, :root[data-theme="a"] .sb-toolbar h1, :root[data-theme="a"] .ai-head, :root[data-theme="a"] .ab-head, :root[data-theme="a"] .fxp-bar, :root[data-theme="a"] .fxt-bar {
+  padding: 4px 10px; background: var(--oled); color: var(--display); border: 1px solid var(--key-lo); border-radius: var(--r-s); box-shadow: var(--well-shadow);
+  font-family: var(--font-mono); font-size: var(--fs-s); font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase;
+}
+:root[data-theme="a"] .ai-head h2, :root[data-theme="a"] .ab-head strong { margin: 0; font-size: inherit; font-weight: inherit; color: inherit; }
+:root[data-theme="a"] .sb-toolbar h1 { margin: 0 auto 0 0; }
+:root[data-theme="a"] .fxp-title { font-weight: 400; }
+
+/* ---- Raised panels and dialogs ---- */
+:root[data-theme="a"] .settings-dialog, :root[data-theme="a"] .shell-dialog, :root[data-theme="a"] .shell-pop, :root[data-theme="a"] .overview, :root[data-theme="a"] .setlists, :root[data-theme="a"] .ai-panel, :root[data-theme="a"] .ab-bar, :root[data-theme="a"] .fxt-dlg, :root[data-theme="a"] .guide { background-color: var(--panel); background-image: var(--grain); border: 1px solid var(--key-lo); border-radius: var(--r-m); box-shadow: var(--modal-shadow), 0 8px 24px var(--scrim-soft); }
+:root[data-theme="a"] .guide { border-color: var(--accent); font-family: var(--font-body); }
+:root[data-theme="a"] .guide::before { background: var(--panel); border-color: var(--accent); }
+:root[data-theme="a"] .guide-step { font-family: var(--font-mono); }
+:root[data-theme="a"] .setlists[data-view="play"] { border-radius: 0; box-shadow: none; }
+:root[data-theme="a"] .setlists[data-inline="true"]:not([data-view="play"]) { background-image: none; border: 0; box-shadow: none; }
+:root[data-theme="a"] .settings-row { border-bottom-color: var(--key-lo); box-shadow: 0 1px 0 var(--key-hi); }
+:root[data-theme="a"] .settings-btns button[aria-pressed="true"] { background: var(--on-bg); color: var(--on-fg); box-shadow: var(--on-shadow); border-color: var(--key-lo); }
+:root[data-theme="a"] .shell-list button:hover { background: var(--key); }
+:root[data-theme="a"] .shell-list button[aria-current="true"] { background: var(--oled); color: var(--display); }
+:root[data-theme="a"] .shell-keys > div { border-bottom-color: var(--key-lo); box-shadow: 0 1px 0 var(--key-hi); }
+:root[data-theme="a"] .shell-keys kbd { padding: 0 6px; background: var(--key); color: var(--ink); border: 1px solid var(--key-lo); border-radius: var(--r-xs); box-shadow: var(--key-shadow); font-family: var(--font-mono); }
+:root[data-theme="a"] .shell-note { color: var(--ink-3); opacity: 1; }
+:root[data-theme="a"] .fxt-list { background: var(--oled); border-color: var(--key-lo); box-shadow: var(--well-shadow); }
+:root[data-theme="a"] .fxt-foot { border-top-color: var(--key-lo); box-shadow: 0 -1px 0 var(--key-hi); }
+
+/* ---- AI panel, review and the A/B bar ---- */
+:root[data-theme="a"] .ai-log, :root[data-theme="a"] .ai-answer { color: var(--ink); }
+:root[data-theme="a"] .ai-card { background: var(--oled); color: var(--display); border: 1px solid var(--key-lo); border-radius: var(--r-s); box-shadow: var(--well-shadow); }
+:root[data-theme="a"] .ai-prose code { background: color-mix(in oklab, var(--display) 16%, transparent); color: var(--display); }
+:root[data-theme="a"] .ai-who { font-family: var(--font-mono); font-weight: 400; }
+:root[data-theme="a"] .ai-built, :root[data-theme="a"] .ai-review ul { color: var(--ink); }
+:root[data-theme="a"] .ai-dest { background: var(--well); border-color: var(--key-lo); border-radius: var(--r-m); box-shadow: var(--well-shadow); }
+:root[data-theme="a"] .ab-name { color: var(--display); }
+:root[data-theme="a"] .ab-bar button.ab-side { position: relative; background: linear-gradient(color-mix(in oklab, var(--key) 80%, var(--key-hi)), var(--key)); color: var(--ink); border-color: var(--key-lo); font-family: var(--font-num); }
+:root[data-theme="a"] .ab-bar button.ab-side::before { content: ""; position: absolute; top: 6px; left: 6px; width: 7px; height: 7px; border-radius: 50%; background: var(--led-off); box-shadow: inset 0 1px 2px var(--key-lo), 0 1px 0 var(--key-hi); }
+:root[data-theme="a"] .ab-bar button.ab-side[aria-pressed="true"] { background: var(--oled); color: var(--accent); border-color: var(--key-lo); box-shadow: inset 0 0 0 1px var(--accent); }
+:root[data-theme="a"] .ab-bar button.ab-side[aria-pressed="true"]::before { background: var(--accent); box-shadow: 0 0 7px var(--accent); }
+:root[data-theme="a"] .ab-note { color: var(--display); }
+:root[data-theme="a"] .ab-status { color: var(--ink-2); }
+
+/* ---- Set List pads: rubber pads with an LED; the LED is lit on the pad that is current ---- */
+:root[data-theme="a"] .sl-pad { position: relative; background: linear-gradient(color-mix(in oklab, var(--key) 80%, var(--key-hi)), var(--key)); border-top-color: var(--key-lo); border-right-color: var(--key-lo); border-bottom-color: var(--key-lo); border-radius: var(--r-m); box-shadow: var(--key-shadow); transition: transform var(--ms), box-shadow var(--ms); }
+:root[data-theme="a"] .sl-pad:hover:not(:disabled) { background: linear-gradient(var(--key-hi), var(--key)); }
+:root[data-theme="a"] .sl-pad:active:not(:disabled) { transform: var(--btn-down); box-shadow: var(--key-shadow-down); }
+:root[data-theme="a"] .sl-pad::after { content: ""; position: absolute; right: 8px; bottom: 8px; width: 9px; height: 9px; border-radius: 50%; background: var(--led-off); box-shadow: inset 0 1px 2px var(--key-lo), 0 1px 0 var(--key-hi); }
+:root[data-theme="a"] .sl-pad[data-selected="true"] { box-shadow: var(--key-shadow), 0 0 0 1px var(--accent); }
+:root[data-theme="a"] .sl-pad[data-current="true"] { background: var(--oled); outline: 0; box-shadow: inset 0 0 0 1px var(--accent), inset 0 0 14px var(--key-lo); }
+:root[data-theme="a"] .sl-pad[data-current="true"]::after { background: var(--led-green); box-shadow: 0 0 8px var(--led-green); }
+:root[data-theme="a"] .sl-pad[data-current="true"] b, :root[data-theme="a"] .sl-pad[data-current="true"] .sl-num { color: var(--display); }
+:root[data-theme="a"] .sl-grid[data-view="play"] .sl-pad[data-current="true"] { border-width: 2px; border-color: var(--accent); background: var(--oled); }
+:root[data-theme="a"] .sl-now { background: var(--oled); color: var(--display); border: 1px solid var(--accent); font-family: var(--font-mono); }
+:root[data-theme="a"] .sl-pages button[data-active="true"], :root[data-theme="a"] .sl-view button[data-active="true"], :root[data-theme="a"] .sl-size button[data-active="true"] { background: var(--on-bg); color: var(--on-fg); box-shadow: var(--on-shadow); border-color: var(--key-lo); }
+
+/* ---- Dock: tabs as keys, a piano with real key faces, the MIDI monitor as an OLED log ---- */
+:root[data-theme="a"] .dock { background-color: var(--panel); background-image: var(--grain); border-top-color: var(--key-lo); box-shadow: 0 -1px 0 var(--key-hi); }
+:root[data-theme="a"] .dock-body { border-top-color: var(--key-lo); }
+:root[data-theme="a"] .dock [role="tab"][aria-selected="true"], :root[data-theme="a"] .dock button[aria-pressed="true"] { background: var(--on-bg); color: var(--on-fg); box-shadow: var(--on-shadow); border-color: var(--key-lo); }
+:root[data-theme="a"] .kd-keys { background: var(--key-lo); border-color: var(--key-lo); box-shadow: var(--well-shadow); }
+:root[data-theme="a"] .dock-key.white:not([data-lit="1"]):not([data-down="1"]) { background: linear-gradient(var(--ivory), color-mix(in oklab, var(--ivory) 86%, var(--key-lo))); box-shadow: inset 0 -3px 0 color-mix(in oklab, var(--ivory) 70%, var(--key-lo)); }
+:root[data-theme="a"] .dock-key.black:not([data-lit="1"]):not([data-down="1"]) { background: linear-gradient(var(--knob-lo), var(--ebony)); box-shadow: inset 0 1px 0 var(--knob-hi), 0 2px 0 var(--key-lo); }
+:root[data-theme="a"] .dock-key[data-down="1"] { background: var(--oled-dim); }
+:root[data-theme="a"] .dock-key[data-lit="1"] { background: var(--accent); }
+:root[data-theme="a"] .mon-scroll { background: var(--oled); border-color: var(--key-lo); border-radius: var(--r-s); box-shadow: var(--well-shadow); }
+:root[data-theme="a"] .mon table { color: var(--display); }
+:root[data-theme="a"] .mon th { background: var(--oled); color: var(--oled-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+:root[data-theme="a"] .mon th, :root[data-theme="a"] .mon td { border-bottom-color: var(--key-lo); }
+:root[data-theme="a"] .mon-bar input[type="text"] { background: var(--oled); color: var(--display); border-color: var(--key-lo); box-shadow: var(--field-shadow); font-family: var(--font-mono); }
+:root[data-theme="a"] .mon-count, :root[data-theme="a"] .mon-copy-note { color: var(--ink-2); font-family: var(--font-mono); }
+
+/* ---- Overview ---- */
+:root[data-theme="a"] .ov-stats div { background: var(--oled); border-color: var(--key-lo); border-radius: var(--r-s); box-shadow: var(--well-shadow); }
+:root[data-theme="a"] .ov-stats b { color: var(--display); font-family: var(--font-mono); font-weight: 400; }
+:root[data-theme="a"] .ov-stats span { color: var(--oled-dim); opacity: 1; }
+:root[data-theme="a"] .ov-bars { background: var(--oled); border: 1px solid var(--key-lo); border-radius: var(--r-s); box-shadow: var(--well-shadow); }
+:root[data-theme="a"] .ov-bar rect:nth-child(2) { fill: var(--oled-dim); }
+:root[data-theme="a"] .ov-bar:hover rect:nth-child(2), :root[data-theme="a"] .ov-bar[data-on="true"] rect:nth-child(2) { fill: var(--accent); }
+:root[data-theme="a"] .ov-bar text { fill: var(--oled-dim); opacity: 1; }
+:root[data-theme="a"] .ov-list { background: var(--well); border-color: var(--key-lo); box-shadow: var(--well-shadow); }
+:root[data-theme="a"] .ov-list button { border-bottom-color: var(--key-lo); }
+:root[data-theme="a"] .ov-list button:hover { background: var(--key); }
+:root[data-theme="a"] .ov-kinds button[aria-pressed="true"] { background: var(--on-bg); color: var(--on-fg); box-shadow: var(--on-shadow); border-color: var(--key-lo); }
+
+/* ---- Sound browser ---- */
+:root[data-theme="a"] .sb-toolbar, :root[data-theme="a"] .sb-filters { border-bottom-color: var(--key-lo); box-shadow: var(--top-shadow); }
+:root[data-theme="a"] .sb-filters { background-color: var(--panel); background-image: var(--grain); }
+:root[data-theme="a"] .sb-list { background: var(--well); box-shadow: var(--well-shadow); }
+:root[data-theme="a"] .sb-row { border-bottom-color: var(--key-lo); font-family: var(--font-num); font-size: var(--fs-s); }
+:root[data-theme="a"] .sb-row:hover { background: var(--key); }
+:root[data-theme="a"] .sb-row.selected { background: var(--oled); color: var(--sel-fg); }
+:root[data-theme="a"] .sb-row.selected .sb-cat, :root[data-theme="a"] .sb-row.selected .sb-bank { color: var(--sel-num); }
+:root[data-theme="a"] .sb-detail { background-color: var(--panel); background-image: var(--grain); border-left-color: var(--key-lo); box-shadow: inset 1px 0 0 var(--key-hi); }
+:root[data-theme="a"] .sb-detail textarea { background: var(--oled); border-color: var(--key-lo); box-shadow: var(--field-shadow); }
+:root[data-theme="a"] .sb-chip { background: var(--well); border-color: var(--key-lo); box-shadow: var(--chip-shadow); }
+:root[data-theme="a"] .sb-error { color: var(--led-red); }
+
+/* ---- Backup manager ---- */
+:root[data-theme="a"] .bkm-row { background: linear-gradient(color-mix(in oklab, var(--panel) 90%, var(--key-hi)), var(--panel)); border-color: var(--key-lo); border-radius: var(--r-m); box-shadow: var(--key-shadow); }
+:root[data-theme="a"] .bkm-name { font-family: var(--font-num); }
+:root[data-theme="a"] .bkm-warn { color: var(--state-warn); }
+:root[data-theme="a"] .bkm-warn::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 6px; border-radius: 50%; background: var(--state-warn); box-shadow: 0 0 6px var(--state-warn); vertical-align: baseline; }
+
+/* ---- Tables, inputs, checkboxes, scrollbars ---- */
+:root[data-theme="a"] .kv-table th { color: var(--ink-3); letter-spacing: 0.04em; }
+:root[data-theme="a"] .kv-table td, :root[data-theme="a"] .kv-table th { border-bottom: 1px solid var(--hair); }
+:root[data-theme="a"] .fxp-table thead tr { border-bottom-color: var(--rule); }
+:root[data-theme="a"] input[type="number"] { font-family: var(--font-num); color: var(--display); }
+:root[data-theme="a"] input[type="search"]:focus, :root[data-theme="a"] input[type="number"]:focus, :root[data-theme="a"] input[type="text"]:focus, :root[data-theme="a"] textarea:focus, :root[data-theme="a"] select:focus { border-color: var(--accent); }
+:root[data-theme="a"] input[type="checkbox"]:checked { box-shadow: 0 0 6px color-mix(in oklab, var(--accent) 70%, transparent); }
+:root[data-theme="a"] ::-webkit-scrollbar-track { background: var(--well); box-shadow: inset 1px 0 0 var(--key-lo); }
+:root[data-theme="a"] ::-webkit-scrollbar-thumb { background: linear-gradient(90deg, var(--key-hi), var(--key)); border: 1px solid var(--key-lo); border-radius: var(--r-s); background-clip: border-box; box-shadow: inset 0 1px 0 var(--knob-hi); }
+:root[data-theme="a"] ::-webkit-scrollbar-thumb:hover { background: linear-gradient(90deg, var(--knob-hi), var(--key-hi)); background-clip: border-box; }
+:root[data-theme="a"] ::-webkit-scrollbar-corner { background: var(--well); }
+
+/* ---- Sound display strip: a bevelled bezel round an OLED well, glowing amber name, bevelled lamps ---- */
+:root[data-theme="a"] .sd { background: var(--paper-3); border-radius: var(--r-2xl); box-shadow: inset 0 2px 5px var(--key-lo), 0 1px 0 var(--key-hi), 0 0 0 1px var(--key-lo); }
+:root[data-theme="a"] .sd-oled { background: var(--oled); box-shadow: inset 0 0 0 1px var(--key-lo), inset 0 0 14px var(--key-lo); color: var(--display); }
+:root[data-theme="a"] .sd-top, :root[data-theme="a"] .sd-no { color: var(--oled-dim); }
+:root[data-theme="a"] .sd-bank, :root[data-theme="a"] .sd-name { text-shadow: 0 0 8px color-mix(in oklab, var(--display) 45%, transparent); }
+:root[data-theme="a"] .lamp { background: var(--led-off); box-shadow: inset 0 1px 2px var(--key-lo), 0 1px 0 var(--key-hi); }
+:root[data-theme="a"] .lamp[data-lit="green"] { background: var(--led-green); box-shadow: 0 0 7px var(--led-green); }
+:root[data-theme="a"] .lamp[data-lit="amber"], :root[data-theme="a"] .editor:has([data-testid="live-edit"]:checked:not(:disabled)) .sd-live .lamp { background: var(--display); box-shadow: 0 0 7px var(--display); }
+:root[data-theme="a"] .lamp[data-lit="red"] { background: var(--led-red); box-shadow: 0 0 7px var(--led-red); }
+
+/* ---- Brushed grain under the chrome and the work surface ---- */
+:root[data-theme="a"] .topbar, :root[data-theme="a"] .banks, :root[data-theme="a"] .side, :root[data-theme="a"] .toolbar, :root[data-theme="a"] .slots, :root[data-theme="a"] .modal { background-image: var(--grain); }
+
+/* ---- Fields without a type attribute are text fields too: the same inset well ---- */
+:root[data-theme="a"] input:not([type]) { height: var(--h-ctl); padding: 0 var(--field-pad); background: var(--field-bg); border: var(--field-border-w) solid var(--field-border); border-radius: var(--r-ctl); box-shadow: var(--field-shadow); }
+:root[data-theme="a"] input:not([type]):focus { border-color: var(--accent); }
+:root[data-theme="a"] .shell-palette input { background: var(--oled); border: 1px solid var(--key-lo); border-radius: var(--r-ctl); box-shadow: var(--field-shadow); padding: 0 var(--field-pad); }

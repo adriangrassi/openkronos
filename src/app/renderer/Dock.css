@@ -1,0 +1,188 @@
+/* Bottom dock: keyboard and MIDI monitor. Uses the app's variables only. */
+.dock {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+  color: var(--text);
+}
+
+.dock-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 2px 8px;
+}
+
+.dock-bar button {
+  height: var(--h-sm);
+}
+
+.dock-body {
+  border-top: 1px solid var(--line);
+}
+
+.dock-tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.dock [role="tab"][aria-selected="true"] {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.dock-body {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 8px 6px;
+  gap: 4px;
+  min-height: 0;
+}
+
+.dock button,
+.dock input[type="text"] {
+  font: inherit;
+}
+
+.dock button[aria-pressed="true"] {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.dock :focus-visible {
+  outline: 1px solid var(--focus);
+  outline-offset: 1px;
+}
+
+/* Keyboard pane */
+.kd {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.kd-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.kd-controls label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text);
+}
+
+.kd-octave {
+  color: var(--text);
+}
+
+.kd-keys {
+  position: relative;
+  display: flex;
+  height: 140px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  user-select: none;
+  touch-action: none;
+}
+
+.dock-key {
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 0 0 var(--r-xs) var(--r-xs);
+  cursor: pointer;
+}
+
+.dock-key.white {
+  height: auto; /* the global button height (28px) made the white keys short stubs */
+  align-self: stretch;
+  border-color: var(--bg);
+  border-radius: 0 0 var(--r-s) var(--r-s);
+  transition: none;
+  flex: 1 1 0;
+  min-width: 0;
+  background: var(--ivory);
+}
+
+/* Black keys stop at 48% so the lower half of every white key is never covered. */
+.dock-key.black {
+  position: absolute;
+  top: 0;
+  height: 48%;
+  background: var(--ebony);
+  border-color: var(--key-lo);
+  border-radius: 0 0 var(--r-xs) var(--r-xs);
+  transition: none;
+  z-index: 1;
+}
+
+.dock-key[data-down="1"] {
+  background: var(--line);
+}
+
+.dock-key[data-lit="1"] {
+  background: var(--accent);
+}
+
+/* MIDI monitor pane */
+.mon {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mon-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mon-bar input[type="text"] {
+  width: 180px;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--line);
+  padding: 2px 6px;
+}
+
+.mon-count,
+.mon-copy-note {
+  color: var(--text);
+}
+
+.mon-scroll {
+  height: 84px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.mon table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: var(--fs-s);
+}
+
+.mon th,
+.mon td {
+  text-align: left;
+  padding: 1px 8px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+.mon th {
+  position: sticky;
+  top: 0;
+  background: var(--panel);
+  color: var(--text);
+}

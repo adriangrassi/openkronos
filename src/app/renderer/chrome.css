@@ -1,0 +1,81 @@
+.mark {
+  flex: none;
+  color: var(--text);
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 8px;
+  font-size: var(--fs-wordmark);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.wm-a {
+  font-weight: var(--fw-wordmark);
+}
+
+.wm-b {
+  font-weight: 300;
+  color: var(--muted);
+}
+
+.mark-k {
+  stroke: var(--mark-stroke);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: var(--h-sm);
+  padding: var(--pill-pad);
+  border: var(--pill-border);
+  border-radius: var(--pill-r);
+  color: var(--muted);
+  font-size: var(--pill-fs);
+  white-space: nowrap;
+}
+
+.pill[data-on="true"] {
+  color: var(--text);
+}
+
+.led {
+  width: var(--led-size);
+  height: var(--led-size);
+  border: var(--led-border);
+  border-radius: 50%;
+  background: var(--led-off);
+  box-shadow: var(--led-shadow);
+  transition: background-color var(--ms), box-shadow var(--ms);
+}
+
+.pill[data-on="true"] .led {
+  border-color: var(--pill-led);
+  background: var(--pill-led);
+  box-shadow: var(--pill-led-glow);
+}
+
+.xfer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  pointer-events: none;
+}
+
+.xfer i {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transition: width 120ms;
+}
+
+.xfer[data-active="false"] i {
+  opacity: 0;
+}

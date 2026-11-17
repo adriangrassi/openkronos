@@ -1,0 +1,18 @@
+.fxr-svg { display: block; width: 100%; height: auto; background: var(--k-graph-bg); border: 1px solid var(--k-line-2); border-radius: var(--k-radius); font-family: var(--k-font); }
+.fxr-node { fill: var(--k-box); stroke: var(--k-line-2); stroke-width: 1; }
+.fxr-node[data-state="on"] { stroke: var(--k-accent); stroke-width: 2; }
+.fxr-label { fill: var(--k-text); font-size: var(--fs-2xs); font-weight: 700; }
+.fxr-detail { fill: var(--k-muted); font-size: var(--fs-3xs); }
+.fxr-dim .fxr-label, .fxr-dim .fxr-detail { fill: var(--k-muted); }
+.fxr-go { cursor: pointer; }
+.fxr-go:hover .fxr-node, .fxr-go:focus-visible .fxr-node { stroke: var(--k-pointed); stroke-width: 2; }
+.fxr-go:focus { outline: none; }
+.fxr-edge { stroke-linejoin: round; }
+.fxr-edge-main, .fxr-edge-chain { stroke: var(--k-accent); stroke-width: 2; }
+.fxr-edge-chain { stroke-dasharray: 5 3; }
+.fxr-edge-dim { stroke: var(--k-muted); stroke-width: 1; }
+.fxr-arrow-main path, .fxr-arrow-chain path { fill: var(--k-accent); }
+.fxr-arrow-dim path { fill: var(--k-muted); }
+.fxr-badge text { fill: var(--k-badge-text); font-size: 7px; font-weight: 700; }
+.fxr-badge-on rect { fill: var(--k-red); }
+.fxr-badge-off rect { fill: var(--k-green); }

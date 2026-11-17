@@ -1,0 +1,8 @@
+.mi { display: grid; gap: 8px; margin-top: 8px; color: var(--text); }
+.mi-grid { display: grid; grid-template-columns: max-content 1fr max-content 1fr; gap: 2px 12px; margin: 0; }
+.mi-grid dt { opacity: 0.7; }
+.mi-grid dd { margin: 0; font-variant-numeric: tabular-nums; }
+.mi-chans { display: flex; flex-wrap: wrap; gap: 4px 12px; }
+.mi-chords { display: flex; flex-wrap: wrap; gap: 2px; }
+.mi-chord { min-width: 44px; padding: 4px 6px; text-align: center; background: var(--panel); border: 1px solid var(--line); }
+.mi-chord[data-current="true"] { background: var(--accent); color: var(--bg); border-color: var(--accent); }

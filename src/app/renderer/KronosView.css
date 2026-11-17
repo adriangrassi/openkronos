@@ -1,0 +1,160 @@
+/* Kronos view. SKINS first: the only place colours, borders, radii, fonts and shadows are chosen.
+   The light skin (a replica of the instrument's own screen) is the one documented exception to the themes.css-only rule for colours. A new skin is one more [data-skin="name"] block that sets every --k-* variable below; the layout rules further down never name a colour. */
+.kv[data-skin="kronos-dark"] {
+  --k-font: var(--font-body);
+  --k-radius: var(--r-s);
+  --k-shadow: none;
+  --k-bg: var(--paper-3); --k-panel: var(--paper-2); --k-raise: var(--key); --k-raise-2: var(--key-hi);
+  --k-line: var(--hair); --k-line-2: var(--rule);
+  --k-text: var(--ink); --k-muted: var(--ink-3);
+  --k-accent: var(--accent-user); --k-accent-text: var(--accent-text); --k-focus: var(--focus-ring);
+  --k-pointed: var(--pointed); --k-pointed-bg: var(--pointed-bg); --k-select: color-mix(in oklab, var(--accent-user) 14%, transparent);
+  --k-title: var(--key-hi); --k-title-text: var(--ink);
+  --k-bar: var(--key-hi); --k-bar-text: var(--ink);
+  --k-box: var(--well); --k-groove: var(--key-lo); --k-tile: var(--paper-2);
+  --k-badge: var(--rep-badge); --k-badge-text: var(--rep-badge-text); --k-red: var(--rep-red); --k-green: var(--rep-green);
+  --k-fader: var(--rep-fader); --k-fader-hi: var(--rep-fader-hi); --k-fader-lo: var(--rep-fader-lo); --k-fader-edge: var(--rep-fader-edge);
+  --k-lcd-bg: var(--rep-lcd-bg); --k-lcd-text: var(--rep-lcd-text);
+  --k-play: var(--rep-play); --k-play-text: var(--rep-play-text); --k-mute: var(--rep-mute); --k-mute-text: var(--rep-mute-text);
+  --k-tab-bg: var(--key); --k-tab-active-bg: var(--accent-user); --k-tab-active-text: var(--accent-text);
+  --k-graph-bg: var(--well); --k-graph-line: var(--accent-user); --k-graph-fill: color-mix(in oklab, var(--accent-user) 22%, transparent); --k-grid: var(--hair);
+}
+.kv[data-skin="kronos-light"] {
+  --k-font: Arial, "Segoe UI", sans-serif;
+  --k-radius: 2px;
+  --k-shadow: 0 1px 0 rgba(255, 255, 255, 0.7) inset;
+  --k-bg: #c9cacd; --k-panel: #dcdddf; --k-raise: #eceded; --k-raise-2: #bfc1c5;
+  --k-line: #9a9ca2; --k-line-2: #7c7e85;
+  --k-text: #101114; --k-muted: #4a4c52; --k-accent: #1e63c8; --k-accent-text: #ffffff; --k-focus: #000000;
+  --k-pointed: #d98200; --k-pointed-bg: rgba(255, 170, 40, 0.3); --k-select: rgba(30, 99, 200, 0.16);
+  --k-title: #9fb4d6; --k-title-text: #0a1530;
+  --k-bar: #4d5057; --k-bar-text: #ffffff;
+  --k-box: #ffffff; --k-groove: #1a1b1e; --k-tile: #a9abb0;
+  --k-badge: #2f6fd6; --k-badge-text: #ffffff; --k-red: #b3261a; --k-green: #2f8f3a;
+  --k-fader: #b42a18; --k-fader-hi: #d9503a; --k-fader-lo: #5a1308; --k-fader-edge: #2a0e08;
+  --k-lcd-bg: #000000; --k-lcd-text: #ffffff;
+  --k-play: #4cae4c; --k-play-text: #06210a; --k-mute: #f0d330; --k-mute-text: #2b2400;
+  --k-tab-bg: #e3e4e6; --k-tab-active-bg: #1e63c8; --k-tab-active-text: #ffffff;
+  --k-graph-bg: #f6f8fc; --k-graph-line: #1e4fb8; --k-graph-fill: rgba(30, 79, 184, 0.22); --k-grid: #c3cbdc;
+}
+/* The shared graph components read the app's variable names; map them onto the skin here. */
+.kv { --bg: var(--k-graph-bg); --panel: var(--k-raise); --raise: var(--k-raise); --line: var(--k-line-2); --line-2: var(--k-line-2); --accent: var(--k-graph-line); --focus: var(--k-focus); --text: var(--k-text); --muted: var(--k-muted); }
+
+/* LAYOUT */
+.kv { display: flex; flex-direction: column; flex: 1; min-height: 0; background: var(--k-bg); color: var(--k-text); font-family: var(--k-font); border: 1px solid var(--k-line-2); border-radius: var(--k-radius); }
+.kv-note { padding: 8px; opacity: 0.8; }
+.kv-titlebar { display: flex; align-items: center; gap: 12px; padding: 3px 10px; background: var(--k-title); color: var(--k-title-text); font-weight: 700; font-size: var(--fs-m); letter-spacing: 0.03em; }
+.kv-subname { margin-left: auto; font-weight: 600; }
+.kv .kv-skin { background: var(--k-raise); color: var(--k-text); border: 1px solid var(--k-line-2); border-radius: var(--k-radius); font: inherit; font-size: var(--fs-xs); padding: 1px 8px; cursor: pointer; }
+.kv-body { flex: 1; min-height: 0; overflow: auto; padding: 8px; }
+
+.kh { padding: 6px 10px 0; display: flex; flex-direction: column; gap: 4px; }
+.kh-top { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: var(--fs-s); }
+.kh-field { display: inline-flex; align-items: center; gap: 6px; background: var(--k-box); border: 1px solid var(--k-line-2); border-radius: var(--k-radius); padding: 1px 8px; min-height: 22px; }
+.kh-tempo .kc-readout { width: 64px; }
+.kh-fav { margin-left: auto; }
+.kh-fav .kc-btn { padding: 1px 8px; }
+.kh-lcd { background: var(--k-lcd-bg); color: var(--k-lcd-text); font-size: var(--fs-4xl); line-height: 34px; font-weight: 600; padding: 0 14px; border: 1px solid var(--k-line-2); border-radius: var(--k-radius); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kh-slim .kh-lcd { font-size: var(--fs-m); line-height: 22px; font-weight: 400; background: var(--k-box); color: var(--k-text); }
+.kh-line { font-size: var(--fs-xs); color: var(--k-muted); padding: 1px 2px; }
+
+.kv-subtabs, .kv-pages { display: flex; gap: 2px; padding: 0 8px; overflow-x: auto; }
+.kv-subtabs { padding-top: 6px; border-top: 1px solid var(--k-line-2); }
+.kv-subtabs button, .kv-pages button { background: var(--k-tab-bg); color: var(--k-text); border: 1px solid var(--k-line-2); border-radius: var(--k-radius) var(--k-radius) 0 0; box-shadow: var(--k-shadow); font: inherit; font-size: var(--fs-s); padding: 4px 12px; cursor: pointer; white-space: nowrap; }
+.kv-subtabs button { border-bottom: 0; }
+.kv-pages { padding-bottom: 6px; }
+.kv-pages button { font-size: var(--fs-m); padding: 7px 16px; border-radius: 0 0 var(--k-radius) var(--k-radius); border-top: 0; }
+/* The :hover/:active forms keep the selected tab filled: the global button:hover rule would otherwise grey it out right after the click. */
+.kv-subtabs button[data-active="true"], .kv-pages button[data-active="true"], .kv-subtabs button[data-active="true"]:hover:not(:disabled), .kv-pages button[data-active="true"]:hover:not(:disabled), .kv-subtabs button[data-active="true"]:active:not(:disabled), .kv-pages button[data-active="true"]:active:not(:disabled) { background: var(--k-tab-active-bg); color: var(--k-tab-active-text); font-weight: 600; }
+.kv-subtabs button:disabled { opacity: 0.4; cursor: default; }
+.kv-subtabs b { opacity: 0.7; margin-right: 6px; font-variant-numeric: tabular-nums; }
+.kv-pages small { margin-left: 6px; opacity: 0.7; }
+.kv-subtabs button:focus-visible, .kv-pages button:focus-visible { outline: 2px solid var(--k-focus); outline-offset: 1px; }
+
+/* generic tab */
+.kv-graphs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.kv-graph { flex: 1 1 420px; max-width: 640px; }
+.kv-graph-sq { flex: 0 0 auto; }
+.kv-panels { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 8px; align-items: start; }
+.kv-table-panel { grid-column: 1 / -1; }
+.kv-wide { grid-column: span 2; }
+.kv-table-panel .kp-body { overflow-x: auto; }
+.kv-ctl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(86px, 1fr)); gap: 4px 6px; }
+.kv-ctl-segmented, .kv-ctl-select, .kv-ctl-field { grid-column: span 2; }
+.kv-table { border-collapse: collapse; font-size: var(--fs-xs); }
+.kv-table th { font-weight: 600; color: var(--k-muted); padding: 2px 4px; white-space: nowrap; text-align: center; }
+.kv-table th[scope="row"] { text-align: left; color: var(--k-text); }
+.kv-table td { padding: 1px 3px; text-align: center; }
+.kc-cell { padding: 0; min-width: 52px; }
+.kc-cell .kc-readout { width: 52px; }
+.kc-cell .kc-select { width: 72px; padding: 0 2px; }
+.kc-cell-btn { padding: 2px 8px; }
+.kv-more { margin-top: 10px; }
+.kv-more summary { cursor: pointer; color: var(--k-muted); font-size: var(--fs-s); }
+
+/* shared graph tuning inside the Kronos view */
+.kv .eg, .kv .g3, .kv .lfo { margin: 0; padding: 0; border: 0; }
+.kv .g3-svg, .kv .lfo-svg { height: auto; }
+.kv .g3-square { width: 240px; }
+.kv .eg-svg, .kv .g3-svg, .kv .lfo-svg { border-color: var(--k-line-2); border-radius: var(--k-radius); }
+.kg-grid line { stroke: var(--k-grid); stroke-width: 1; }
+.kg-text { fill: var(--k-muted); font-size: var(--fs-xs); font-family: var(--k-font); }
+.eq-svg { display: block; width: 100%; max-width: 460px; height: auto; background: var(--k-graph-bg); border: 1px solid var(--k-line-2); border-radius: var(--k-radius); }
+.eq-line { fill: none; stroke: var(--k-graph-line); stroke-width: 2; }
+.eq-fill { fill: var(--k-graph-fill); stroke: none; }
+.kv-mini { min-width: 0; }
+.kv-mini .eg-note, .kv-mini .g3-caption, .kv-mini .lfo-caption, .kv-mini .kg-text { display: none; }
+.kv-mini .eg-svg { max-width: none; }
+.kdb .kv-mini svg { display: block; max-height: 72px; margin: 0 auto; }
+.kdb .kv-mini-wide svg { max-height: 92px; }
+.kdb-cap { display: block; font-size: var(--fs-2xs); text-transform: uppercase; color: var(--k-muted); }
+
+/* Combination mixer */
+.kx { min-width: 900px; display: flex; flex-direction: column; gap: 3px; }
+.kx-row { display: grid; grid-template-columns: repeat(16, minmax(0, 1fr)); gap: 3px; }
+.kx-slot { display: flex; flex-direction: column; align-items: center; gap: 2px; min-width: 0; padding: 2px; border-radius: var(--k-radius); }
+.kx-slot[data-selected="true"] { background: var(--k-select); }
+.kx-num { cursor: pointer; border: 0; font: inherit; font-size: var(--fs-xs); font-weight: 700; min-width: 24px; }
+.kx-num[aria-pressed="true"] { outline: 2px solid var(--k-focus); }
+.kx-cap { text-align: center; font-size: var(--fs-s); font-weight: 600; border-bottom: 1px solid var(--k-line-2); margin-top: 4px; color: var(--k-muted); }
+.kx-cell { width: 100%; display: flex; flex-direction: column; align-items: stretch; position: relative; border-radius: var(--k-radius); }
+.kx-cell.pointed { outline: 2px solid var(--k-pointed); background: var(--k-pointed-bg); }
+.kx-cell[data-changed="true"]::after { content: ""; position: absolute; top: 1px; right: 1px; width: 5px; height: 5px; border-radius: 50%; background: var(--k-accent); }
+.kx-select, .kx-prog { width: 100%; box-sizing: border-box; background: var(--k-box); color: var(--k-text); border: 1px solid var(--k-line-2); border-radius: var(--k-radius); font: inherit; font-size: var(--fs-xs); padding: 1px 0; text-align: center; box-shadow: var(--k-shadow); }
+.kx-select:focus-visible, .kx-prog:focus-visible, .kx-btn:focus-visible, .kx-name:focus-visible { outline: 2px solid var(--k-focus); outline-offset: 1px; }
+.kx-btns { gap: 2px; }
+.kx-btn { width: 100%; height: 17px; line-height: 15px; padding: 0; background: var(--k-raise); color: var(--k-text); border: 1px solid var(--k-line-2); border-radius: var(--k-radius); font: inherit; font-size: var(--fs-xs); cursor: pointer; box-shadow: var(--k-shadow); }
+.kx-btn:disabled { opacity: 0.45; cursor: default; }
+.kx-play[data-on="true"] { background: var(--k-play); color: var(--k-play-text); border-color: transparent; }
+.kx-mute[data-on="true"] { background: var(--k-mute); color: var(--k-mute-text); border-color: transparent; }
+.kx-pan .kc-dial { width: 100%; }
+.kx-pan .kc-dial-svg { width: 44px; height: 44px; }
+.kx-vol .kc-fader { width: 100%; }
+.kx-names { display: grid; grid-template-columns: repeat(16, minmax(0, 1fr)); gap: 2px 3px; margin-top: 12px; }
+.kx-name { display: flex; align-items: center; gap: 6px; min-width: 0; background: var(--k-box); color: var(--k-text); border: 1px solid var(--k-line-2); border-radius: var(--k-radius); padding: 1px 6px 1px 2px; font: inherit; font-size: var(--fs-s); cursor: pointer; text-align: left; }
+.kx-name[data-off="true"] { opacity: 0.5; }
+.kx-name[data-selected="true"] { border-color: var(--k-accent); box-shadow: 0 0 0 1px var(--k-accent); }
+.kx-name-text { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.kx-arrow { width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid var(--k-muted); flex: none; }
+
+/* Program Main dashboard */
+.kdb { display: grid; grid-template-columns: minmax(0, 1fr) 250px; grid-template-rows: auto auto; gap: 8px; min-width: 900px; }
+.kdb-r1, .kdb-r2 { grid-column: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr) minmax(0, 1fr); gap: 6px; align-items: stretch; }
+.kdb-side { grid-column: 2; grid-row: 1 / span 2; display: flex; flex-direction: column; gap: 6px; }
+.kdb-ms { height: 60px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: var(--k-tile); border: 1px solid var(--k-line-2); border-radius: var(--k-radius); }
+.kdb-ms-title { font-weight: 700; font-size: var(--fs-m); }
+.kdb-ms-note { font-size: var(--fs-2xs); color: var(--k-muted); }
+.kdb-zone { position: relative; height: 20px; margin: 4px 0; background: var(--k-box); border: 1px solid var(--k-line-2); border-radius: var(--k-radius); font-size: var(--fs-2xs); display: flex; justify-content: space-between; align-items: center; padding: 0 3px; }
+.kdb-zone i { position: absolute; top: 0; bottom: 0; background: var(--k-accent); opacity: 0.55; }
+.kdb-zone span { position: relative; }
+.kdb-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+.kdb-filter .kp-body, .kdb-amp .kp-body, .kdb-osc .kp-body { display: flex; flex-direction: column; gap: 6px; }
+.kdb-types { display: inline-flex; gap: 3px; }
+.kdb-knobs { display: flex; gap: 4px; align-items: flex-end; justify-content: space-between; }
+.kdb-dials { display: flex; flex-wrap: wrap; gap: 2px; }
+.kdb-dials .kc-dial { width: 64px; }
+.kdb-dials .kc-dial-svg { width: 46px; height: 46px; }
+.kdb-fx { display: flex; flex-direction: column; gap: 4px; }
+.kdb-btn { background: var(--k-raise); color: var(--k-accent); font: inherit; font-weight: 700; font-size: var(--fs-s); border: 1px solid var(--k-accent); border-radius: var(--k-radius); padding: 3px 8px; cursor: pointer; box-shadow: var(--k-shadow); }
+.kdb-btn:focus-visible { outline: 2px solid var(--k-focus); outline-offset: 1px; }
+.kdb-ge { background: var(--k-lcd-bg); color: var(--k-lcd-text); font-weight: 700; font-size: var(--fs-s); padding: 3px 8px; border-radius: var(--k-radius); }

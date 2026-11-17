@@ -1,0 +1,18 @@
+.audition { display: inline-flex; align-items: center; gap: 6px; font-size: var(--fs-m); color: var(--text); }
+.audition select:focus-visible, .audition input:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+.audition input:checked { accent-color: var(--accent); }
+
+/* A/B compare bar: a small floating strip above the app, above the AI window (.ai-panel is 10). */
+.ab-bar { position: fixed; z-index: 11; right: 16px; bottom: 16px; width: 340px; display: flex; flex-direction: column; gap: 8px; padding: 12px 14px; background: var(--raise-2); color: var(--text); border: 1px solid var(--accent); border-radius: var(--r-m); box-shadow: 0 6px 20px var(--bg); font-size: var(--fs-m); line-height: var(--lh-s); }
+.ab-head { display: flex; align-items: center; gap: 8px; }
+.ab-head strong { font-size: var(--fs-xl); }
+.ab-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ab-sides { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.ab-side { height: 44px; font-size: var(--fs-xl); font-weight: 600; }
+.ab-bar button.ab-side[aria-pressed="true"] { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+.ab-row { flex-wrap: wrap; }
+.ab-bar p { margin: 0; }
+.ab-status { color: var(--text-2); }
+.ab-note { color: var(--accent-hi); }
+.ab-err { color: var(--danger); }
+.ab-bar button:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }

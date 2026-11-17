@@ -1,0 +1,50 @@
+/* Style A panel view: titled cards of encoders and faders, laid out like the instrument panel. Scoped to the theme; tokens only. */
+:root[data-theme="a"] .pv { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 16px; padding: 12px; }
+:root[data-theme="a"] .pv-row { display: flex; gap: 12px; flex: none; min-width: 0; align-items: stretch; }
+:root[data-theme="a"] .pv-card { flex: 1 1 0; min-width: 0; min-height: 168px; display: flex; flex-direction: column; align-items: stretch; gap: 8px; margin: 0; padding: 4px 12px 12px; border: 1px solid var(--rule); border-radius: var(--r-l); }
+:root[data-theme="a"] .pv-title { margin: 0 0 0 8px; padding: 0 8px; font-family: var(--font-body); font-size: var(--fs-l); font-weight: 600; color: var(--ink); }
+:root[data-theme="a"] .pv-controls { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; min-width: 0; }
+:root[data-theme="a"] .pv-dials { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 12px; justify-items: center; flex: 1; max-width: 270px; }
+:root[data-theme="a"] .pv-dials[data-n="1"], :root[data-theme="a"] .pv-dials[data-n="2"] { grid-template-columns: 1fr; flex: none; }
+:root[data-theme="a"] .pv-dials[data-n="3"], :root[data-theme="a"] .pv-dials[data-n="4"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+:root[data-theme="a"] .pv-faders { display: flex; gap: 0; align-items: flex-end; }
+:root[data-theme="a"] .pv-switches { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+:root[data-theme="a"] .pv .kc-dial { width: 76px; }
+:root[data-theme="a"] .pv .kc-name { font-family: var(--font-body); font-size: var(--fs-s); color: var(--ink-2); }
+:root[data-theme="a"] .pv .kc-value { font-family: var(--font-mono); font-size: var(--fs-s); color: var(--accent); }
+:root[data-theme="a"] .pv .kc[data-changed="true"] .kc-name::before { content: ""; display: inline-block; width: 5px; height: 5px; margin-right: 4px; border-radius: 50%; background: var(--accent); vertical-align: middle; }
+:root[data-theme="a"] .pv .kc.pointed { outline: 2px solid var(--pointed); outline-offset: 1px; background: var(--pointed-bg); }
+:root[data-theme="a"] .pv .kc-toggle .kc-btn, :root[data-theme="a"] .pv .kc-choice .kc-select { min-height: var(--h-ctl); }
+:root[data-theme="a"] .pv .kc-choice { flex-direction: row; gap: 8px; }
+:root[data-theme="a"] .pv .kc-choice .kc-select { max-width: 130px; }
+:root[data-theme="a"] .pv-note { margin: 0; color: var(--ink-3); font-size: var(--fs-s); }
+:root[data-theme="a"] .pv-note span { font-family: var(--font-mono); color: var(--accent); }
+:root[data-theme="a"] .pv-chips { display: flex; flex-wrap: wrap; gap: 4px 8px; align-content: flex-start; max-height: 150px; overflow-y: auto; padding: 4px; background: var(--well); border-radius: var(--r-s); box-shadow: var(--well-shadow); }
+:root[data-theme="a"] .pv-chip { height: var(--h-xs); padding: 0 8px; font-size: var(--fs-xs); font-weight: 400; display: inline-flex; align-items: center; gap: 4px; }
+:root[data-theme="a"] .pv-chip span { font-family: var(--font-mono); color: var(--oled-dim); }
+:root[data-theme="a"] .pv-chip:hover span { color: var(--accent); }
+
+:root[data-theme="a"] .pv-switches .kc-choice .kc-select { min-width: 72px; }
+:root[data-theme="a"] .pv .kc-dial-svg { width: 58px; height: 58px; order: 0; }
+:root[data-theme="a"] .pv-switches .kc-choice .kc-name { max-width: none; flex: none; }
+:root[data-theme="a"] .pv .kc-name { max-width: none; overflow: visible; text-overflow: clip; white-space: normal; line-height: var(--lh-2xs); }
+:root[data-theme="a"] .pv-dials { gap: 4px 8px; }
+
+/* Round 2: the mockup's cards. A dial is its ring, then its label, then the amber value; a fader its scale, label and value. Labels wrap to two condensed lines, never an ellipsis. */
+:root[data-theme="a"] .pv-dials, :root[data-theme="a"] .pv-dials[data-n] { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: none; width: 100%; flex: 1; gap: 8px 4px; }
+:root[data-theme="a"] .pv-dials[data-n="1"], :root[data-theme="a"] .pv-dials[data-n="2"] { grid-template-columns: repeat(var(--n, 1), minmax(0, 1fr)); }
+:root[data-theme="a"] .pv-dials[data-n="1"] { max-width: 90px; }
+:root[data-theme="a"] .pv-dials[data-n="2"] { max-width: 180px; }
+:root[data-theme="a"] .pv .kc-dial { width: 100%; max-width: 92px; }
+:root[data-theme="a"] .pv .kc-dial .kc-name { order: 1; font-size: var(--fs-s); line-height: 1.15; max-width: 100%; display: flex; align-items: flex-start; justify-content: center; text-align: center; }
+:root[data-theme="a"] .pv .kc-dial .kc-readout { order: 2; }
+:root[data-theme="a"] .pv .kc-fader .kc-name { order: 2; font-size: var(--fs-s); line-height: 1.15; text-align: center; }
+:root[data-theme="a"] .pv .kc-fader .ta-fader { order: 1; }
+:root[data-theme="a"] .pv .kc-fader .kc-fader-box { order: 3; }
+:root[data-theme="a"] .pv .kc-fader-box { background: transparent; border-color: transparent; box-shadow: none; color: var(--accent); font-family: var(--font-mono); font-size: var(--fs-s); font-weight: 400; width: 100%; }
+:root[data-theme="a"] .pv .kc-fader { width: 52px; }
+:root[data-theme="a"] .pv-faders { gap: 2px; }
+:root[data-theme="a"] .pv [data-long="true"] .kc-name { min-height: calc(2 * 1.15em); }
+:root[data-theme="a"] .pv-card:not([data-card^="amp"]) .pv-faders { order: -1; }
+:root[data-theme="a"] .pv .kc-fader { width: 44px; }
+:root[data-theme="a"] .pv .kc-fader .info-btn { position: absolute; top: 0; right: 0; }

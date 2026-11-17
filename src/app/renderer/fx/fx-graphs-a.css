@@ -1,0 +1,8 @@
+/* Extras for the EQ, dynamics and drive graphs; the base look is .eq-svg/.eq-line/.eq-fill in KronosView.css. */
+.fxg { max-width: 460px; }
+.fxg .fxg-dot { fill: var(--k-accent); stroke: var(--k-graph-bg); stroke-width: 1.5; }
+.fxg .fxg-bar { fill: var(--k-graph-fill); stroke: var(--k-graph-line); stroke-width: 1.5; }
+.fxg .fxg-zero { stroke: var(--k-line-2); stroke-width: 1; }
+.fxg .fxg-diag { fill: none; stroke: var(--k-muted); stroke-width: 1; stroke-dasharray: 4 3; }
+.fxg .fxg-thr { stroke: var(--k-accent); stroke-width: 1; stroke-dasharray: 2 3; }
+.fxg-title { padding: 1px 6px; font-size: var(--fs-xs); font-weight: 700; color: var(--k-muted); }

@@ -1,0 +1,64 @@
+/* Kronos-view controls. Every colour, border, radius and font comes from the --k-* variables of the skin block in KronosView.css. */
+.kc { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; min-width: 0; padding: 3px 2px; border-radius: var(--r-s); }
+.kc[data-changed="true"]::after { content: ""; position: absolute; top: 3px; right: 3px; width: 6px; height: 6px; border-radius: 50%; background: var(--k-accent); }
+.kc.pointed { outline: 2px solid var(--k-pointed); outline-offset: -1px; background: var(--k-pointed-bg); }
+.kc-name { font-size: var(--fs-xs); line-height: var(--lh-2xs); color: var(--k-muted); text-align: center; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.kc-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+.kc-dial { width: 78px; }
+.kc-dial-svg { width: 56px; height: 56px; cursor: ns-resize; touch-action: none; user-select: none; outline: none; }
+.kc-dial-svg:focus-visible .kc-cap { stroke: var(--k-focus); stroke-width: 2; }
+.kc-track { fill: none; stroke: var(--k-line-2); stroke-width: 5; stroke-linecap: round; }
+.kc-arc { fill: none; stroke: var(--k-accent); stroke-width: 5; stroke-linecap: round; }
+.kc-centre { stroke: var(--k-text); stroke-width: 2; }
+.kc-cap { fill: var(--k-raise); stroke: var(--k-line-2); stroke-width: 1; }
+.kc-dial-svg:hover .kc-cap { stroke: var(--k-muted); }
+.kc-tick { stroke: var(--k-text); stroke-width: 3; stroke-linecap: round; }
+.kc-readout { position: relative; display: block; width: 100%; text-align: center; }
+.kc-value { display: block; font-size: var(--fs-s); line-height: var(--lh-xs); color: var(--k-text); min-height: 16px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* The number box sits invisibly over the value text; it shows on hover and on focus, so exact values can be typed. */
+.kc-num { width: 100%; box-sizing: border-box; font: inherit; font-size: var(--fs-s); text-align: center; color: var(--k-text); background: var(--k-bg); border: 1px solid var(--k-line-2); border-radius: var(--r-xs); padding: 0 2px; height: 18px; -moz-appearance: textfield; }
+.kc-num::-webkit-inner-spin-button { display: none; }
+.kc-num-over { position: absolute; inset: 0; opacity: 0; }
+.kc-readout:hover .kc-num-over, .kc-num-over:focus { opacity: 1; }
+
+.kc-toggle { align-items: stretch; }
+.kc-btn { display: flex; align-items: center; gap: 6px; background: var(--k-raise); color: var(--k-text); border: 1px solid var(--k-line-2); border-radius: var(--r-s); padding: 3px 8px; cursor: pointer; font: inherit; font-size: var(--fs-s); text-align: left; }
+.kc-btn .kc-name { color: inherit; }
+.kc-led { width: 8px; height: 8px; border-radius: 50%; background: var(--k-line-2); flex: none; }
+.kc-btn[aria-checked="true"] { border-color: var(--k-accent); }
+.kc-btn[aria-checked="true"] .kc-led { background: var(--k-accent); box-shadow: 0 0 6px var(--k-accent); }
+.kc-btn:focus-visible, .kc-segs button:focus-visible, .kc-select:focus-visible, .kc-num:focus-visible { outline: 2px solid var(--k-focus); outline-offset: 1px; }
+
+.kc-seg, .kc-choice, .kc-field { align-items: stretch; }
+.kc-segs { display: flex; flex-wrap: wrap; border: 1px solid var(--k-line-2); border-radius: var(--r-s); overflow: hidden; }
+.kc-segs button { flex: 1 1 auto; background: var(--k-raise); color: var(--k-text); border: 0; border-right: 1px solid var(--k-line-2); padding: 3px 6px; font: inherit; font-size: var(--fs-s); cursor: pointer; white-space: nowrap; }
+.kc-segs button:last-child { border-right: 0; }
+.kc-segs button[data-active="true"] { background: var(--k-accent); color: var(--k-accent-text); font-weight: 600; }
+.kc-select { background: var(--k-raise); color: var(--k-text); border: 1px solid var(--k-line-2); border-radius: var(--r-s); padding: 2px 4px; font: inherit; font-size: var(--fs-s); width: 100%; box-sizing: border-box; }
+.kc-field { display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto; column-gap: 6px; align-items: center; }
+.kc-field .kc-name { text-align: left; grid-column: 1; }
+.kc-field .kc-value { grid-column: 1; text-align: left; }
+.kc-field .kc-num { grid-column: 2; grid-row: 1 / span 2; width: 64px; }
+/* input[type="range"] in the selector outweighs the app's global range style */
+input[type="range"].kc-bar { width: 100%; margin: 0; cursor: pointer; background: transparent; }
+input[type="range"].kc-bar::-webkit-slider-runnable-track { height: 4px; border-radius: var(--r-xs); background: linear-gradient(to right, var(--k-accent) var(--p), var(--k-line-2) var(--p)); }
+.kc-bar { grid-column: 1 / -1; }
+.kc-ro .kc-value { opacity: 0.75; }
+
+.kc-fader { gap: 4px; }
+/* input[type="range"] in the selector outweighs the app's global range style */
+input[type="range"].kc-fader-input { writing-mode: vertical-lr; direction: rtl; width: 26px; margin: 0; background: transparent; cursor: pointer; -webkit-appearance: none; appearance: none; }
+input[type="range"].kc-fader-input::-webkit-slider-runnable-track { width: 6px; height: auto; border-radius: var(--r-s); background: var(--k-groove); border: 1px solid var(--k-line-2); }
+input[type="range"].kc-fader-input::-webkit-slider-thumb,
+input[type="range"].kc-fader-input:hover:not(:disabled)::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 24px; height: 12px; margin: 0 0 0 -10px; border-radius: var(--r-xs); background: linear-gradient(var(--k-fader-hi), var(--k-fader) 55%, var(--k-fader-lo)); border: 1px solid var(--k-fader-edge); }
+.kc-fader-box { width: 38px; font-weight: 600; background: var(--k-box); }
+
+/* Panels */
+.kp { background: var(--k-panel); border: 1px solid var(--k-line-2); border-radius: var(--r-s); min-width: 0; display: flex; flex-direction: column; }
+.kp-title { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 2px 8px; font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.02em; background: var(--k-title); color: var(--k-title-text); border-bottom: 1px solid var(--k-line-2); }
+.kp-body { padding: 6px; min-width: 0; }
+.kb-badge { display: inline-block; min-width: 18px; padding: 0 6px; border-radius: var(--r-2xl); font-size: var(--fs-xs); line-height: var(--lh-xs); font-weight: 700; text-align: center; background: var(--k-raise-2); color: var(--k-text); border: 1px solid var(--k-line-2); }
+.kb-blue { background: var(--k-badge); border-color: transparent; color: var(--k-badge-text); }
+.kb-red { background: var(--k-red); border-color: transparent; color: var(--k-badge-text); }
+.kb-green { background: var(--k-green); border-color: transparent; color: var(--k-badge-text); }

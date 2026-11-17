@@ -1,0 +1,69 @@
+/* Song match and per-channel sounds in the MIDI player. Uses the app's variables only. */
+.midimatch {
+  display: grid;
+  gap: 6px;
+  padding: 8px 0;
+  border-top: 1px solid var(--line);
+}
+
+.midimatch-line {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.midimatch-channels {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.midimatch-channel {
+  display: grid;
+  grid-template-columns: 4em minmax(0, 1fr) minmax(0, 1.4fr) auto;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+}
+
+.midimatch-channel > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.midimatch-channel button:focus-visible,
+.midimatch input:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.midimatch-row {
+  display: grid;
+  gap: 4px;
+}
+
+.midimatch-find {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 6px;
+}
+
+/* Under its row, scrolling: the right column is narrow, so no popup. */
+.midimatch-results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 160px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+}
+
+.midimatch-results button {
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

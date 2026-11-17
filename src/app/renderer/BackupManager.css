@@ -1,0 +1,8 @@
+.bkm { margin-top: 8px; }
+.bkm-list { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.bkm-row { border: 1px solid var(--line); background: var(--panel); padding: 6px 8px; display: flex; flex-direction: column; gap: 4px; color: var(--text); }
+.bkm-name { font-weight: 600; }
+.bkm-facts { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: var(--fs-s); }
+.bkm-warn { color: var(--accent); }
+.bkm-result { margin: 0; white-space: pre-line; font-size: var(--fs-s); }
+.bkm-actions { display: flex; gap: 6px; }

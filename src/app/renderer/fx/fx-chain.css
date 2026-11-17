@@ -1,0 +1,6 @@
+.kl-graph:has(> .fxc) { padding: 0; border: 0; background: none; position: relative; overflow: visible; }
+.fxc { text-align: center; font-weight: 700; font-size: var(--fs-xs); color: var(--k-muted); }
+.fxc-svg { position: absolute; left: 0; top: 0; pointer-events: none; overflow: visible; }
+.kl-graph .fxc-svg { max-height: none; width: auto; }
+.fxc-link { stroke: var(--k-accent); stroke-width: 2; stroke-linejoin: round; }
+.fxc-svg marker path { fill: var(--k-accent); }

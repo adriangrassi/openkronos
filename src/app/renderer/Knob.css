@@ -1,0 +1,67 @@
+.knob {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  cursor: ns-resize;
+  touch-action: none;
+  user-select: none;
+}
+
+.knob[data-disabled="true"] {
+  cursor: default;
+  opacity: 0.4;
+}
+
+.knob svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.knob-track,
+.knob-value {
+  fill: none;
+  stroke-width: 4;
+  stroke-linecap: butt;
+}
+
+.knob-track {
+  stroke: var(--line-2);
+}
+
+.knob-value {
+  stroke: var(--accent);
+}
+
+.knob-cap {
+  fill: var(--raise);
+  stroke: var(--line);
+  stroke-width: 1;
+  transition: stroke 120ms;
+}
+
+.knob:hover:not([data-disabled="true"]) .knob-cap {
+  stroke: var(--muted);
+}
+
+.knob-tick {
+  stroke: var(--text);
+  stroke-width: 2.5;
+  stroke-linecap: square;
+}
+
+/* The range input fills the dial but takes no pointer events and shows nothing; it carries the keyboard, the label and the value. */
+.knob input[type="range"] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.knob:has(input:focus-visible) .knob-cap {
+  stroke: var(--focus);
+  stroke-width: 2;
+}

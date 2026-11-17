@@ -1,0 +1,11 @@
+research/korg-sysex/
+node_modules/
+out/
+dist/
+*.log
+research/korg-factory/
+research/
+src/generated/
+
+# Test runs write this screenshot at the repo root
+/setpad.png

@@ -1,0 +1,356 @@
+/* Studio theme, style D "stage-first": structure on top of the tokens in themes.css. Everything is under html[data-theme="studio"], so Normal and Style A never see it.
+   Colours, fonts and radii come from the Studio tokens; the sizes below make every control a 56 px target readable at arm's length on a dark stage. */
+html[data-theme="studio"] {
+  --h-ctl: 56px;
+  --h-cell: 44px;
+  --h-xs: 40px;
+  --h-sm: 48px;
+  --h-lg: 56px;
+  --h-top: 56px;
+  --col-banks: 208px;
+  --col-side: 408px;
+  --col-nav: 216px;
+  --fs-xs: 0.9375rem;
+  --fs-s: 1rem;
+  --fs-m: 1.0625rem;
+  --fs-l: 1.125rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.375rem;
+  --lh-xs: 1.35;
+  --lh-s: 1.4;
+  --lh-m: 1.4;
+  --check-size: 32px;
+  --rail-h: 16px;
+  --thumb-w: 28px;
+  --thumb-h: 44px;
+  --scroll-w: 20px;
+  --top-gap: 8px;
+  --top-minh: 0px;
+  --top-pad: 8px 12px;
+  --bank-h: 56px;
+  --bank-pad: 12px;
+  --btn-pad: 24px;
+
+  font-size: 1rem;
+
+  /* Scrollbars: wide, high-contrast thumbs that a gloved or wet thumb can hit. */
+  ::-webkit-scrollbar-thumb { background: var(--rule); }
+  ::-webkit-scrollbar-thumb:hover { background: var(--ink-3); background-clip: padding-box; }
+
+  button { font-size: 1.0625rem; }
+  button:disabled { opacity: 0.4; }
+  input[type="search"], input[type="number"], input[type="text"], textarea, select { font-size: 1.125rem; }
+  textarea { min-height: 7rem; }
+  select { padding-right: 40px; }
+  input[type="checkbox"] { width: var(--check-size); height: var(--check-size); border-radius: var(--r-s); }
+  .check { gap: 14px; min-height: 56px; font-size: 1.0625rem; }
+  h1 { font-size: 1.75rem; font-weight: 800; font-stretch: var(--stretch-head); }
+  h2 { font-size: 1.25rem; font-weight: 800; }
+  h3 { font-size: 1.125rem; font-weight: 800; }
+  .error { padding: 16px 24px; margin: 0 12px; border: 0; border-radius: var(--r-ctl); background: var(--state-bad); color: var(--paper-3); font-size: 1.25rem; font-weight: 800; }
+  .status { font-size: 1rem; }
+  progress { height: 16px; }
+  .scrim { background: var(--scrim); }
+  .modal { width: min(640px, 92vw); padding: 32px; border-width: 2px; }
+  .modal p { font-size: 1.375rem; font-weight: 700; line-height: 1.3; }
+  .modal .buttons { gap: 16px; }
+  .modal button { height: 64px; min-width: 144px; font-size: 1.25rem; }
+
+  /* ---- Top area: wordmark and the five big keys, then the state blocks ---- */
+  .topbar { align-items: stretch; row-gap: 6px; }
+  .topbar > .wordmark { margin-right: auto; align-self: center; font-size: 1.5rem; }
+  .topbar > button { font-size: 1.125rem; }
+  .topbar > [data-testid="open-file"] { order: 10; }
+  .topbar > [data-testid="save-file"] { order: 11; }
+  .topbar > [data-testid="undo"] { order: 12; margin-left: 0; }
+  .topbar > [data-testid="redo"] { order: 13; }
+  .topbar > [data-testid="studio-tools"] { order: 14; background: var(--accent); color: var(--accent-text); }
+  .topbar > [data-testid="studio-tools"]:hover:not(:disabled) { background: var(--accent-hi); }
+  .topbar > [data-testid="studio-tools"][aria-expanded="true"] { outline: var(--focus-w) solid var(--focus); outline-offset: 0; }
+  .topbar > [data-testid="studio-tools"]::after { content: "\25BE"; margin-left: 10px; }
+  .topbar > [data-testid="sounds-open"] { order: 5; margin-left: 0; }
+  .topbar > [data-testid="setlists-open"] { order: 6; }
+  .topbar > [data-testid="ai-open"] { order: 7; }
+  .topbar > [data-testid="search"] { order: 34; flex: 0 1 240px; margin-left: 0; }
+  .topbar > button[aria-pressed="true"], .topbar > button[aria-expanded="true"] { background: var(--on-bg); color: var(--on-fg); }
+
+  .studio-break { order: 29; flex: 0 0 100%; height: 0; }
+  .topbar > .file-name, .topbar > .pill, .topbar > .studio-block {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    max-width: none;
+    min-height: 52px;
+    margin: 0;
+    padding: 4px 16px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: var(--r-ctl);
+    background: var(--key);
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .topbar > .file-name { order: 30; flex-basis: 15%; }
+  .topbar > .file-name::after { content: "File open"; font-size: 0.875rem; font-weight: 600; color: var(--text-2); }
+  .topbar > .pill { order: 31; }
+  .topbar > .pill .led { display: none; }
+  .topbar > .pill::after { content: attr(title); overflow: hidden; text-overflow: ellipsis; font-size: 0.875rem; font-weight: 600; opacity: 0.85; }
+  .topbar > .pill[data-on="true"] { background: var(--state-ok); color: var(--state-ok-ink); }
+  .topbar > .studio-block { order: 32; }
+  .topbar > .studio-block[data-testid="studio-differs"] { order: 33; }
+  .studio-block small { font-size: 0.875rem; font-weight: 600; overflow: hidden; text-overflow: ellipsis; }
+  .studio-block[data-tone="ok"] { background: var(--state-ok); color: var(--state-ok-ink); }
+  .studio-block[data-tone="warn"] { background: var(--state-warn); color: var(--state-warn-ink); }
+  .studio-block[data-tone="idle"] small { color: var(--text-2); }
+  .topbar > .xfer { order: 99; }
+
+  /* Tools: the secondary keys stay mounted. Closed, they are hidden (display none); open, they stack in a sheet at the right edge. */
+  .topbar > :is([data-testid="save-as"], [data-testid="exchange-open"], [data-testid="shell-recent-button"], [data-testid="shell-history-button"], [data-testid="overview-open"], [data-testid="shell-help-button"], [data-testid="settings-open"]) { display: none; }
+  &[data-studio-tools="open"] .topbar > :is([data-testid="save-as"], [data-testid="exchange-open"], [data-testid="shell-recent-button"], [data-testid="shell-history-button"], [data-testid="overview-open"], [data-testid="shell-help-button"], [data-testid="settings-open"]) {
+    display: block;
+    position: fixed;
+    right: 24px;
+    width: 312px;
+    height: 56px;
+    z-index: 62;
+    margin: 0;
+    text-align: left;
+    font-size: 1.125rem;
+  }
+  &[data-studio-tools="open"] .topbar > [data-testid="save-as"] { top: 128px; }
+  &[data-studio-tools="open"] .topbar > [data-testid="exchange-open"] { top: 192px; }
+  &[data-studio-tools="open"] .topbar > [data-testid="shell-recent-button"] { top: 256px; }
+  &[data-studio-tools="open"] .topbar > [data-testid="shell-history-button"] { top: 320px; }
+  &[data-studio-tools="open"] .topbar > [data-testid="overview-open"] { top: 384px; }
+  &[data-studio-tools="open"] .topbar > [data-testid="shell-help-button"] { top: 448px; }
+  &[data-studio-tools="open"] .topbar > [data-testid="settings-open"] { top: 512px; }
+  .studio-scrim { position: fixed; inset: 0; z-index: 60; background: var(--scrim-soft); }
+  .studio-sheet { position: fixed; top: 72px; right: 8px; z-index: 61; box-sizing: border-box; width: 344px; height: 536px; padding: 16px; background: var(--panel); border: 2px solid var(--rule); border-radius: var(--r-xl); }
+  .studio-sheet b { font-size: 1.5rem; font-weight: 800; }
+  .shell-pop { top: 144px; right: 24px; left: auto; }
+
+  /* ---- The open sound: slot and name huge. The state lights live in the blocks above, so only Live stays here ---- */
+  .sd { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 12px; margin: 4px 12px 0; padding: 0; background: none; border-radius: 0; box-shadow: none; }
+  .sd-oled { padding: 0; background: none; box-shadow: none; border-radius: 0; color: var(--text); }
+  .sd-top { font-size: 0.9375rem; color: var(--text-2); }
+  .sd-main { align-items: flex-end; gap: 24px; margin-top: 0; }
+  .sd-slot { padding-right: 0; border: 0; line-height: 0.9; }
+  .sd-bank { font-size: 1.5rem; letter-spacing: 0.02em; color: var(--display); text-shadow: none; }
+  .sd-no { font-size: clamp(3.5rem, 6vw, 5.5rem); font-weight: 800; font-stretch: var(--stretch-head); color: var(--text); font-variant-numeric: tabular-nums; }
+  .sd-name { font-size: clamp(2rem, 3.6vw, 3.25rem); font-weight: 800; font-stretch: var(--stretch-head); color: var(--text); text-shadow: none; line-height: 1.02; padding-bottom: 0.4rem; }
+  .sd-leds { display: flex; flex-flow: row wrap; gap: 8px; min-width: 0; margin: 0; padding: 0; }
+  .sd-leds li { min-height: 48px; box-sizing: border-box; padding: 0 20px; border-radius: var(--r-ctl); background: var(--key); color: var(--text); font-weight: 800; font-size: 1.125rem; }
+  .sd-leds li:not(.sd-live) { display: none; }
+  .sd .lamp { display: none; }
+  .editor:has([data-testid="live-edit"]:checked:not(:disabled)) .sd-live { background: var(--accent); color: var(--accent-text); }
+  .toolbar { gap: 8px; flex-wrap: wrap; height: auto; min-height: var(--h-bar); padding: 4px 12px; }
+  .editor > button { height: 48px; }
+  .view-switch, .view-row, .kb-tabs { padding: 4px 12px; }
+  .view-switch button, .view-row button { height: 48px; }
+  .toolbar h1 { font-size: 1.5rem; }
+  /* The 56 px targets stack taller than the window at 1064 x 835, so the Kronos view used to collapse to 2 px; the editor scrolls, nothing in it shrinks, and the view and the parameter list keep a usable height. */
+  .editor { overflow-y: auto; }
+  .editor > * { flex-shrink: 0; }
+  .editor > .kv { flex: 1 0 640px; }
+  .editor > .editor-body { flex: 1 0 520px; }
+
+  /* ---- Left bank list and slot rows ---- */
+  .banks section { padding: 4px; margin-bottom: 8px; }
+  .banks h2 { font-size: 0.9375rem; letter-spacing: 0.06em; color: var(--text-2); }
+  .bank { font-size: 1.0625rem; }
+  .bank[aria-current="true"] { background: var(--accent); color: var(--accent-text); }
+  .bank[aria-current="true"] .num { color: var(--accent-text); }
+  .row { font-size: 1.125rem; border-bottom: 2px solid var(--line); }
+  .row .name { font-weight: 700; }
+  .row.selected, .row.selected:hover { background: var(--accent); }
+  .row.selected .name, .row.selected .slot { color: var(--accent-text); }
+  .slot, .num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+  .eng { font-size: 0.875rem; padding: 4px 10px; }
+  .hit { min-height: 56px; font-size: 1.125rem; }
+  .change { min-height: 56px; font-size: 1.0625rem; padding: 10px 0; }
+  .sec-toggle { min-height: 56px; font-size: 1.125rem; font-weight: 800; }
+
+  /* ---- The Keyboard panel: the five-step safe order, Sync as one giant slab, the read-only pulls apart ---- */
+  .kb-conn { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .kb-lead { font-size: 1.0625rem; color: var(--text-2); }
+  .steps { display: grid; gap: 8px; }
+  .steps::before { display: none; }
+  .step { grid-template-columns: 56px minmax(0, 1fr) auto; column-gap: 0; align-items: stretch; padding: 0; min-height: 72px; background: var(--key); border-radius: var(--r-m); overflow: hidden; }
+  .step::before { width: 56px; height: auto; border: 0; border-radius: 0; background: var(--paper-3); color: var(--text); font: 800 1.5rem/1 var(--font-display); }
+  .step:first-child::before { background: var(--state-warn); color: var(--state-warn-ink); }
+  .step > div { align-self: center; padding: 10px 16px; min-width: 0; }
+  .step h3 { font-size: 1.25rem; }
+  .step p { font-size: 0.875rem; color: var(--text-2); }
+  .step > button, .step > .step-slot { align-self: center; margin: 8px 8px 8px 0; min-width: 96px; }
+  .step > .status { padding: 0 16px 10px; }
+  .step:has(.guard) { outline: 2px solid var(--state-bad); outline-offset: -2px; }
+  .step-slot { align-items: stretch; }
+  .kb-sync { position: relative; margin-top: 16px; padding: 0; border: 0; }
+  .kb-sync > button { display: flex; align-items: flex-start; width: 100%; height: auto; min-height: 208px; padding: 24px 24px 76px; border: 0; border-radius: var(--r-xl); background: var(--accent); color: var(--accent-text); font: 800 3rem/1 var(--font-display); font-stretch: var(--stretch-head); text-align: left; white-space: normal; }
+  .kb-sync > button:hover:not(:disabled) { background: var(--accent-hi); }
+  .kb-sync > button:disabled { opacity: 0.45; }
+  .kb-sync > p { position: absolute; left: 24px; right: 24px; bottom: 16px; margin: 0; color: var(--accent-text); font-size: 0.9375rem; line-height: 1.3; pointer-events: none; }
+  .kb-sub { margin: 32px 0 4px; font-size: 1.375rem; }
+  .kb-sub + p { margin: 0 0 8px; }
+  .kb-sub + p + .kb-grid { padding: 12px; border: 2px solid var(--line-2); border-radius: var(--r-l); gap: 8px; }
+  .kb-grid select { min-width: 0; }
+  .badge { padding: 12px 16px; border-radius: var(--r-m); background: var(--state-warn); color: var(--state-warn-ink); font-weight: 800; font-size: 1.0625rem; }
+  .mode-bar button { min-height: 56px; }
+  .mode-bar button[data-active="true"] { background: var(--accent); color: var(--accent-text); }
+  .sec-count { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+  /* ---- Set List pads: giant, high contrast, the current pad unmistakable ---- */
+  .setlists { background: var(--bg); border: 2px solid var(--rule); border-radius: var(--r-xl); font-size: 1.125rem; }
+  .setlists[data-view="play"] { top: 0; padding: 16px 24px; font-size: 1.375rem; }
+  .sl-head, .sl-pages, .sl-fields, .sl-playbar { gap: 10px; }
+  .sl-pages button, .sl-view button, .sl-size button { min-width: 56px; }
+  .sl-pages button[data-active="true"], .sl-view button[data-active="true"], .sl-size button[data-active="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+  .sl-grid { gap: 10px; }
+  .sl-pad { min-height: 96px; border: 3px solid var(--rule); border-left-width: 14px; border-radius: var(--r-ctl); background: var(--key); color: var(--text); padding: 10px 16px; }
+  .sl-pad b { font-weight: 800; font-size: 1.375rem; }
+  .sl-pad[data-selected="true"], .sl-pad[data-current="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-text); outline: 4px solid var(--focus); outline-offset: 2px; }
+  .sl-pad small, .sl-num { opacity: 1; }
+  .sl-pad[data-selected="true"] small, .sl-pad[data-current="true"] small { color: var(--accent-text); }
+  .setlists[data-inline="true"]:not([data-view="play"]) .sl-pad b { font-size: clamp(1.25rem, 6cqw, 2.25rem); }
+  .setlists[data-inline="true"]:not([data-view="play"]) .sl-pad { padding: 10px 16px; }
+  .sl-grid[data-view="play"] .sl-pad { border-width: 3px; border-left-width: 3px !important; border-left-color: var(--rule) !important; background: var(--key); padding-left: 24px; }
+  .sl-grid[data-view="play"] .sl-pad::before { width: 14px; }
+  .sl-grid[data-view="play"] .sl-pad b { font-weight: 800; }
+  .sl-grid[data-view="play"] .sl-pad[data-current="true"] { border: 8px solid var(--focus); border-left-width: 8px !important; border-left-color: var(--focus) !important; background: var(--accent); color: var(--accent-text); outline: none; }
+  .sl-grid[data-view="play"] .sl-pad[data-current="true"] :is(small, .sl-num, .sl-pc) { color: var(--accent-text); opacity: 1; }
+  .sl-now { background: var(--accent-text); color: var(--accent); font-size: 1.125rem; padding: 4px 14px; border-radius: var(--r-s); }
+  .sl-play-foot .sl-hint { font-size: 1.125rem; }
+  .sl-picker { border-top: 2px solid var(--line-2); }
+  .sl-rows { max-height: 240px; }
+  .sl-error { color: var(--state-bad); font-weight: 800; }
+  .setpad-host > button[data-testid="setlists-list-view"] { margin-bottom: 12px; }
+
+  /* ---- Parameter pages: big pad rows, a stepper on each number, large tabular numerals, a thick slider ---- */
+  .param-nav { padding-top: 16px; }
+  .editor-body { grid-template-columns: var(--col-nav) minmax(0, 1fr); }
+  .param-list { container-type: inline-size; }
+  .group { font-size: 1.0625rem; font-weight: 700; }
+  .group[aria-current="true"] { background: var(--accent); color: var(--accent-text); }
+  .param-row { height: 56px; grid-template-columns: minmax(0, 1fr) 112px 56px 112px 56px minmax(120px, 220px); gap: 8px; padding: 0 16px; border-bottom: 2px solid var(--line); font-size: 1.0625rem; }
+  .param-name { font-weight: 700; }
+  .param-value { font: 800 1.5rem/1 var(--font-mono); font-variant-numeric: tabular-nums; color: var(--text); }
+  .param-input { height: 44px; padding: 0 8px; font: 800 1.375rem/1 var(--font-mono); font-variant-numeric: tabular-nums; text-align: center; }
+  .param-input:focus-visible { border-color: var(--focus); }
+  .param-row[data-changed="true"] .param-name, .param-row[data-changed="true"] .param-value { color: var(--state-warn); }
+  .studio-step { width: 56px; min-width: 0; height: 56px; padding: 0; border-radius: var(--r-ctl); font-size: 1.75rem; font-weight: 800; line-height: 1; }
+  .studio-step:disabled { opacity: 0.25; }
+  .param-slider { height: 44px; }
+  /* Below 600 px the 56 px row (two steppers, value, field, slider) no longer fits: the same controls, shrunk to the 44 px minimum. */
+  @container (max-width: 599px) {
+    .param-row { grid-template-columns: minmax(0, 1fr) 80px 44px 80px 44px minmax(56px, 96px); gap: 6px; padding: 0 8px; }
+    .studio-step { width: 44px; height: 44px; }
+    .param-value { font-size: 1.25rem; }
+  }
+  .kb-row { height: auto; min-height: 56px; }
+  .kb-toggle { min-height: 44px; min-width: 88px; }
+  .kb-toggle[aria-checked="true"] { background: var(--state-ok); color: var(--state-ok-ink); }
+  input[type="range"]::-webkit-slider-thumb { border-radius: var(--r-s); background: var(--accent); border: 3px solid var(--paper-3); box-sizing: border-box; }
+  input[type="range"]::-webkit-slider-runnable-track { border-radius: var(--r-s); }
+  .kc-name, .knob-value, .kc-value, .kc-num { font-variant-numeric: tabular-nums; }
+  .kc-num, .kc-box-input { font-size: 1.25rem; font-weight: 800; }
+  .kc-btn, .kc-segs button, .kl-panes button { min-height: 56px; }
+  .kc-steps button { min-width: 44px; min-height: 44px; }
+  .kl-panes button[data-active="true"], .kc-segs button[data-active="true"] { background: var(--accent); color: var(--accent-text); }
+
+  /* ---- AI panel, review, A/B bar, Compare ---- */
+  .ai-panel { font-size: 1.0625rem; border-width: 2px; }
+  .ai-panel textarea { font-size: 1.125rem; min-height: 8rem; }
+  /* At 1064 px the AI window leaves the docked tip under 240 px, too narrow to narrow it, so the tip sat behind the window and Next could not be clicked. */
+  .guide { z-index: 11; }
+  .ai-pick > span { font-size: 1rem; }
+  .ai-grip { opacity: 0.6; }
+  .ab-bar { border: 2px solid var(--rule); border-radius: var(--r-xl); font-size: 1.125rem; }
+  /* While the hold bar is up (340 px wide, bottom right), the AI window steps left of it instead of sitting on its Keep button. */
+  &:has(.ab-bar) .ai-panel { left: max(0px, calc(100vw - 784px)) !important; }
+  .ab-bar button.ab-side { min-height: 72px; font-size: 1.5rem; font-weight: 800; }
+  .ab-bar button.ab-side[aria-pressed="true"] { background: var(--accent); color: var(--accent-text); }
+  .ab-name { font-size: 1.5rem; font-weight: 800; }
+  .compare-row { min-height: 56px; font-size: 1.0625rem; }
+  .compare-row.differs .name { color: var(--state-warn); }
+  .compare-params th, .compare-params td, .ex-rows td, .bt-preview th, .mon th, .mon td { padding: 10px 12px; font-size: 1rem; }
+
+  /* ---- Overview, Sound browser, Backup manager, Settings, Help, History, Exchange, Bank tools ---- */
+  .overview { font-size: 1.0625rem; }
+  .ov-stats b { font: 800 2rem/1 var(--font-display); font-variant-numeric: tabular-nums; }
+  .ov-kinds button, .ov-list button { min-height: 56px; }
+  .ov-kinds button[aria-pressed="true"] { background: var(--accent); color: var(--accent-text); }
+  .sb-toolbar { gap: 12px; flex-wrap: wrap; }
+  .sb-filters { gap: 10px; flex-wrap: wrap; }
+  .sb-row { min-height: 56px; font-size: 1.125rem; }
+  .sb-row.selected { background: var(--accent); color: var(--accent-text); }
+  .sb-name { font-weight: 800; }
+  .sb-star, .sb-chip button { min-width: 44px; min-height: 44px; }
+  .sb-chip { min-height: 44px; font-size: 1rem; }
+  .sb-detail { overflow-y: auto; font-size: 1.0625rem; }
+  .sb-error { color: var(--state-bad); font-weight: 800; }
+  .bkm-row { min-height: 56px; padding: 8px 0; font-size: 1.0625rem; }
+  .bkm-actions { gap: 8px; flex-wrap: wrap; }
+  .bkm-warn { color: var(--state-warn); font-weight: 700; }
+  .settings-dialog { width: min(720px, 94vw); max-height: 90vh; overflow-y: auto; padding: 32px; border: 2px solid var(--rule); border-radius: var(--r-xl); font-size: 1.125rem; }
+  .settings-row { min-height: 56px; gap: 12px; }
+  .settings-btns button[aria-pressed="true"], .settings-theme input:checked + span { background: var(--accent); color: var(--accent-text); }
+  .settings-hint { font-size: 1rem; }
+  .shell-dialog, .shell-pop { border: 2px solid var(--rule); border-radius: var(--r-xl); padding: 16px; font-size: 1.125rem; }
+  .shell-list button { min-height: 56px; font-size: 1.125rem; }
+  .shell-list button[aria-current="true"] { background: var(--accent); color: var(--accent-text); }
+  .shell-keys kbd { font-size: 1rem; padding: 4px 10px; }
+  .exchange, .banktools { font-size: 1.0625rem; }
+  .ex-warn, .bt-error, .ex-error, .param-error { color: var(--state-bad); font-weight: 800; }
+  .welcome-card h1 { font-size: 3rem; }
+  .welcome-actions button { min-height: 64px; font-size: 1.25rem; }
+
+  /* ---- Dock: piano and MIDI monitor ---- */
+  .dock { border-top: 2px solid var(--rule); }
+  .dock-bar { padding: 2px 12px; gap: 12px; }
+  .dock-bar button, .dock-tabs button { height: 48px; min-width: 48px; }
+  .dock [role="tab"][aria-selected="true"], .dock button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+  .dock-body { padding: 8px 24px 12px; gap: 8px; }
+  .kd-controls { gap: 12px; }
+  .kd-controls label { gap: 10px; font-size: 1.0625rem; }
+  .dock :focus-visible { outline: var(--focus-w) solid var(--focus); outline-offset: 2px; }
+  .mon { font-size: 1rem; }
+  .mon-scroll { max-height: 220px; overflow: auto; }
+  .mon th { position: sticky; top: 0; background: var(--panel); }
+  .mt-chan button { min-width: 44px; min-height: 44px; }
+  .mt-chan button[aria-pressed="true"] { background: var(--accent); color: var(--accent-text); }
+}
+
+/* 1280 x 800 and below: the columns give way before the targets do. */
+@media (max-width: 1400px) {
+  html[data-theme="studio"] {
+    --col-banks: 176px;
+    --col-side: 360px;
+    --col-nav: 188px;
+  }
+}
+
+/* Default window (1064 wide): narrower side columns and tighter keys, so the five big keys and Tools share one row and the editor keeps a usable width. */
+@media (max-width: 1150px) {
+  html[data-theme="studio"] {
+    --col-banks: 148px;
+    --col-side: 288px;
+    --col-nav: 168px;
+    --btn-pad: 16px;
+    --top-btn-pad: 12px;
+  }
+}
+
+@media (max-height: 820px) {
+  html[data-theme="studio"] {
+    .sd-no { font-size: clamp(3rem, 6vw, 5rem); }
+    .kb-sync > button { min-height: 168px; font-size: 2.5rem; padding-bottom: 68px; }
+  }
+}

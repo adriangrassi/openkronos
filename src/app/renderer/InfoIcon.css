@@ -1,0 +1,17 @@
+/* The "i" help icon and its popover (InfoIcon.tsx). App variables by default; inside the Kronos view (.kv) the --k-* skin variables. */
+.info-btn { flex: none; display: inline-grid; place-items: center; width: 13px; height: 13px; margin: 0 0 0 4px; padding: 0; border: 1px solid var(--line-2); border-radius: 50%; background: transparent; color: var(--muted); font: italic 700 var(--fs-3xs)/1 var(--font-serif); cursor: help; opacity: 0.55; vertical-align: middle; }
+button.info-btn:hover:not(:disabled), button.info-btn[aria-expanded="true"] { opacity: 1; color: var(--text); background: var(--raise-2); border-color: var(--accent); }
+button.info-btn:focus-visible { opacity: 1; outline: 2px solid var(--focus); outline-offset: 1px; }
+.info-pop { position: fixed; z-index: 1000; width: max-content; max-width: 320px; padding: 8px 10px; background: var(--raise-2); color: var(--text); border: 1px solid var(--line-2); border-radius: var(--r-m); box-shadow: 0 4px 14px var(--bg); font-size: var(--fs-s); line-height: 17px; font-weight: 400; font-style: normal; text-align: left; text-transform: none; letter-spacing: 0; white-space: normal; }
+.info-pop p { margin: 0; }
+.info-src { margin-top: 6px !important; color: var(--muted); font-size: var(--fs-xs); }
+.kv .info-btn { border-color: var(--k-line-2); color: var(--k-muted); }
+.kv button.info-btn:hover:not(:disabled), .kv button.info-btn[aria-expanded="true"] { color: var(--k-text); background: var(--k-raise-2); border-color: var(--k-accent); }
+.kv button.info-btn:focus-visible { outline-color: var(--k-focus); }
+.kv .info-pop { background: var(--k-panel); color: var(--k-text); border-color: var(--k-line-2); border-radius: var(--k-radius); box-shadow: 0 4px 14px var(--k-bg); font-family: var(--k-font); }
+.kv .info-src { color: var(--k-muted); }
+/* the name keeps its ellipsis; the icon stays outside the clipped text */
+.param-name:has(> .info-btn) { display: flex; align-items: center; overflow: visible; }
+.param-name:has(> .info-btn) > .pn-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+button.info-btn:active:not(:disabled) { background: var(--bg); }
+.kv button.info-btn:active:not(:disabled) { background: var(--k-bg); }

@@ -1,0 +1,13 @@
+.mt { display: grid; gap: 8px; margin-top: 8px; color: var(--text); }
+.mt-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.mt-row input[type="range"] { flex: 1; min-width: 160px; accent-color: var(--accent); }
+.mt-row input[type="number"] { width: 64px; background: var(--panel); color: var(--text); border: 1px solid var(--line); padding: 2px 4px; }
+.mt-row input:focus-visible, .mt button:focus-visible { outline: 2px solid var(--focus); }
+.mt-time { font-variant-numeric: tabular-nums; min-width: 40px; }
+.mt-roll { position: relative; background: var(--bg); border: 1px solid var(--line); height: 120px; cursor: pointer; }
+.mt-roll canvas { display: block; width: 100%; height: 100%; }
+.mt-playhead { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--accent); pointer-events: none; }
+.mt-chans { display: grid; gap: 2px; }
+.mt-chan { display: grid; grid-template-columns: 48px 1fr 56px 64px 64px 120px 32px; gap: 8px; align-items: center; padding: 2px 4px; border-bottom: 1px solid var(--line); }
+.mt-chan button { background: var(--panel); color: var(--text); border: 1px solid var(--line); padding: 2px 6px; cursor: pointer; }
+.mt-chan button[aria-pressed="true"] { background: var(--accent); color: var(--bg); border-color: var(--accent); }

@@ -1,0 +1,10 @@
+/* Filter, Keyboard Track and Vector graphs: the same look as the envelope and LFO graphs. */
+.g3 { margin: 8px 10px 0; }
+.g3-svg { display: block; width: 100%; height: 180px; background: var(--bg); border: 1px solid var(--line); touch-action: none; }
+.g3-square { width: 240px; height: 240px; }
+.g3-frame { fill: none; stroke: var(--line); }
+.g3-zero { stroke: var(--line); }
+.g3-line { fill: none; stroke: var(--accent); stroke-width: 2; }
+.g3-handle { fill: var(--panel); stroke: var(--accent); stroke-width: 2; cursor: grab; }
+.g3-handle:focus-visible { outline: none; stroke: var(--focus); stroke-width: 3; }
+.g3-caption { margin: 4px 0 0; font-size: var(--fs-s); }

@@ -1,0 +1,10 @@
+.ms-tools { margin-left: 8px; }
+.ms-tools button { margin-right: 4px; }
+.ms-panel { position: fixed; top: 96px; right: 24px; width: 360px; max-height: 70vh; display: flex; flex-direction: column; gap: 8px; padding: 12px; background: var(--panel); border: 1px solid var(--line); color: var(--text); z-index: 20; }
+.ms-panel:focus-visible, .ms-panel input:focus-visible, .ms-opt:focus-visible { outline: 1px solid var(--focus); }
+.ms-panel h3 { margin: 8px 0 4px; font-size: var(--fs-s); color: var(--accent); }
+.ms-scroll { overflow-y: auto; min-height: 0; }
+.ms-opt { display: block; width: 100%; text-align: left; background: transparent; border: 0; color: var(--text); padding: 4px 8px; }
+.ms-opt:hover { background: var(--bg); }
+.param-name:has(.ms-tools) { overflow: visible; }
+.ms-tools button { padding: 0 6px; }

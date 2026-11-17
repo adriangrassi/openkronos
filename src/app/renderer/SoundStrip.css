@@ -1,0 +1,144 @@
+/* The sound display strip: structure and a flat look from the neutral tokens. The OLED well, glow and lamp bevels are Style A only and live in theme-a.css; Studio restyles it in theme-studio.css, Normal hides it. */
+.sd {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  flex: none;
+  margin: 8px 12px 0;
+  padding: 8px;
+  background: var(--well);
+  border-radius: var(--r-l);
+}
+
+.sd-oled {
+  min-width: 0;
+  padding: 8px 12px;
+  border-radius: var(--r-m);
+  color: var(--text);
+}
+
+.sd-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-m);
+  color: var(--muted);
+}
+
+.sd-top span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sd-main {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 4px;
+}
+
+.sd-slot {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  padding-right: 24px;
+  border-right: 1px solid var(--rule);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(20px, 2.2vw, 32px);
+  line-height: 1.06;
+  white-space: nowrap;
+}
+
+.sd-no {
+  color: var(--muted);
+}
+
+.sd-name {
+  min-width: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(20px, 2.2vw, 32px);
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.sd-leds {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  min-width: 170px;
+  margin: 0;
+  padding: 0 8px 0 0;
+  list-style: none;
+}
+
+.sd-leds li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sd-leds li[data-on="false"] {
+  color: var(--muted);
+}
+
+.lamp {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--line-2);
+}
+
+.lamp[data-lit="green"] {
+  background: var(--state-ok);
+}
+
+.lamp[data-lit="amber"] {
+  background: var(--accent);
+}
+
+.lamp[data-lit="red"] {
+  background: var(--danger);
+}
+
+/* Live is on when the editor's Live checkbox is checked and usable (a keyboard is connected). */
+.sd-live {
+  color: var(--muted);
+}
+
+.sd-live-on {
+  display: none;
+}
+
+.editor:has([data-testid="live-edit"]:checked:not(:disabled)) .sd-live {
+  color: var(--text);
+}
+
+.editor:has([data-testid="live-edit"]:checked:not(:disabled)) .sd-live .lamp {
+  background: var(--accent);
+}
+
+.editor:has([data-testid="live-edit"]:checked:not(:disabled)) .sd-live-on {
+  display: inline;
+}
+
+.editor:has([data-testid="live-edit"]:checked:not(:disabled)) .sd-live-off {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .sd {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sd-leds {
+    flex-flow: row wrap;
+    gap: 8px 24px;
+  }
+}

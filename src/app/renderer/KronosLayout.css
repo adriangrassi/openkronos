@@ -1,0 +1,116 @@
+/* Layout-spec screens (KronosLayout.tsx). Colours, borders and radii come from the --k-* skin variables in KronosView.css. */
+.kl { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; align-items: stretch; }
+.kl-sec { min-width: 0; display: flex; flex-direction: column; }
+.kl-sec > .kp { flex: 1; }
+.kl .kp-title { background: var(--k-bar); color: var(--k-bar-text); font-size: var(--fs-s); padding: 3px 8px; }
+.kl .kp-body { padding: 6px 8px; flex: 1; }
+.kl-bare > .kl-rows { flex: 1; }
+.kl-more { grid-column: 1 / -1; }
+.kl-wrap { display: flex; gap: 8px; align-items: flex-start; }
+.kl-wrap > .kl { flex: 1; min-width: 0; }
+.kl-panes { display: flex; flex-direction: column; gap: 4px; width: 92px; flex: none; }
+.kl-panes button { padding: 8px 6px; text-align: left; font: inherit; font-size: var(--fs-s); font-weight: 700; color: var(--k-text); background: var(--k-tab-bg); border: 1px solid var(--k-line-2); border-radius: var(--k-radius); cursor: pointer; }
+.kl-panes button[data-active="true"], .kl-panes button[data-active="true"]:hover:not(:disabled), .kl-panes button[data-active="true"]:active:not(:disabled) { background: var(--k-tab-active-bg); color: var(--k-tab-active-text); }
+.kl-panes button:focus-visible { outline: 2px solid var(--k-focus); outline-offset: 1px; }
+
+.kl-rows { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.kl-row { display: grid; grid-template-columns: var(--kl-tpl); gap: 2px 6px; align-items: center; min-width: 0; }
+.kl-row[data-rule="true"] { border-top: 1px solid var(--k-line); padding-top: 4px; margin-top: 2px; }
+.kl-heading { font-weight: 700; font-size: var(--fs-s); padding: 2px 4px; }
+.kl-rowlabel { font-weight: 700; font-size: var(--fs-s); text-align: right; padding-right: 6px; }
+.kl-slot { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.kl-stack { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 6px; align-items: center; }
+.kl-stack > .kl-cell { display: contents; }
+.kl-cell { display: flex; align-items: center; gap: 6px; min-width: 0; padding: 1px 2px; }
+.kl-label { font-size: var(--fs-s); white-space: nowrap; color: var(--k-text); }
+.kl-box .kc, .kl-text .kc { flex: 0 0 auto; }
+.kl-pick .kc, .kl-fill .kc { flex: 1; min-width: 0; }
+.kl-fill .kc-box { width: auto; }
+.kl-dial .kc-dial { width: 70px; }
+.kl-dial .kc-dial-svg { width: 48px; height: 48px; }
+.kl-fader { flex-direction: column; align-items: flex-start; }
+.kl-graph { min-width: 0; border: 1px solid var(--k-line-2); background: var(--k-graph-bg); border-radius: var(--k-radius); padding: 2px; align-self: stretch; }
+.kl-graph svg { display: block; width: 100%; height: auto; max-height: 160px; }
+.kl-graph .eq-svg { max-width: none; border: 0; }
+.kl-graph:empty { display: none; }
+.kl-graph .eg-note, .kl-graph .g3-caption, .kl-graph .lfo-caption { display: none; }
+.kl-caption { font-weight: 700; font-size: var(--fs-xs); text-align: center; color: var(--k-muted); }
+.kl-placeholder { display: flex; align-items: center; justify-content: center; min-height: 64px; height: 100%; box-sizing: border-box; padding: 6px; text-align: center; font-size: var(--fs-xs); color: var(--k-muted); background: var(--k-tile); border: 1px dashed var(--k-line-2); border-radius: var(--k-radius); }
+.kl-graph:has(> .kl-placeholder) { padding: 0; border: 0; background: none; }
+.kl-graph:has(.g3-square) { display: flex; justify-content: center; }
+.kl-graph .g3-square { width: auto; height: 260px; max-height: none; aspect-ratio: 1; }
+.kl-missing { display: inline-block; width: 12px; height: 12px; border: 1px dashed var(--k-line-2); }
+
+/* numeric box */
+.kc-box { padding: 0; align-items: stretch; width: 68px; }
+/* the changed dot would sit on the up arrow and eat its clicks */
+.kc-box[data-changed="true"]::after { right: auto; left: -3px; top: -3px; pointer-events: none; }
+.kc-boxframe { position: relative; display: flex; align-items: center; height: 22px; background: var(--k-box); border: 1px solid var(--k-line-2); border-radius: var(--r-xs); }
+.kc-boxval { flex: 1; text-align: left; padding: 0 6px; line-height: var(--lh-m); min-height: 0; cursor: ns-resize; user-select: none; touch-action: none; font-variant-numeric: tabular-nums; }
+.kc-box-input { pointer-events: none; text-align: left; padding-left: 5px; }
+.kc-box-input:focus { pointer-events: auto; }
+.kc-steps { position: absolute; right: 1px; top: 1px; bottom: 1px; width: 13px; display: none; flex-direction: column; }
+.kc-boxframe:hover .kc-steps { display: flex; }
+.kc-box-input:focus ~ .kc-steps { display: none; }
+.kc-steps button { flex: 1; position: relative; padding: 0; border: 0; background: var(--k-raise); cursor: pointer; }
+.kc-steps button::after { content: ""; position: absolute; left: 3px; top: 50%; margin-top: -2px; border-left: 3px solid transparent; border-right: 3px solid transparent; }
+.kc-steps button:first-child::after { border-bottom: 4px solid var(--k-text); }
+.kc-steps button:last-child::after { border-top: 4px solid var(--k-text); }
+
+/* check box and radio buttons */
+.kc-check label, .kc-radios label { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; font-size: var(--fs-s); }
+.kc-check input, .kc-radios input { position: absolute; opacity: 0; width: 0; height: 0; }
+.kc-checkbox { width: 14px; height: 14px; box-sizing: border-box; background: var(--k-box); border: 1px solid var(--k-line-2); border-radius: var(--r-xs); flex: none; }
+.kc-check input:checked + .kc-checkbox { background: var(--k-accent); box-shadow: inset 0 0 0 2px var(--k-box); }
+.kc-radios > div { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.kc-radio { width: 14px; height: 14px; box-sizing: border-box; background: var(--k-box); border: 1px solid var(--k-line-2); border-radius: 50%; flex: none; }
+.kc-radios input:checked + .kc-radio { background: var(--k-red); box-shadow: inset 0 0 0 3px var(--k-box); }
+.kc-check input:focus-visible + .kc-checkbox, .kc-radios input:focus-visible + .kc-radio { outline: 2px solid var(--k-focus); outline-offset: 1px; }
+.kc-check .kc-name { color: var(--k-text); font-size: var(--fs-s); }
+
+/* pop-up with the round arrow */
+.kc-pick { align-items: stretch; }
+.kc-pickbox { display: flex; align-items: center; gap: 6px; height: 22px; padding: 0 4px; min-width: 0; background: var(--k-box); border: 1px solid var(--k-line-2); border-radius: var(--r-xs); }
+.kc-pick-ico { position: relative; flex: none; width: 15px; height: 15px; border-radius: 50%; background: var(--k-text); }
+.kc-pick-ico::after { content: ""; position: absolute; left: 6px; top: 4px; border-left: 5px solid var(--k-box); border-top: 4px solid transparent; border-bottom: 4px solid transparent; }
+.kc-pickbox select { flex: 1; min-width: 0; appearance: none; background: transparent; color: var(--k-text); border: 0; font: inherit; font-size: var(--fs-s); padding: 0; cursor: pointer; text-overflow: ellipsis; }
+.kc-pickbox select option { background: var(--k-box); color: var(--k-text); }
+.kc-pickbox:focus-within { outline: 2px solid var(--k-focus); outline-offset: 1px; }
+
+/* Combination: timbre columns, titled rows, zone maps */
+.kl-band { display: flex; align-items: center; gap: 8px; margin-top: 4px; font-weight: 700; font-size: var(--fs-s); color: var(--k-text); }
+.kl-band::before, .kl-band::after { content: ""; flex: 1; border-top: 1px solid var(--k-line-2); }
+.kl-strip { display: grid; grid-template-columns: repeat(16, minmax(0, 1fr)); gap: 2px 6px; }
+.kl-tnum { display: flex; flex-direction: column; align-items: stretch; gap: 1px; min-width: 0; padding: 0; background: none; border: 0; border-radius: var(--k-radius); font: inherit; font-size: var(--fs-2xs); color: var(--k-muted); cursor: pointer; text-align: center; }
+.kl-tnum b { display: block; border-radius: 0; font-size: var(--fs-xs); line-height: var(--lh-2xs); }
+.kl-tnum span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.kl-tnum[data-sel="true"] { outline: 2px solid var(--k-focus); outline-offset: 1px; }
+.kl-tnum:focus-visible { outline: 2px solid var(--k-focus); outline-offset: 1px; }
+.kl-slot[data-sel="true"] { background: var(--k-select); border-radius: var(--k-radius); }
+.kl-dense .kl-cell { justify-content: center; }
+.kl-dense .kc-box, .kl-dense .kc-pick, .kl-dense .kc-fader { width: 100%; min-width: 0; }
+.kl-dense .kl-box .kc, .kl-dense .kl-pick .kc { flex: 1; }
+.kl-dense .kc-pickbox { padding: 0 2px; gap: 2px; overflow: hidden; }
+.kl-dense .kc-pickbox select { width: 0; flex: 1 1 0; }
+.kl-dense .kc-pick-ico { width: 12px; height: 12px; }
+.kl-dense .kc-pick-ico::after { left: 5px; top: 3px; border-left-width: 4px; border-top-width: 3px; border-bottom-width: 3px; }
+.kl-dense .kc-boxval { padding: 0 3px; }
+.kl-dense .kl-dial .kc-dial { width: 100%; }
+.kl-dense .kl-dial .kc-dial-svg { width: 38px; height: 38px; }
+.kl-dense .kl-fader { align-items: center; }
+.kl-dense .kc-toggle { width: 100%; }
+
+.kz { display: flex; flex-direction: column; gap: 2px; padding: 4px; }
+.kz-lane { line-height: 1; display: flex; align-items: center; gap: 6px; font-size: var(--fs-2xs); color: var(--k-muted); }
+.kz-lane[data-sel="true"] { color: var(--k-text); font-weight: 700; }
+.kz-n { width: 16px; text-align: right; }
+.kz-track { position: relative; flex: 1; height: 7px; background: var(--k-box); border: 1px solid var(--k-line); }
+.kz-bar { position: absolute; top: 0; bottom: 0; background: var(--k-graph-line); opacity: 0.7; }
+.kz-lane[data-sel="true"] .kz-bar { opacity: 1; background: var(--k-accent); }
+.kz-vel { flex-direction: row; height: 150px; }
+.kz-vel .kz-lane { flex: 1; flex-direction: column-reverse; min-width: 0; }
+.kz-vel .kz-n { width: auto; text-align: center; }
+.kz-vel .kz-track { flex: 1; width: 100%; height: auto; }
+.kz-vel .kz-bar { top: auto; bottom: auto; left: 0; right: 0; }
+.kz-ruler { position: relative; height: 12px; margin-left: 22px; font-size: var(--fs-3xs); color: var(--k-muted); }
+.kz-ruler span { position: absolute; top: 0; border-left: 1px solid var(--k-line-2); padding-left: 2px; line-height: 12px; }

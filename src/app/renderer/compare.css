@@ -1,0 +1,80 @@
+/* Compare panel. Uses the app's variables only. */
+.compare-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.compare-file {
+  margin: 4px 0;
+  color: var(--text);
+}
+
+.compare-banks {
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.compare-rows {
+  max-height: 260px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  margin: 6px 0;
+}
+
+.compare-row {
+  display: grid;
+  grid-template-columns: 22px 44px 1fr 1fr;
+  gap: 4px;
+  align-items: center;
+  padding: 2px 6px;
+  font-size: var(--fs-s);
+}
+
+.compare-row .name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.compare-row.differs .name {
+  color: var(--accent);
+}
+
+.compare-copy,
+.compare-diff {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.compare-copy input[type="number"] {
+  width: 80px;
+}
+
+.compare-diff input {
+  flex: 1 1 140px;
+  min-width: 0;
+}
+
+.compare-error {
+  color: var(--danger);
+  font-size: var(--fs-s);
+  margin: 4px 0;
+}
+
+.compare-params {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-s);
+}
+
+.compare-params th,
+.compare-params td {
+  text-align: left;
+  padding: 2px 4px;
+  border-bottom: 1px solid var(--line);
+}

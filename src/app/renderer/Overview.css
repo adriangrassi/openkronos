@@ -1,0 +1,18 @@
+.overview { position: fixed; top: 48px; right: 12px; bottom: 12px; width: 560px; z-index: 20; overflow: auto; padding: 12px 14px; background: var(--panel); border: 1px solid var(--line); color: var(--text); }
+.overview h2, .overview h3 { margin: 0 0 8px; font-size: var(--fs-l); font-weight: 600; }
+.ov-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.ov-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 12px; }
+.ov-stats div { border: 1px solid var(--line); padding: 6px 8px; display: flex; flex-direction: column; }
+.ov-stats b { font-size: var(--fs-3xl); color: var(--accent); font-weight: 600; }
+.ov-stats span, .ov-muted { font-size: var(--fs-xs); opacity: 0.7; }
+.ov-kinds { display: flex; gap: 6px; margin-bottom: 6px; }
+.ov-kinds button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+.ov-bars { display: block; margin-bottom: 12px; }
+.ov-bar { cursor: pointer; outline: none; }
+.ov-bar rect:nth-child(2) { fill: var(--line); }
+.ov-bar:hover rect:nth-child(2), .ov-bar[data-on="true"] rect:nth-child(2) { fill: var(--accent); }
+.ov-bar:focus-visible rect:nth-child(2) { stroke: var(--focus); stroke-width: 2; }
+.ov-bar text { fill: var(--text); font-size: var(--fs-2xs); opacity: 0.7; }
+.ov-list { display: flex; flex-direction: column; max-height: 220px; overflow: auto; margin-bottom: 12px; border: 1px solid var(--line); }
+.ov-list button { text-align: left; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--text); padding: 3px 8px; }
+.ov-list button:hover { background: var(--bg); }

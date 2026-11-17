@@ -1,0 +1,21 @@
+.kfx-type { font: inherit; padding: 3px 10px; color: var(--k-text); background: var(--k-box); border: 1px solid var(--k-line-2); border-radius: var(--r-s); cursor: pointer; }
+.kfx-type:hover { border-color: var(--k-accent); }
+.kv-fx { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 8px; align-items: start; }
+.kv-ifxlist { display: flex; flex-direction: column; gap: 2px; }
+.kv-ifxlist button { height: auto; min-height: 36px; justify-content: center; display: flex; flex-direction: column; align-items: flex-start; text-align: left; font: inherit; padding: 3px 8px; color: var(--k-text); background: var(--k-box); border: 1px solid var(--k-line-2); border-radius: var(--r-s); cursor: pointer; }
+.kv-ifxlist button small { display: block;  color: var(--k-muted); font-size: 0.75em; max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.kv-ifxlist button[data-active="true"], .kv-ifxlist button[data-active="true"]:hover { background: var(--k-tab-active-bg); color: var(--k-tab-active-text); border-color: var(--k-accent); }
+.kv-ifxlist button[data-active="true"] small { color: inherit; }
+.kl-graph .fxr-svg { max-height: none; }
+.kl-graph:has(> .kfx-type) { padding: 0; border: 0; background: none; }
+/* 8-5 has ten narrow columns: the pick arrow gives way to the value text */
+.kl-row:has(.kfx-type) .kc-pick-ico { display: none; }
+.kl-row:has(.kfx-type) .kc-pickbox { gap: 0; padding: 0 4px; }
+/* 8-5 rows (p156_1): button centred on the row, each row a framed strip */
+.kl-graph:has(> .kfx-type) { align-self: center; }
+.kl-row:has(.kfx-type) { padding: 3px 6px; background: var(--k-box); border: 1px solid var(--k-line); border-radius: var(--k-radius); }
+.kl-row:has(.kfx-type) .kfx-type { display: block; width: 100%; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kl-row:has(.kfx-type) .kfx-type { font-size: var(--fs-xs); padding: 3px 5px; }
+/* 16 narrow timbre columns (combi 8-1): the arrow gives way to the value so "IFX10" is not cut to "I..." */
+.kl-dense .kc-pick-ico { display: none; }
+.kl-dense .kc-pickbox { gap: 0; padding: 0 3px; }

@@ -1,0 +1,5 @@
+.variations { flex: none; border: 1px solid var(--line); background: var(--panel); padding: 10px; margin: 8px 0; display: grid; gap: 8px; color: var(--text); }
+.variations-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.variations-pads button { min-width: 56px; }
+.variations-pads button[data-selected="1"] { border-color: var(--accent); color: var(--accent); }
+.variations-pads button:focus-visible, .variations button:focus-visible { outline: 2px solid var(--focus); }

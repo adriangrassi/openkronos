@@ -1,0 +1,138 @@
+/* Style A frame: one-row key bar, compact bank wells, the LED header and its action row, the editor bar, the right rail. Scoped to the theme; tokens only. */
+
+/* ---- Top bar: a single row of rubber keys ---- */
+:root[data-theme="a"] .topbar { flex-wrap: nowrap; gap: 8px; min-height: 56px; padding: 0 16px; }
+:root[data-theme="a"] .topbar > button { height: var(--h-top); padding: 0 12px; white-space: nowrap; }
+:root[data-theme="a"] .topbar > [data-testid="save-as"], :root[data-theme="a"] .topbar > [data-testid="exchange-open"], :root[data-theme="a"] .topbar > [data-testid="shell-recent-button"], :root[data-theme="a"] .topbar > [data-testid="shell-history-button"] { height: var(--h-top); padding: 0 10px; font-size: var(--fs-m); }
+:root[data-theme="a"] .topbar > [data-testid="save-as"], :root[data-theme="a"] .topbar > [data-testid="sounds-open"], :root[data-theme="a"] .topbar > [data-testid="search"] { margin-left: 0; }
+:root[data-theme="a"] .topbar input[type="search"] { flex: 0 6 200px; min-width: 56px; }
+:root[data-theme="a"] .topbar > [data-testid="file-name"] { max-width: 96px; margin-left: auto; padding: 0; font-size: var(--fs-s); }
+/* The connection pill is just its lamp; the text is its tooltip and the header says it too */
+:root[data-theme="a"] .topbar > .pill { font-size: 0; gap: 0; }
+
+/* ---- Bank lists: small wells, 22 px rows ---- */
+:root[data-theme="a"] .body { grid-template-columns: 196px minmax(0, 1fr) 300px; }
+:root[data-theme="a"] .banks { padding: 12px; }
+:root[data-theme="a"] .banks section:not(:first-child) { margin-top: 12px; }
+:root[data-theme="a"] .banks h2 { padding: 0 8px 6px; font-size: var(--fs-s); font-weight: 400; }
+:root[data-theme="a"] .banks section { padding: 4px; }
+:root[data-theme="a"] .bank { height: var(--h-xs); }
+
+/* ---- The LED header ---- */
+:root[data-theme="a"] .sd { grid-template-columns: minmax(0, 1fr) 196px; gap: 16px; margin: 16px 16px 0; padding: 12px; }
+:root[data-theme="a"] .sd-oled { padding: 12px 16px; }
+:root[data-theme="a"] .sd-top { font-size: var(--fs-s); }
+:root[data-theme="a"] .sd-main { gap: 24px; margin-top: 8px; }
+:root[data-theme="a"] .sd-slot, :root[data-theme="a"] .sd-name { font-size: var(--fs-display); }
+:root[data-theme="a"] .sd-leds { min-width: 0; gap: 12px; font-size: var(--fs-l); }
+:root[data-theme="a"] .sd-leds li { gap: 12px; }
+:root[data-theme="a"] .sd-leds li[data-on="false"], :root[data-theme="a"] .sd-live { color: var(--ink-3); }
+:root[data-theme="a"] .lamp { width: 10px; height: 10px; }
+
+/* ---- Action keys under the header: Compare A/B, Check keyboard, Send, Live, then the notes ---- */
+:root[data-theme="a"] .editor > .toolbar { flex-wrap: wrap; height: auto; padding: 12px 16px 4px; gap: 12px; background-color: transparent; border-bottom: 0; }
+:root[data-theme="a"] .editor > .toolbar h1 { position: absolute; width: 1px; height: 1px; margin: 0; overflow: hidden; clip-path: inset(50%); }
+:root[data-theme="a"] .editor > .toolbar > button { height: var(--h-top); padding: 0 16px; }
+:root[data-theme="a"] .editor > .toolbar > [data-testid="ab-open-editor"] { order: 1; }
+:root[data-theme="a"] .editor > .toolbar > [data-testid="check-keyboard"] { order: 2; }
+:root[data-theme="a"] .editor > .toolbar > [data-testid="send-sound"] { order: 3; }
+:root[data-theme="a"] .editor > .toolbar > .check { order: 4; }
+:root[data-theme="a"] .editor > .toolbar > small { order: 6; flex: 1 1 0; min-width: 0; margin-left: auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: right; color: var(--ink-3); font-size: var(--fs-s); }
+:root[data-theme="a"] .editor > .toolbar > [data-testid="check-why"] { position: absolute; width: 1px; height: 1px; flex: none; overflow: hidden; clip-path: inset(50%); }
+:root[data-theme="a"] .editor > .toolbar > [data-testid="close-editor"] { order: 8; height: var(--h-ctl); padding: 0 12px; font-size: var(--fs-m); }
+:root[data-theme="a"] .ab-chips { display: inline-flex; gap: 2px; margin-right: 8px; }
+:root[data-theme="a"] .ab-chips b { display: grid; place-items: center; width: 18px; height: 18px; border-radius: var(--r-xs); background: var(--paper-2); color: var(--ink-3); font-family: var(--font-mono); font-size: var(--fs-s); font-weight: 400; }
+:root[data-theme="a"] .ab-chips b:first-child { background: var(--accent); color: var(--accent-text); }
+
+/* ---- The editor bar: Variations, Effects, the view switch and Snapshots on one row ---- */
+:root[data-theme="a"] .ed-bar { flex: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 4px 16px 8px; }
+:root[data-theme="a"] .ed-bar > button { height: var(--h-ctl); padding: 0 12px; }
+:root[data-theme="a"] .ed-bar > .view-switch { padding: 0; margin-left: auto; background: none; border-bottom: 0; }
+:root[data-theme="a"] .ed-bar > .snaps { padding: 0; border-bottom: 0; }
+:root[data-theme="a"] .ed-bar > .variations, :root[data-theme="a"] .ed-bar > .fx-page, :root[data-theme="a"] .ed-bar > .snaps:has(.snaps-add) { order: 5; flex: 1 0 100%; margin: 0; max-height: 36vh; overflow-y: auto; }
+:root[data-theme="a"] .view-switch button { min-width: 0; height: var(--h-ctl); padding: 0 12px; }
+
+/* ---- Right rail: the Keyboard steps first, a short Used by list ---- */
+:root[data-theme="a"] .side { display: flex; flex-direction: column; padding: 16px; }
+:root[data-theme="a"] .side > .keyboard { order: -2; }
+:root[data-theme="a"] .side > .progress { order: -3; }
+:root[data-theme="a"] .side > .used-by { order: -1; }
+:root[data-theme="a"] .side > * { flex: none; }
+:root[data-theme="a"] .used-by .sec-body { max-height: 140px; overflow-y: auto; }
+
+/* The step keys sit under their text so the text keeps the rail's width */
+:root[data-theme="a"] .step > button, :root[data-theme="a"] .step > .step-slot, :root[data-theme="a"] .step > div:has(button) { grid-column: 2; justify-self: start; }
+:root[data-theme="a"] .step { row-gap: 8px; }
+
+/* ---- Bottom dock: tabs on the left, the keyboard controls on the same row, the piano under them ---- */
+:root[data-theme="a"] .dock { position: relative; }
+:root[data-theme="a"] .dock-bar { height: 50px; padding: 0 16px; }
+:root[data-theme="a"] .dock-tabs button { height: var(--h-ctl); padding: 0 16px; background: none; border-color: transparent; box-shadow: none; color: var(--ink-3); font-weight: 600; }
+:root[data-theme="a"] .dock-tabs button:hover:not(:disabled) { color: var(--ink); background: none; }
+:root[data-theme="a"] .dock-tabs button[aria-selected="true"] { background: var(--on-bg); color: var(--on-fg); box-shadow: var(--on-shadow); }
+:root[data-theme="a"] .dock-body { padding: 0; }
+:root[data-theme="a"] .dock-body:empty { display: none; }
+:root[data-theme="a"] [data-testid="dock-playing"] { margin: 0; padding: 2px 16px; font-size: var(--fs-s); }
+:root[data-theme="a"] .kd { gap: 0; }
+:root[data-theme="a"] .kd-controls { position: absolute; top: 0; right: 112px; z-index: 1; height: 50px; flex-wrap: nowrap; gap: 16px; font-size: var(--fs-m); }
+:root[data-theme="a"] .kd-controls input[type="range"] { width: 96px; }
+:root[data-theme="a"] .kd-controls [data-testid="dock-volume-value"], :root[data-theme="a"] .kd-controls [data-testid="dock-octave"] { font-family: var(--font-mono); color: var(--accent); }
+:root[data-theme="a"] .kd-keys { height: 96px; border-width: 1px 0 0; border-radius: 0; }
+:root[data-theme="a"] .mon { padding: 0 16px 8px; }
+:root[data-theme="a"] .dock-player { max-height: 250px; overflow-y: auto; padding: 8px 16px 12px; border-top: 1px solid var(--key-lo); box-shadow: inset 0 1px 0 var(--key-hi); }
+:root[data-theme="a"] .dock-player .sec { border-bottom: 0; }
+:root[data-theme="a"] .dock-player .sec-head { display: none; }
+:root[data-theme="a"] .dock-player .sec-body { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); align-items: start; gap: 8px 24px; padding: 0; }
+:root[data-theme="a"] .dock-player .mt { grid-column: 1 / -1; }
+:root[data-theme="a"] .dock-player .mt-time { font-family: var(--font-display); font-size: var(--fs-3xl); color: var(--display); text-shadow: 0 0 6px color-mix(in oklab, var(--display) 45%, transparent); }
+:root[data-theme="a"] .dock-player .buttons { margin: 0; }
+
+/* ---- Set List pads: textured rubber, display-font numbers, an amber LED on the selected pad ---- */
+:root[data-theme="a"] .sl-pad { background-image: var(--grain), linear-gradient(color-mix(in oklab, var(--key) 80%, var(--key-hi)), var(--key)); }
+:root[data-theme="a"] .sl-pad[data-current="true"] { background-image: var(--grain); }
+:root[data-theme="a"] .sl-num { font-family: var(--font-display); font-size: var(--fs-xl); font-weight: 700; opacity: 1; color: var(--oled-dim); }
+:root[data-theme="a"] .sl-pad[data-selected="true"]:not([data-current="true"])::after { background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+
+/* ---- Combi needs list: a short well instead of a wall of lines ---- */
+:root[data-theme="a"] .editor > .needs { flex: none; max-height: 84px; overflow-y: auto; margin: 4px 16px 0; padding: 4px 12px; background: var(--well); border-radius: var(--r-s); box-shadow: var(--well-shadow); }
+:root[data-theme="a"] .editor > .needs .status { margin: 0; padding: 0; }
+
+/* ---- Drop-down lists are drawn by the browser: give them the key colours and the label face ---- */
+:root[data-theme="a"] option, :root[data-theme="a"] optgroup { background: var(--paper-2); color: var(--ink); font-family: var(--font-body); }
+
+/* ---- Live: a key with an LED, lit amber while the editor's Live box is on ---- */
+:root[data-theme="a"] .editor > .toolbar > .check { margin: 0; padding: 0 16px; gap: 12px; height: var(--h-top); background: var(--paper-2); border-color: var(--key-lo); box-shadow: var(--field-shadow); color: var(--ink-2); font-weight: 600; }
+:root[data-theme="a"] .editor > .toolbar > .check input[type="checkbox"] { width: 10px; height: 10px; border-radius: 50%; background: var(--led-off); border-color: var(--key-lo); box-shadow: inset 0 1px 2px var(--key-lo), 0 1px 0 var(--key-hi); }
+:root[data-theme="a"] .editor > .toolbar > .check input[type="checkbox"]:checked { background: var(--accent); border-color: var(--key-lo); box-shadow: 0 0 7px var(--accent); }
+:root[data-theme="a"] .editor > .toolbar > .check input[type="checkbox"]:checked::after { display: none; }
+:root[data-theme="a"] .editor > .toolbar > .check:has(input:checked) { color: var(--ink); }
+
+/* ---- Panel faders: the value is amber mono text on the panel, not a box ---- */
+:root[data-theme="a"] .pv .kc-fader-box { background: transparent; border-color: transparent; box-shadow: none; font-weight: 400; }
+
+/* ---- Help icon and its popover: the label face, a textured panel ---- */
+:root[data-theme="a"] .info-btn { font-family: var(--font-body); font-style: normal; font-weight: 600; }
+:root[data-theme="a"] .info-pop { background-color: var(--panel); background-image: var(--grain); border-color: var(--key-lo); box-shadow: var(--modal-shadow); font-family: var(--font-body); }
+
+/* The sound name stays on one line: its size follows the OLED's width and the name's length (--n), ellipsis only below the smallest size. */
+:root[data-theme="a"] .sd-oled { container-type: inline-size; }
+:root[data-theme="a"] .sd-name { font-size: clamp(18px, calc((100cqw - 200px) / (var(--n) * 0.64)), var(--fs-display)); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; overflow-wrap: normal; }
+
+/* ---- List view, Combination and effects pages: framed cards on the panel, parameters in an inset well ---- */
+:root[data-theme="a"] .editor-body { gap: 12px; padding: 8px 16px 12px; }
+:root[data-theme="a"] .param-nav { padding: 12px 0 0; border: 1px solid var(--rule); border-radius: var(--r-m); background: transparent; overflow: hidden; }
+:root[data-theme="a"] .param-pane { border: 1px solid var(--rule); border-radius: var(--r-m); overflow: hidden; }
+:root[data-theme="a"] .param-list { background: var(--well); box-shadow: var(--well-shadow); }
+:root[data-theme="a"] .editor > .needs { padding: 8px 12px; border: 1px solid var(--rule); background: transparent; box-shadow: none; max-height: 72px; }
+:root[data-theme="a"] .fx-page { gap: 16px; padding: 16px; margin: 0; border: 1px solid var(--rule); border-radius: var(--r-m); background: transparent; }
+:root[data-theme="a"] .fx-slots { gap: 8px; }
+:root[data-theme="a"] .fx-slots button { height: var(--h-ctl); padding: 0 12px; }
+:root[data-theme="a"] .fx-slots button[aria-pressed="true"] { background: var(--on-bg); color: var(--on-fg); box-shadow: var(--on-shadow); border-color: var(--key-lo); }
+:root[data-theme="a"] .fx-type { position: relative; gap: 16px; margin-top: 4px; padding: 16px 12px 12px; border: 1px solid var(--rule); border-radius: var(--r-m); }
+:root[data-theme="a"] .fx-type::before { content: "Effect type"; position: absolute; top: -9px; left: 12px; padding: 0 8px; background: var(--panel); font-weight: 600; color: var(--ink); }
+:root[data-theme="a"] .fx-type [data-testid="effects-type-name"] { font-family: var(--font-mono); color: var(--accent); }
+:root[data-theme="a"] .fx-params { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; }
+:root[data-theme="a"] .fx-row { grid-template-columns: minmax(0, 1fr) 88px; grid-template-rows: auto auto; gap: 4px 8px; align-items: end; padding: 8px 12px; border: 1px solid var(--rule); border-radius: var(--r-m); background: var(--well); box-shadow: var(--well-shadow); }
+:root[data-theme="a"] .fx-row > [data-testid^="effects-label-"] { grid-column: 1 / -1; color: var(--ink-2); line-height: 1.15; min-height: calc(2 * 1.15em); }
+:root[data-theme="a"] .fx-row > [data-testid^="effects-value-"] { font-family: var(--font-mono); color: var(--accent); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+:root[data-theme="a"] .fx-row > input { grid-column: 2; }

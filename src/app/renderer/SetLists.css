@@ -1,0 +1,65 @@
+/* Set List pad grid. Uses the app variables; no gradients, shadows or glows. */
+.setlists { position: fixed; bottom: 12px; right: 12px; width: min(620px, 95vw); max-height: 70vh; overflow: auto; z-index: 50; background: var(--panel); border: 1px solid var(--line); color: var(--text); padding: 10px 12px; font-size: var(--fs-m); }
+.setlists button:focus-visible, .setlists input:focus-visible, .setlists select:focus-visible, .setlists textarea:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+.sl-head, .sl-pages, .sl-fields { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 8px; }
+.sl-pages button[data-active="true"] { border-color: var(--accent); color: var(--accent); }
+.sl-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 8px; }
+.sl-pad { min-height: 64px; text-align: left; background: var(--bg); border: 1px solid var(--line); border-left-width: 6px; border-radius: 0; color: var(--text); padding: 4px 6px; overflow: hidden; cursor: grab; }
+.sl-pad[data-selected="true"] { border-color: var(--accent); }
+.sl-pad b { display: block; font-weight: 600; }
+.sl-pad small { display: block; opacity: 0.7; max-height: 2.6em; overflow: hidden; }
+.sl-fields label { display: flex; gap: 4px; align-items: center; }
+.sl-fields input[type="text"] { width: 4em; }
+.sl-comment { width: 100%; min-height: 3.5em; box-sizing: border-box; margin-bottom: 6px; }
+.sl-error { color: var(--accent); }
+.sl-picker { border-top: 1px solid var(--line); padding-top: 6px; }
+.sl-rows { max-height: 180px; overflow: auto; margin-top: 4px; }
+.sl-rows button { display: block; width: 100%; text-align: left; }
+.sl-view button[data-active="true"] { border-color: var(--accent); color: var(--accent); }
+.sl-playbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 8px; }
+.sl-hint { opacity: 0.7; font-size: var(--fs-s); }
+.sl-num { display: block; font-size: var(--fs-xs); opacity: 0.8; }
+.sl-pad[data-current="true"] { border-color: var(--accent); outline: 2px solid var(--accent); outline-offset: -3px; }
+.sl-grid[data-view="play"] .sl-pad { min-height: 92px; cursor: pointer; font-size: var(--fs-xl); }
+.sl-pad:disabled { cursor: not-allowed; opacity: 0.6; }
+.sl-play-comment { min-height: 3.5em; margin-bottom: 6px; opacity: 0.85; white-space: pre-wrap; }
+.sl-name { width: 12em; }
+
+/* Play: full-window screen below the top bar (48px). Pads size from their own width via container units. */
+.setlists[data-view="play"] { top: 48px; left: 0; right: 0; bottom: 0; width: auto; max-height: none; display: flex; flex-direction: column; overflow: hidden; padding: 10px 14px; font-size: var(--fs-xl); --k: 1; }
+.setlists[data-large="true"] { --k: 1.4; }
+.setlists[data-view="play"] button, .setlists[data-view="play"] select, .setlists[data-view="play"] label { min-height: 44px; box-sizing: border-box; }
+.setlists[data-view="play"] label { display: inline-flex; align-items: center; gap: 6px; }
+.setlists[data-view="play"] .sl-pages button { min-width: 44px; }
+.setlists[data-view="play"] .sl-head { gap: 10px; }
+.setlists[data-view="play"] .sl-grid { flex: 1 1 auto; min-height: 0; overflow: auto; grid-template-rows: repeat(4, minmax(calc(110px * var(--k)), 1fr)); gap: 10px; }
+.sl-grid[data-view="play"] .sl-pad { position: relative; height: 100%; box-sizing: border-box; container-type: inline-size; min-height: 110px; display: flex; flex-direction: column; justify-content: flex-start; gap: 2px; padding: 6px 10px 6px 18px; border-width: 2px; border-left-width: 2px !important; border-left-color: var(--line) !important; background: color-mix(in srgb, var(--sw) 16%, var(--bg)); }
+.sl-grid[data-view="play"] .sl-pad::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 10px; background: var(--sw); }
+.sl-grid[data-view="play"] .sl-num { font-size: clamp(14px, 7cqw, 26px); font-weight: 700; opacity: 1; line-height: 1; }
+.sl-grid[data-view="play"] .sl-pad b { font-size: calc(clamp(14px, 7cqw, 26px) * var(--k)); line-height: 1.15; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; overflow-wrap: normal; word-break: normal; }
+.sl-grid[data-view="play"] .sl-pad small { font-size: clamp(11px, 4.6cqw, 16px); opacity: 0.85; max-height: none; white-space: nowrap; text-overflow: ellipsis; }
+.sl-grid[data-view="play"] .sl-pad .sl-pc { opacity: 0.7; font-size: clamp(10px, 4cqw, 14px); }
+.sl-grid[data-view="play"] .sl-pad[data-current="true"] { border: 5px solid var(--accent); border-left-width: 5px !important; border-left-color: var(--accent) !important; outline: none; background: color-mix(in srgb, var(--accent) 26%, color-mix(in srgb, var(--sw) 16%, var(--bg))); }
+.sl-grid[data-view="play"] .sl-pad[data-current="true"]::before { left: 0; }
+.sl-grid[data-view="play"] .sl-pad:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.sl-now { position: absolute; top: 6px; right: 8px; background: var(--accent); color: var(--bg); font-weight: 700; font-size: var(--fs-m); padding: 1px 8px; letter-spacing: 0.08em; }
+.sl-play-foot { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; padding-top: 8px; }
+.sl-play-foot .sl-hint { font-size: var(--fs-l); opacity: 0.85; }
+.sl-play-foot .sl-play-comment { min-height: 0; margin: 0; }
+.sl-grid[data-view="play"] .sl-pad > * { flex-shrink: 0; }
+.setlists[data-inline="true"]:not([data-view="play"]) { position: static; z-index: auto; width: auto; max-height: none; border: 0; padding: 0; }
+.setpad-host { padding: 8px 12px; }
+/* Inline pad view: fill the main area, pads share the height and scale their text. */
+.setpad-host { height: 100%; box-sizing: border-box; display: flex; flex-direction: column; min-height: 0; }
+.setlists[data-inline="true"]:not([data-view="play"]) { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+.setlists[data-inline="true"]:not([data-view="play"]) .sl-grid { flex: 1 1 auto; min-height: 0; grid-template-rows: repeat(4, minmax(72px, 1fr)); gap: 8px; }
+.setlists[data-inline="true"]:not([data-view="play"]) .sl-pad { height: 100%; box-sizing: border-box; container-type: inline-size; min-height: 72px; padding: 8px 12px; display: flex; flex-direction: column; justify-content: center; }
+.setlists[data-inline="true"]:not([data-view="play"]) .sl-pad b { font-size: clamp(14px, 6cqw, 28px); line-height: 1.15; }
+.setlists[data-inline="true"]:not([data-view="play"]) .sl-pad small { font-size: clamp(11px, 4cqw, 15px); max-height: none; }
+.setlists[data-inline="true"]:not([data-view="play"]) .sl-num { font-size: clamp(11px, 3.6cqw, 16px); }
+.setpad-host > button[data-testid="setlists-list-view"] { align-self: flex-start; margin-bottom: 6px; }
+.sl-size { display: inline-flex; gap: 8px; align-items: center; margin-left: auto; }
+.sl-size button[data-active="true"] { border-color: var(--accent); color: var(--accent); }
+.setlists[data-inline="true"][data-sized="true"]:not([data-view="play"]) .sl-grid { flex: 0 0 auto; grid-template-rows: repeat(4, var(--pad-h)); }
+.setlists[data-inline="true"][data-sized="true"]:not([data-view="play"]) .sl-pad { min-height: 0; overflow: hidden; }
+.setpad-host { overflow: auto; }
