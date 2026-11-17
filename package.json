@@ -9,7 +9,8 @@
     "dev": "electron-vite dev",
     "build": "electron-vite build",
     "start": "electron-vite preview",
-    "test": "node --test \"src/**/*.test.ts\""
+    "test": "node --test \"src/**/*.test.ts\"",
+    "dist": "npm run build && electron-builder --win --x64"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",
@@ -17,6 +18,7 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.2.1",
     "electron": "^45.2.3",
+    "electron-builder": "^26.18.0",
     "electron-vite": "^6.0.0",
     "playwright-core": "^1.65.0",
     "react": "^19.3.1",
@@ -24,5 +26,35 @@
     "typescript": "^7.0.2",
     "vite": "^8.3.6"
   },
-  "main": "out/main/index.js"
+  "main": "out/main/index.js",
+  "description": "Open-source editor and librarian for the Korg Kronos",
+  "author": "Adrian Grassi",
+  "homepage": "https://github.com/adriangrassi/openkronos",
+  "build": {
+    "appId": "io.github.adriangrassi.openkronos",
+    "productName": "OpenKronos",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "out/**",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ],
+      "icon": "build/icon.png"
+    },
+    "portable": {
+      "artifactName": "OpenKronos-${version}-portable.exe"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "artifactName": "OpenKronos-${version}-Setup.exe"
+    }
+  }
 }
